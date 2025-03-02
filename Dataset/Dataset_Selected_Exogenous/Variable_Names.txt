@@ -1,0 +1,14 @@
+### This text file represents `Column names in excel file <- variable name in manuscript' ###
+
+Target Variable: spot_ER_(Country name) <- Exchange Rate
+
+Exogenous Variables:
+
+(i) SR_Interest_rate_diff_(Country)_U <- Country-specific Short-term IRD
+
+Global exogenous variables:
+
+(ii) Oil_price_growth_rate_WTI <- Oil Price Growth Rate
+(iii) global_EPU(PPP) <- GEPU
+(iv) US_EMV <- US EMV
+(v) US_MPU <- US MPU
