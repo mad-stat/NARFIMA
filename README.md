@@ -13,3 +13,5 @@
 * To view "Figure 1: Impulse response functions (generated using the local projections method) of spot exchange rates to GEPU, GPR, US EMV, and US MPU shocks for the BRIC nations. The reaction is represented by the solid black line and corresponding 95% confidence bands by grey shading. The dashed black line displays the zero line. The sample period runs from 1997-01 to 2023-10.", please refer to [Figure_01_Impulse_Response_Functions.R](https://github.com/mad-stat/NARFIMA/blob/main/Figure_01_Impulse_Response_Functions.R)
 
 * To view "Figure 2: Illustration of the proposed NARFIMA model.", please refer to [Figure_02_Model_Illustration.R](https://github.com/mad-stat/NARFIMA/blob/main/Figure_02_Model_Illustration.R)
+
+* To generate "Table 6: The table illustrates the evaluation of the proposed NARFIMA model’s performance relative to baseline forecasters across all forecast horizons for Brazil (‘best’ and ‘second-best’ results are highlighted).", please refer to [Table_06_Evaluation_Comparison_Brazil.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_06_Evaluation_Comparison_Brazil.R)
