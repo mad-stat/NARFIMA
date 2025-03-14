@@ -6,7 +6,7 @@
 
 * To view "Table 2: Summary statistics of the datasets utilized in this analysis.", please refer to [Table_02_Summary_Statistics_BRIC.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_02_Summary_Statistics_BRIC.R)
 
-* To view "Table 3: Global characteristics of the economic time series under study for BRIC countries.", please refer to [Table_03_Global_Characteristics_BRIC.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_03_Global_Characteristics_BRIC_BRIC.R)
+* To view "Table 3: Global characteristics of the economic time series under study for BRIC countries.", please refer to [Table_03_Global_Characteristics_BRIC.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_03_Global_Characteristics_BRIC.R)
 
 * To view "Table 4: Causality analysis results based on nonlinear Granger causality (GC) test and transfer entropy between exchange rates and exogenous covariates across BRIC countries.", please refer to [Table_04_Causality Analysis_BRIC.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_04_Causality_Analysis_BRIC.R)
 
