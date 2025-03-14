@@ -1,0 +1,49 @@
+# Detail about the R.Version():
+
+attached base packages:
+[1] parallel  stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+ [1] NlinTS_1.4.5            Rcpp_1.0.12             RTransferEntropy_0.2.21 gridExtra_2.3          
+ [5] strucchange_1.5-3       sandwich_3.1-0          car_3.1-2               carData_3.0-5          
+ [9] seastests_0.15.4        nonlinearTseries_0.3.0  e1071_1.7-14            pracma_2.4.4           
+[13] bsts_0.9.10             xts_0.14.0              BoomSpikeSlab_1.2.6     Boom_0.9.15            
+[17] tseries_0.10-56         FinTS_0.4-9             WaveletArima_0.1.2      forecastHybrid_5.0.19  
+[21] thief_0.3               tsDyn_11.0.4.1          Metrics_0.1.4           lubridate_1.9.3        
+[25] forcats_1.0.0           stringr_1.5.1           purrr_1.0.2             readr_2.1.5            
+[29] tidyr_1.3.1             tibble_3.2.1            ggplot2_3.5.1           tidyverse_2.0.0        
+[33] caretForecast_0.1.1     dplyr_1.1.4             readxl_1.4.3            murphydiagram_0.12.2   
+[37] forecast_8.23.0         MTS_1.2.1               greybox_2.0.1           vioplot_0.5.0          
+[41] zoo_1.8-12              sm_2.2-6.0              PMCMRplus_1.9.10        tsutils_0.9.4          
+[45] rugarch_1.5-1          
+
+loaded via a namespace (and not attached):
+  [1] splines_4.4.1               cellranger_1.1.0            hardhat_1.4.0               pROC_1.18.5                
+  [5] rpart_4.1.23                deSolve_1.40                lifecycle_1.0.4             Rdpack_2.6                 
+  [9] doParallel_1.0.17           globals_0.16.3              Rsolnp_1.16                 lattice_0.22-6             
+ [13] MASS_7.3-60.2               magrittr_2.0.3              fracdiff_1.5-3              gbutils_0.5                
+ [17] RColorBrewer_1.1-3          abind_1.4-5                 quadprog_1.5-8              nnet_7.3-19                
+ [21] ipred_0.9-15                lava_1.8.0                  listenv_0.9.1               spatial_7.3-17             
+ [25] texreg_1.39.4               parallelly_1.38.0           codetools_0.2-20            tidyselect_1.2.1           
+ [29] SuppDists_1.1-9.7           farver_2.1.2                urca_1.3-4                  gmp_0.7-4                  
+ [33] stats4_4.4.1                vars_1.6-1                  caret_6.0-94                ks_1.14.2                  
+ [37] survival_3.7-0              iterators_1.0.14            foreach_1.5.2               BWStest_0.2.3              
+ [41] tools_4.4.1                 tseriesChaos_0.1-13.1       glue_1.7.0                  mnormt_2.1.1               
+ [45] prodlim_2024.06.25          mgcv_1.9-1                  kSamples_1.2-10             TTR_0.24.4                 
+ [49] withr_3.0.0                 numDeriv_2016.8-1.1         timeSeries_4032.109         fastmap_1.2.0              
+ [53] fansi_1.0.6                 digest_0.6.36               truncnorm_1.0-9             timechange_0.3.0           
+ [57] R6_2.5.1                    colorspace_2.1-0            utf8_1.2.4                  generics_0.1.3             
+ [61] renv_1.1.2                  data.table_1.15.4           recipes_1.1.0               class_7.3-22               
+ [65] httr_1.4.7                  ModelMetrics_1.2.2.2        pkgconfig_2.0.3             gtable_0.3.5               
+ [69] smooth_4.0.2                timeDate_4032.109           Rmpfr_0.9-5                 lmtest_0.9-40              
+ [73] spd_2.0-1                   GeneralizedHyperbolic_0.8-6 cvar_0.5                    multcompView_0.1-10        
+ [77] scales_1.3.0                MAPA_2.0.7                  gower_1.0.1                 rstudioapi_0.16.0          
+ [81] tzdb_0.4.0                  reshape2_1.4.4              nlme_3.1-164                curl_5.2.1                 
+ [85] nloptr_2.1.1                proxy_0.4-27                cachem_1.1.0                KernSmooth_2.23-24         
+ [89] fGarch_4033.92              fBasics_4032.96             pillar_1.9.0                grid_4.4.1                 
+ [93] vctrs_0.6.5                 xtable_1.8-4                mvtnorm_1.2-5               cli_3.6.3                  
+ [97] compiler_4.4.1              crayon_1.5.3                rlang_1.1.4                 future.apply_1.11.2        
+[101] labeling_0.4.3              mclust_6.1.1                plyr_1.8.9                  stringi_1.8.4              
+[105] wavelets_0.3-0.2            munsell_0.5.1               Matrix_1.7-0                hms_1.1.3                  
+[109] future_1.34.0               statmod_1.5.0               rbibutils_2.2.16            memoise_2.0.1              
+[113] quantmod_0.4.26             DistributionUtils_0.6-1     SkewHyperbolic_0.4-2       
