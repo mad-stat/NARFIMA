@@ -46,7 +46,7 @@ train_chn_1 <- subset(exchange_rate_chn, end = length(exchange_rate_chn) - n)
 test_chn_1 <- subset(exchange_rate_chn, start = length(exchange_rate_chn) - n + 1)
 train_reg_chn_1 <- reg_chn[1:length(train_chn_1),]
 test_reg_chn_1 <- matrix(c(reg_chn[1,1], reg_chn[1,2], reg_chn[1,3], reg_chn[1,4], reg_chn[1,5]), ncol = 5, nrow = 1)
-colnames(test_reg_chn_1) <- c("SR_Interest_rate_diff_C_U", "Oil_price_growth_rate_WTI", "global_EPU(PPP)", "US_EMV" ,"US_MPU")
+colnames(test_reg_chn_1) <- c("Oil_price_growth_rate_WTI", "SR_Interest_rate_diff_C_U", "global_EPU(PPP)", "US_EMV" ,"US_MPU")
 
 model_evaluate_chn_1 <- tibble()  
 predict_chn_1 <- tibble(Date = as.Date(data$Date[length(train_chn_1) + 1:length(test_chn_1)]))  
