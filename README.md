@@ -16,7 +16,7 @@
 
 * To generate "Table 6: The table illustrates the evaluation of the proposed NARFIMA model’s performance relative to baseline forecasters across all forecast horizons for Brazil (‘best’ and ‘second-best’ results are highlighted).", please refer to [Table_06_Evaluation_Comparison_Brazil.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_06_Evaluation_Comparison_Brazil.R)
 
-* To generate "Table 7: The table illustrates the evaluation of the proposed NARFIMA model’s performance relative to baseline forecasters across all forecast horizons for Russia (‘best’ and ‘second-best’ results are highlighted).", please refer to [Table_07_Evaluation_Comparison_Brazil.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_07_Evaluation_Comparison_Russia.R)
+* To generate "Table 7: The table illustrates the evaluation of the proposed NARFIMA model’s performance relative to baseline forecasters across all forecast horizons for Russia (‘best’ and ‘second-best’ results are highlighted).", please refer to [Table_07_Evaluation_Comparison_Russia.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_07_Evaluation_Comparison_Russia.R)
  
 * To generate "Table 8: The table illustrates the evaluation of the proposed NARFIMA model’s performance relative to baseline forecasters across all forecast horizons for India (‘best’ and ‘second-best’ results are highlighted).", please refer to [Table_08_Evaluation_Comparison_India.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_08_Evaluation_Comparison_India.R)
 
