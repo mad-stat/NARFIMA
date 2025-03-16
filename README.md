@@ -33,6 +33,6 @@
 
 * To view "Figure 7: Visualization of the actual exchange rate series (red dots) with point forecasts from NARFIMA (blue line), BSTSx (green line), and ARIMAx (violet line), along with the conformal prediction interval for NARFIMA (yellow shaded region). Forecasts are for a 48-month horizon for (a) Brazil, (b) Russia, (c) India, and (d) China.", please refer to [Figure_07_Conformal_Prediction_Interval_48.R](https://github.com/mad-stat/NARFIMA/blob/main/Figure_07_Conformal_Prediction_Interval_48.R).
 
+* To generate "Table 11: The table depicts the Terasvirta Test and the BDS Test results applied to the residuals of the ARFIMAx.", please refer to [Table_11_ARFIMAx_Residuals_Tests.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_11_ARFIMAx_Residuals_Tests.R).
+
 * To view "Figure 8: Visualization of the actual exchange rate series (red dots) with point forecasts from NARFIMA (blue line), BSTSx (green line), and ARIMAx (violet line), along with the conformal prediction interval for NARFIMA (yellow shaded region). Forecasts are for a 24-month horizon for (a) Brazil, (b) Russia, (c) India, and (d) China.", please refer to [Figure_08_Conformal_Prediction_Interval_24.R](https://github.com/mad-stat/NARFIMA/blob/main/Figure_08_Conformal_Prediction_Interval_24.R).
-
-
