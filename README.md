@@ -31,3 +31,8 @@
 
 * To view "Figure 6: MCB plot comparing the performance of NARFIMA and its variants based on RMSE metrics. In the plot, ‘NARFIMA - 1.12’ indicates that the average rank of NARFIMA is 1.12, similar for other models.", please refer to [Figure_06_MCB_NARFIMA_Variants.R](https://github.com/mad-stat/NARFIMA/blob/main/Figure_06_MCB_NARFIMA_Variants).
 
+* To view "Figure 7: Visualization of the actual exchange rate series (red dots) with point forecasts from NARFIMA (blue line), BSTSx (green line), and ARIMAx (violet line), along with the conformal prediction interval for NARFIMA (yellow shaded region). Forecasts are for a 48-month horizon for (a) Brazil, (b) Russia, (c) India, and (d) China.", please refer to [Figure_07_Conformal_Prediction_Interval_48.R](https://github.com/mad-stat/NARFIMA/blob/main/Figure_07_Conformal_Prediction_Interval_48.R).
+
+* To view "Figure 8: Visualization of the actual exchange rate series (red dots) with point forecasts from NARFIMA (blue line), BSTSx (green line), and ARIMAx (violet line), along with the conformal prediction interval for NARFIMA (yellow shaded region). Forecasts are for a 24-month horizon for (a) Brazil, (b) Russia, (c) India, and (d) China.", please refer to [Figure_08_Conformal_Prediction_Interval_24.R](https://github.com/mad-stat/NARFIMA/blob/main/Figure_08_Conformal_Prediction_Interval_24.R).
+
+
