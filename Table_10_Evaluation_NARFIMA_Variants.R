@@ -29,7 +29,7 @@ setwd('NARFIMA/Dataset/Dataset_Selected_Exogenous')
 getwd()
 data <- read_excel('Brazil_Data.xlsx') %>% rename('Exchange_Rate_braz' = spot_ER_Brazil)                   
 exchange_rate_braz <- ts(data$Exchange_Rate_braz)
-reg_braz <- as.matrix(data[,c(3,4,5,6,7)], ncol = 5)
+reg_braz <- as.matrix(data[,c(4,3,5,6,7)], ncol = 5)
 
 n = 1
 set.seed(100)
@@ -509,8 +509,7 @@ setwd('NARFIMA/Dataset/Dataset_Selected_Exogenous')
 getwd()
 data <- read_excel('Russia_Data.xlsx') %>% rename('Exchange_Rate_rus' = spot_ER_Russia)                   
 exchange_rate_rus <- ts(data$Exchange_Rate_rus)
-reg_rus <- as.matrix(data[,c(3,4,5,6,7)], ncol = 5)
-
+reg_rus <- as.matrix(data[,c(4,3,5,6,7)], ncol = 5)
 
 n = 1
 set.seed(100)
@@ -990,7 +989,7 @@ setwd('NARFIMA/Dataset/Dataset_Selected_Exogenous')
 getwd()
 data <- read_excel('India_Data.xlsx') %>% rename('Exchange_Rate_ind' = spot_ER_India)                   
 exchange_rate_ind <- ts(data$Exchange_Rate_ind)
-reg_ind <- as.matrix(data[,c(3,4,5,6,7)], ncol = 5)
+reg_ind <- as.matrix(data[,c(4,3,5,6,7)], ncol = 5)
 
 n = 1
 set.seed(100)
@@ -1470,7 +1469,7 @@ setwd('NARFIMA/Dataset/Dataset_Selected_Exogenous')
 getwd()
 data <- read_excel('China_Data.xlsx') %>% rename('Exchange_Rate_chn' = spot_ER_China)                   
 exchange_rate_chn <- ts(data$Exchange_Rate_chn)
-reg_chn <- as.matrix(data[,c(3,4,5,6,7)], ncol = 5)
+reg_chn <- as.matrix(data[,c(4,3,5,6,7)], ncol = 5)
 
 n = 1
 set.seed(100)
