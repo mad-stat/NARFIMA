@@ -16,7 +16,7 @@ setwd('NARFIMA/Dataset/Dataset_Selected_Exogenous')
 getwd()
 data <- read_excel('Brazil_Data.xlsx') %>% rename('Exchange_Rate_braz' = spot_ER_Brazil)                   
 exchange_rate_braz <- ts(data$Exchange_Rate_braz)
-reg_braz <- as.matrix(data[,c(3,4,5,6,7)], ncol = 5)
+reg_braz <- as.matrix(data[,c(4,3,5,6,7)], ncol = 5)
 
 
 ##################################################### Evaluation Function #####################################################
@@ -46,7 +46,7 @@ train_braz_1 <- subset(exchange_rate_braz, end = length(exchange_rate_braz) - n)
 test_braz_1 <- subset(exchange_rate_braz, start = length(exchange_rate_braz) - n + 1)
 train_reg_braz_1 <- reg_braz[1:length(train_braz_1),]
 test_reg_braz_1 <- matrix(c(reg_braz[1,1], reg_braz[1,2], reg_braz[1,3], reg_braz[1,4], reg_braz[1,5]), ncol = 5, nrow = 1)
-colnames(test_reg_braz_1) <- c("SR_Interest_rate_diff_B_U", "Oil_price_growth_rate_WTI", "global_EPU(PPP)", "US_EMV" ,"US_MPU")
+colnames(test_reg_braz_1) <- c( "Oil_price_growth_rate_WTI", "SR_Interest_rate_diff_B_U", "global_EPU(PPP)", "US_EMV" ,"US_MPU")
 
 model_evaluate_braz_1 <- tibble()  
 predict_braz_1 <- tibble(Date = as.Date(data$Date[length(train_braz_1) + 1:length(test_braz_1)]))  
