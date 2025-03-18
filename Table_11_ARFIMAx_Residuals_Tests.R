@@ -62,7 +62,7 @@ setwd('NARFIMA/Dataset/Dataset_Selected_Exogenous')
 getwd()
 data <- read_excel('Brazil_Data.xlsx') %>% rename('Exchange_Rate_braz' = spot_ER_Brazil)                   
 exchange_rate_braz <- ts(data$Exchange_Rate_braz)
-reg_braz <- as.matrix(data[,c(3,4,5,6,7)], ncol = 5)
+reg_braz <- as.matrix(data[,c(4,3,5,6,7)], ncol = 5)
 
 n = 1
 set.seed(100)
@@ -70,7 +70,7 @@ train_braz_1 <- subset(exchange_rate_braz, end = length(exchange_rate_braz) - n)
 test_braz_1 <- subset(exchange_rate_braz, start = length(exchange_rate_braz) - n + 1)
 train_reg_braz_1 <- reg_braz[1:length(train_braz_1),]
 test_reg_braz_1 <- matrix(c(reg_braz[1,1], reg_braz[1,2], reg_braz[1,3], reg_braz[1,4], reg_braz[1,5]), ncol = 5, nrow = 1)
-colnames(test_reg_braz_1) <- c("SR_Interest_rate_diff_B_U", "Oil_price_growth_rate_WTI", "global_EPU(PPP)", "US_EMV" ,"US_MPU")
+colnames(test_reg_braz_1) <- c( "Oil_price_growth_rate_WTI", "SR_Interest_rate_diff_B_U", "global_EPU(PPP)", "US_EMV" ,"US_MPU")
 
 
 arfima_braz_1 <- arfima(train_braz_1, xreg = train_reg_braz_1)
@@ -165,7 +165,7 @@ setwd('NARFIMA/Dataset/Dataset_Selected_Exogenous')
 getwd()
 data <- read_excel('Russia_Data.xlsx') %>% rename('Exchange_Rate_rus' = spot_ER_Russia)                   
 exchange_rate_rus <- ts(data$Exchange_Rate_rus)
-reg_rus <- as.matrix(data[,c(3,4,5,6,7)], ncol = 5)
+reg_rus <- as.matrix(data[,c(4,3,5,6,7)], ncol = 5)
 
 n = 1
 set.seed(100)
@@ -267,7 +267,8 @@ setwd('NARFIMA/Dataset/Dataset_Selected_Exogenous')
 getwd()
 data <- read_excel('India_Data.xlsx') %>% rename('Exchange_Rate_ind' = spot_ER_India)                   
 exchange_rate_ind <- ts(data$Exchange_Rate_ind)
-reg_ind <- as.matrix(data[,c(3,4,5,6,7)], ncol = 5)
+reg_ind <- as.matrix(data[,c(4,3,5,6,7)], ncol = 5)
+
 
 n = 1
 set.seed(100)
@@ -368,7 +369,7 @@ setwd('NARFIMA/Dataset/Dataset_Selected_Exogenous')
 getwd()
 data <- read_excel('China_Data.xlsx') %>% rename('Exchange_Rate_chn' = spot_ER_China)                   
 exchange_rate_chn <- ts(data$Exchange_Rate_chn)
-reg_chn <- as.matrix(data[,c(3,4,5,6,7)], ncol = 5)
+reg_chn <- as.matrix(data[,c(4,3,5,6,7)], ncol = 5)
 
 n = 1
 set.seed(100)
