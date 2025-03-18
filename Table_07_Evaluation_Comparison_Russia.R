@@ -16,7 +16,7 @@ setwd('NARFIMA/Dataset/Dataset_Selected_Exogenous')
 getwd()
 data <- read_excel('Russia_Data.xlsx') %>% rename('Exchange_Rate_rus' = spot_ER_Russia)                   
 exchange_rate_rus <- ts(data$Exchange_Rate_rus)
-reg_rus <- as.matrix(data[,c(3,4,5,6,7)], ncol = 5)
+reg_rus <- as.matrix(data[,c(4,3,5,6,7)], ncol = 5)
 
 
 ##################################################### Evaluation Function #####################################################
