@@ -24,7 +24,6 @@ str(all_data_brazil)
 
 endog_data_brazil_all <- all_data_brazil[,c("spot_ER_Brazil", 
                                             "global_EPU_PPP",
-                                            "gprc_brazil",
                                             "US_EMV",
                                             "US_MPU")]
 str(endog_data_brazil_all)
@@ -65,7 +64,6 @@ str(all_data_russia)
 
 endog_data_russia_all <- all_data_russia[,c("spot_ER_Russia", 
                                             "global_EPU_PPP",
-                                            "gprc_russia",
                                             "US_EMV",
                                             "US_MPU")]
 str(endog_data_russia_all)
@@ -107,7 +105,6 @@ str(all_data_india)
 
 endog_data_india_all <- all_data_india[,c("spot_ER_India", 
                                           "global_EPU_PPP",
-                                          "gprc_india",
                                           "US_EMV",
                                           "US_MPU")]
 str(endog_data_india_all)
@@ -149,7 +146,6 @@ str(all_data_china)
 
 endog_data_china_all <- all_data_china[,c("spot_ER_China", 
                                           "global_EPU_PPP",
-                                          "gprc_china",
                                           "US_EMV",
                                           "US_MPU")]
 str(endog_data_china_all)
