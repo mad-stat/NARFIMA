@@ -87,16 +87,29 @@ set.seed(100)
 model_evaluate_braz_1 <- rbind(model_evaluate_braz_1, evaluate(test_braz_1, narfima_braz_1_pred$mean, model = paste0('NBSTS(', narfima_braz_1$p, ',', narfima_braz_1$q, ',', narfima_braz_1$size, ',', narfima_braz_1$skip,')')))
 
 
-# 4- NTBATS - TBATS Error
-tbats_braz_1 <- tbats(train_braz_1)
-tbats_er_braz_1 <-  residuals(tbats_braz_1)
-tbats_er_braz_1[is.na(tbats_er_braz_1)] <-  0
+# 4- NNaïve - Naïve Error
+naive_braz_1 <- naive(train_braz_1, h = n)
+naive_er_braz_1 <-  residuals(naive_braz_1)
+naive_er_braz_1[is.na(naive_er_braz_1)] <-  0
 set.seed(100)
-narfima_braz_1 <-  auto.narfima(train_braz_1, tbats_er_braz_1, p = 5, q = 4, size = 4  , skip = F, xreg = train_reg_braz_1, lambda = 0, lambdae = 0, repeats = 1000)
+narfima_braz_1 <-  auto.narfima(train_braz_1, naive_er_braz_1, p = 5, q = 4, size = 4, skip = F, xreg = train_reg_braz_1, lambda = 0.00001, lambdae = 0.00001, repeats = 1000)
 set.seed(100)
 narfima_braz_1_pred <-  forecast.narfima(narfima_braz_1, PI = FALSE, h = n, xreg = test_reg_braz_1)
 set.seed(100)
-model_evaluate_braz_1 <- rbind(model_evaluate_braz_1, evaluate(test_braz_1, narfima_braz_1_pred$mean, model = paste0('NTBATS(', narfima_braz_1$p, ',', narfima_braz_1$q, ',', narfima_braz_1$size, ',', narfima_braz_1$skip,')')))
+model_evaluate_braz_1 <- rbind(model_evaluate_braz_1, evaluate(test_braz_1, narfima_braz_1_pred$mean, model = paste0('NNaïve(', narfima_braz_1$p, ',', narfima_braz_1$q, ',', narfima_braz_1$size, ',', narfima_braz_1$skip,')')))
+
+
+
+# 4- NTBATS - TBATS Error
+#tbats_braz_1 <- tbats(train_braz_1)
+#tbats_er_braz_1 <-  residuals(tbats_braz_1)
+#tbats_er_braz_1[is.na(tbats_er_braz_1)] <-  0
+#set.seed(100)
+#narfima_braz_1 <-  auto.narfima(train_braz_1, tbats_er_braz_1, p = 5, q = 4, size = 4  , skip = F, xreg = train_reg_braz_1, lambda = 0, lambdae = 0, repeats = 1000)
+#set.seed(100)
+#narfima_braz_1_pred <-  forecast.narfima(narfima_braz_1, PI = FALSE, h = n, xreg = test_reg_braz_1)
+#set.seed(100)
+#model_evaluate_braz_1 <- rbind(model_evaluate_braz_1, evaluate(test_braz_1, narfima_braz_1_pred$mean, model = paste0('NTBATS(', narfima_braz_1$p, ',', narfima_braz_1$q, ',', narfima_braz_1$size, ',', narfima_braz_1$skip,')')))
 
 
 # 5- ARNNx
@@ -166,16 +179,28 @@ set.seed(100)
 model_evaluate_braz_3 <- rbind(model_evaluate_braz_3, evaluate(test_braz_3, narfima_braz_3_pred$mean, model = paste0('NBSTS(', narfima_braz_3$p, ',', narfima_braz_3$q, ',', narfima_braz_3$size, ',', narfima_braz_3$skip,')')))
 
 
-# 4- NTBATS - TBATS Error
-tbats_braz_3 <- tbats(train_braz_3)
-tbats_er_braz_3 <-  residuals(tbats_braz_3)
-tbats_er_braz_3[is.na(tbats_er_braz_3)] <-  0
+# 4- NNaive - Naive Error
+naive_braz_3 <- naive(train_braz_3)
+naive_er_braz_3 <-  residuals(naive_braz_3)
+naive_er_braz_3[is.na(naive_er_braz_3)] <-  0
 set.seed(100)
-narfima_braz_3 <-  auto.narfima(train_braz_3, tbats_er_braz_3, p = 2, q = 5, size = 2  , skip = F, xreg = train_reg_braz_3, lambda = 0, lambdae = 0, repeats = 1000)
+narfima_braz_3 <-  auto.narfima(train_braz_3, naive_er_braz_3, p = 2, q = 5, size = 2  , skip = F, xreg = train_reg_braz_3, lambda = 0.00001, lambdae = 0.00001, repeats = 1000)
 set.seed(100)
 narfima_braz_3_pred <-  forecast.narfima(narfima_braz_3, PI = FALSE, h = n, xreg = test_reg_braz_3)
 set.seed(100)
-model_evaluate_braz_3 <- rbind(model_evaluate_braz_3, evaluate(test_braz_3, narfima_braz_3_pred$mean, model = paste0('NTBATS(', narfima_braz_3$p, ',', narfima_braz_3$q, ',', narfima_braz_3$size, ',', narfima_braz_3$skip,')')))
+model_evaluate_braz_3 <- rbind(model_evaluate_braz_3, evaluate(test_braz_3, narfima_braz_3_pred$mean, model = paste0('NNaive(', narfima_braz_3$p, ',', narfima_braz_3$q, ',', narfima_braz_3$size, ',', narfima_braz_3$skip,')')))
+
+
+# 4- NTBATS - TBATS Error
+#tbats_braz_3 <- tbats(train_braz_3)
+#tbats_er_braz_3 <-  residuals(tbats_braz_3)
+#tbats_er_braz_3[is.na(tbats_er_braz_3)] <-  0
+#set.seed(100)
+#narfima_braz_3 <-  auto.narfima(train_braz_3, tbats_er_braz_3, p = 2, q = 5, size = 2  , skip = F, xreg = train_reg_braz_3, lambda = 0, lambdae = 0, repeats = 1000)
+#set.seed(100)
+#narfima_braz_3_pred <-  forecast.narfima(narfima_braz_3, PI = FALSE, h = n, xreg = test_reg_braz_3)
+#set.seed(100)
+#model_evaluate_braz_3 <- rbind(model_evaluate_braz_3, evaluate(test_braz_3, narfima_braz_3_pred$mean, model = paste0('NTBATS(', narfima_braz_3$p, ',', narfima_braz_3$q, ',', narfima_braz_3$size, ',', narfima_braz_3$skip,')')))
 
 
 # 5- ARNNx
@@ -242,16 +267,28 @@ set.seed(100)
 model_evaluate_braz_6 <- rbind(model_evaluate_braz_6, evaluate(test_braz_6, narfima_braz_6_pred$mean, model = paste0('NBSTS(', narfima_braz_6$p, ',', narfima_braz_6$q, ',', narfima_braz_6$size, ',', narfima_braz_6$skip,')')))
 
 
-# 4- NTBATS - TBATS Error
-tbats_braz_6 <- tbats(train_braz_6)
-tbats_er_braz_6 <-  residuals(tbats_braz_6)
-tbats_er_braz_6[is.na(tbats_er_braz_6)] <-  0
+# 4- NNaive - Naive Error
+naive_braz_6 <- naive(train_braz_6)
+naive_er_braz_6 <-  residuals(naive_braz_6)
+naive_er_braz_6[is.na(naive_er_braz_6)] <-  0
 set.seed(100)
-narfima_braz_6 <-  auto.narfima(train_braz_6, tbats_er_braz_6, p = 1, q = 2, size = 1  , skip = F, xreg = train_reg_braz_6, lambda = 0, lambdae = 0, repeats = 1000)
+narfima_braz_6 <-  auto.narfima(train_braz_6, naive_er_braz_6, p = 1, q = 2, size = 1, skip = F, xreg = train_reg_braz_6, lambda = 0.00001, lambdae = 0.00001, repeats = 1000)
 set.seed(100)
 narfima_braz_6_pred <-  forecast.narfima(narfima_braz_6, PI = FALSE, h = n, xreg = test_reg_braz_6)
 set.seed(100)
-model_evaluate_braz_6 <- rbind(model_evaluate_braz_6, evaluate(test_braz_6, narfima_braz_6_pred$mean, model = paste0('NTBATS(', narfima_braz_6$p, ',', narfima_braz_6$q, ',', narfima_braz_6$size, ',', narfima_braz_6$skip,')')))
+model_evaluate_braz_6 <- rbind(model_evaluate_braz_6, evaluate(test_braz_6, narfima_braz_6_pred$mean, model = paste0('NNaive(', narfima_braz_6$p, ',', narfima_braz_6$q, ',', narfima_braz_6$size, ',', narfima_braz_6$skip,')')))
+
+
+# 4- NTBATS - TBATS Error
+#tbats_braz_6 <- tbats(train_braz_6)
+#tbats_er_braz_6 <-  residuals(tbats_braz_6)
+#tbats_er_braz_6[is.na(tbats_er_braz_6)] <-  0
+#set.seed(100)
+#narfima_braz_6 <-  auto.narfima(train_braz_6, tbats_er_braz_6, p = 1, q = 2, size = 1, skip = F, xreg = train_reg_braz_6, lambda = 0, lambdae = 0, repeats = 1000)
+#set.seed(100)
+#narfima_braz_6_pred <-  forecast.narfima(narfima_braz_6, PI = FALSE, h = n, xreg = test_reg_braz_6)
+#set.seed(100)
+#model_evaluate_braz_6 <- rbind(model_evaluate_braz_6, evaluate(test_braz_6, narfima_braz_6_pred$mean, model = paste0('NTBATS(', narfima_braz_6$p, ',', narfima_braz_6$q, ',', narfima_braz_6$size, ',', narfima_braz_6$skip,')')))
 
 
 # 5- ARNNx
@@ -321,16 +358,28 @@ set.seed(100)
 model_evaluate_braz_12 <- rbind(model_evaluate_braz_12, evaluate(test_braz_12, narfima_braz_12_pred$mean, model = paste0('NBSTS(', narfima_braz_12$p, ',', narfima_braz_12$q, ',', narfima_braz_12$size, ',', narfima_braz_12$skip,')')))
 
 
-# 4- NTBATS - TBATS Error
-tbats_braz_12 <- tbats(train_braz_12)
-tbats_er_braz_12 <-  residuals(tbats_braz_12)
-tbats_er_braz_12[is.na(tbats_er_braz_12)] <-  0
+# 4- NNaive - Naive Error
+naive_braz_12 <- naive(train_braz_12)
+naive_er_braz_12 <-  residuals(naive_braz_12)
+naive_er_braz_12[is.na(naive_er_braz_12)] <-  0
 set.seed(100)
-narfima_braz_12 <-  auto.narfima(train_braz_12, tbats_er_braz_12, p = 1, q = 1, size = 1  , skip = F, xreg = train_reg_braz_12, lambda = 0, lambdae = 0, repeats = 1000)
+narfima_braz_12 <-  auto.narfima(train_braz_12, naive_er_braz_12, p = 1, q = 1, size = 1, skip = F, xreg = train_reg_braz_12, lambda = 0.00001, lambdae = 0.00001, repeats = 1000)
 set.seed(100)
 narfima_braz_12_pred <-  forecast.narfima(narfima_braz_12, PI = FALSE, h = n, xreg = test_reg_braz_12)
 set.seed(100)
-model_evaluate_braz_12 <- rbind(model_evaluate_braz_12, evaluate(test_braz_12, narfima_braz_12_pred$mean, model = paste0('NTBATS(', narfima_braz_12$p, ',', narfima_braz_12$q, ',', narfima_braz_12$size, ',', narfima_braz_12$skip,')')))
+model_evaluate_braz_12 <- rbind(model_evaluate_braz_12, evaluate(test_braz_12, narfima_braz_12_pred$mean, model = paste0('NNaive(', narfima_braz_12$p, ',', narfima_braz_12$q, ',', narfima_braz_12$size, ',', narfima_braz_12$skip,')')))
+
+
+# 4- NTBATS - TBATS Error
+#tbats_braz_12 <- tbats(train_braz_12)
+#tbats_er_braz_12 <-  residuals(tbats_braz_12)
+#tbats_er_braz_12[is.na(tbats_er_braz_12)] <-  0
+#set.seed(100)
+#narfima_braz_12 <-  auto.narfima(train_braz_12, tbats_er_braz_12, p = 1, q = 1, size = 1  , skip = F, xreg = train_reg_braz_12, lambda = 0, lambdae = 0, repeats = 1000)
+#set.seed(100)
+#narfima_braz_12_pred <-  forecast.narfima(narfima_braz_12, PI = FALSE, h = n, xreg = test_reg_braz_12)
+#set.seed(100)
+#model_evaluate_braz_12 <- rbind(model_evaluate_braz_12, evaluate(test_braz_12, narfima_braz_12_pred$mean, model = paste0('NTBATS(', narfima_braz_12$p, ',', narfima_braz_12$q, ',', narfima_braz_12$size, ',', narfima_braz_12$skip,')')))
 
 
 # 5- ARNNx
@@ -401,15 +450,27 @@ model_evaluate_braz_24 <- rbind(model_evaluate_braz_24, evaluate(test_braz_24, n
 
 
 # 4- NTBATS - TBATS Error
-tbats_braz_24 <- tbats(train_braz_24)
-tbats_er_braz_24 <-  residuals(tbats_braz_24)
-tbats_er_braz_24[is.na(tbats_er_braz_24)] <-  0
+naive_braz_24 <- naive(train_braz_24)
+naive_er_braz_24 <-  residuals(naive_braz_24)
+naive_er_braz_24[is.na(naive_er_braz_24)] <-  0
 set.seed(100)
-narfima_braz_24 <-  auto.narfima(train_braz_24, tbats_er_braz_24, p = 2, q = 5, size = 1, skip = F, xreg = train_reg_braz_24, lambda = 0, lambdae = 0, repeats = 1000)
+narfima_braz_24 <-  auto.narfima(train_braz_24, naive_er_braz_24, p = 2, q = 5, size = 1, skip = F, xreg = train_reg_braz_24, lambda = 0.00001, lambdae = 0.00001, repeats = 1000)
 set.seed(100)
 narfima_braz_24_pred <-  forecast.narfima(narfima_braz_24, PI = FALSE, h = n, xreg = test_reg_braz_24)
 set.seed(100)
-model_evaluate_braz_24 <- rbind(model_evaluate_braz_24, evaluate(test_braz_24, narfima_braz_24_pred$mean, model = paste0('NTBATS(', narfima_braz_24$p, ',', narfima_braz_24$q, ',', narfima_braz_24$size, ',', narfima_braz_24$skip,')')))
+model_evaluate_braz_24 <- rbind(model_evaluate_braz_24, evaluate(test_braz_24, narfima_braz_24_pred$mean, model = paste0('NNaive(', narfima_braz_24$p, ',', narfima_braz_24$q, ',', narfima_braz_24$size, ',', narfima_braz_24$skip,')')))
+
+
+# 4- NTBATS - TBATS Error
+#tbats_braz_24 <- tbats(train_braz_24)
+#tbats_er_braz_24 <-  residuals(tbats_braz_24)
+#tbats_er_braz_24[is.na(tbats_er_braz_24)] <-  0
+#set.seed(100)
+#narfima_braz_24 <-  auto.narfima(train_braz_24, tbats_er_braz_24, p = 2, q = 5, size = 1, skip = F, xreg = train_reg_braz_24, lambda = 0, lambdae = 0, repeats = 1000)
+#set.seed(100)
+#narfima_braz_24_pred <-  forecast.narfima(narfima_braz_24, PI = FALSE, h = n, xreg = test_reg_braz_24)
+#set.seed(100)
+#model_evaluate_braz_24 <- rbind(model_evaluate_braz_24, evaluate(test_braz_24, narfima_braz_24_pred$mean, model = paste0('NTBATS(', narfima_braz_24$p, ',', narfima_braz_24$q, ',', narfima_braz_24$size, ',', narfima_braz_24$skip,')')))
 
 
 # 5- ARNNx
@@ -479,16 +540,28 @@ set.seed(100)
 model_evaluate_braz_48 <- rbind(model_evaluate_braz_48, evaluate(test_braz_48, narfima_braz_48_pred$mean, model = paste0('NBSTS(', narfima_braz_48$p, ',', narfima_braz_48$q, ',', narfima_braz_48$size, ',', narfima_braz_48$skip,')')))
 
 
-# 4- NTBATS - TBATS Error
-tbats_braz_48 <- tbats(train_braz_48)
-tbats_er_braz_48 <-  residuals(tbats_braz_48)
-tbats_er_braz_48[is.na(tbats_er_braz_48)] <-  0
+# 4- NNaive - Naive Error
+naive_braz_48 <- naive(train_braz_48)
+naive_er_braz_48 <-  residuals(naive_braz_48)
+naive_er_braz_48[is.na(naive_er_braz_48)] <-  0
 set.seed(100)
-narfima_braz_48 <-  auto.narfima(train_braz_48, tbats_er_braz_48, p = 4, q = 2, size = 1  , skip = T, xreg = train_reg_braz_48, lambda = 0, lambdae = 0, repeats = 1000)
+narfima_braz_48 <-  auto.narfima(train_braz_48, naive_er_braz_48, p = 4, q = 2, size = 1, skip = T, xreg = train_reg_braz_48, lambda = 0.00001, lambdae = 0.00001, repeats = 1000)
 set.seed(100)
 narfima_braz_48_pred <-  forecast.narfima(narfima_braz_48, PI = FALSE, h = n, xreg = test_reg_braz_48)
 set.seed(100)
-model_evaluate_braz_48 <- rbind(model_evaluate_braz_48, evaluate(test_braz_48, narfima_braz_48_pred$mean, model = paste0('NTBATS(', narfima_braz_48$p, ',', narfima_braz_48$q, ',', narfima_braz_48$size, ',', narfima_braz_48$skip,')')))
+model_evaluate_braz_48 <- rbind(model_evaluate_braz_48, evaluate(test_braz_48, narfima_braz_48_pred$mean, model = paste0('NNaive(', narfima_braz_48$p, ',', narfima_braz_48$q, ',', narfima_braz_48$size, ',', narfima_braz_48$skip,')')))
+
+
+# 4- NTBATS - TBATS Error
+#tbats_braz_48 <- tbats(train_braz_48)
+#tbats_er_braz_48 <-  residuals(tbats_braz_48)
+#tbats_er_braz_48[is.na(tbats_er_braz_48)] <-  0
+#set.seed(100)
+#narfima_braz_48 <-  auto.narfima(train_braz_48, tbats_er_braz_48, p = 4, q = 2, size = 1  , skip = T, xreg = train_reg_braz_48, lambda = 0, lambdae = 0, repeats = 1000)
+#set.seed(100)
+#narfima_braz_48_pred <-  forecast.narfima(narfima_braz_48, PI = FALSE, h = n, xreg = test_reg_braz_48)
+#set.seed(100)
+#model_evaluate_braz_48 <- rbind(model_evaluate_braz_48, evaluate(test_braz_48, narfima_braz_48_pred$mean, model = paste0('NTBATS(', narfima_braz_48$p, ',', narfima_braz_48$q, ',', narfima_braz_48$size, ',', narfima_braz_48$skip,')')))
 
 
 # 5- ARNNx
@@ -567,16 +640,28 @@ set.seed(100)
 model_evaluate_rus_1 <- rbind(model_evaluate_rus_1, evaluate(test_rus_1, narfima_rus_1_pred$mean, model = paste0('NBSTS(', narfima_rus_1$p, ',', narfima_rus_1$q, ',', narfima_rus_1$size, ',', narfima_rus_1$skip,')')))
 
 
-# 4- NTBATS - TBATS Error
-tbats_rus_1 <- tbats(train_rus_1)
-tbats_er_rus_1 <-  residuals(tbats_rus_1)
-tbats_er_rus_1[is.na(tbats_er_rus_1)] <-  0
+# 4- NNaive - Naive Error
+naive_rus_1 <- naive(train_rus_1)
+naive_er_rus_1 <-  residuals(naive_rus_1)
+naive_er_rus_1[is.na(naive_er_rus_1)] <-  0
 set.seed(100)
-narfima_rus_1 <-  auto.narfima(train_rus_1, tbats_er_rus_1, p = 1, q = 2, size = 2, skip = T, xreg = train_reg_rus_1, lambda = 0, lambdae = 0, repeats = 1000)
+narfima_rus_1 <-  auto.narfima(train_rus_1, naive_er_rus_1, p = 1, q = 2, size = 2, skip = T, xreg = train_reg_rus_1, lambda = 0.00001, lambdae = 0.00001, repeats = 1000)
 set.seed(100)
 narfima_rus_1_pred <-  forecast.narfima(narfima_rus_1, PI = FALSE, h = n, xreg = test_reg_rus_1)
 set.seed(100)
-model_evaluate_rus_1 <- rbind(model_evaluate_rus_1, evaluate(test_rus_1, narfima_rus_1_pred$mean, model = paste0('NTBATS(', narfima_rus_1$p, ',', narfima_rus_1$q, ',', narfima_rus_1$size, ',', narfima_rus_1$skip,')')))
+model_evaluate_rus_1 <- rbind(model_evaluate_rus_1, evaluate(test_rus_1, narfima_rus_1_pred$mean, model = paste0('NNaive(', narfima_rus_1$p, ',', narfima_rus_1$q, ',', narfima_rus_1$size, ',', narfima_rus_1$skip,')')))
+
+
+# 4- NTBATS - TBATS Error
+#tbats_rus_1 <- tbats(train_rus_1)
+#tbats_er_rus_1 <-  residuals(tbats_rus_1)
+#tbats_er_rus_1[is.na(tbats_er_rus_1)] <-  0
+#set.seed(100)
+#narfima_rus_1 <-  auto.narfima(train_rus_1, tbats_er_rus_1, p = 1, q = 2, size = 2, skip = T, xreg = train_reg_rus_1, lambda = 0, lambdae = 0, repeats = 1000)
+#set.seed(100)
+#narfima_rus_1_pred <-  forecast.narfima(narfima_rus_1, PI = FALSE, h = n, xreg = test_reg_rus_1)
+#set.seed(100)
+#model_evaluate_rus_1 <- rbind(model_evaluate_rus_1, evaluate(test_rus_1, narfima_rus_1_pred$mean, model = paste0('NTBATS(', narfima_rus_1$p, ',', narfima_rus_1$q, ',', narfima_rus_1$size, ',', narfima_rus_1$skip,')')))
 
 
 # 5- ARNNx
@@ -646,16 +731,28 @@ set.seed(100)
 model_evaluate_rus_3 <- rbind(model_evaluate_rus_3, evaluate(test_rus_3, narfima_rus_3_pred$mean, model = paste0('NBSTS(', narfima_rus_3$p, ',', narfima_rus_3$q, ',', narfima_rus_3$size, ',', narfima_rus_3$skip,')')))
 
 
-# 4- NTBATS - TBATS Error
-tbats_rus_3 <- tbats(train_rus_3)
-tbats_er_rus_3 <-  residuals(tbats_rus_3)
-tbats_er_rus_3[is.na(tbats_er_rus_3)] <-  0
+# 4- NNaive - Naive Error
+naive_rus_3 <- naive(train_rus_3)
+naive_er_rus_3 <-  residuals(naive_rus_3)
+naive_er_rus_3[is.na(naive_er_rus_3)] <-  0
 set.seed(100)
-narfima_rus_3 <-  auto.narfima(train_rus_3, tbats_er_rus_3, p = 1, q = 1, size = 1, skip = F, xreg = train_reg_rus_3, lambda = 0, lambdae = 0, repeats = 1000)
+narfima_rus_3 <-  auto.narfima(train_rus_3, naive_er_rus_3, p = 1, q = 1, size = 1, skip = F, xreg = train_reg_rus_3, lambda = 0.00001, lambdae = 0.00001, repeats = 1000)
 set.seed(100)
 narfima_rus_3_pred <-  forecast.narfima(narfima_rus_3, PI = FALSE, h = n, xreg = test_reg_rus_3)
 set.seed(100)
-model_evaluate_rus_3 <- rbind(model_evaluate_rus_3, evaluate(test_rus_3, narfima_rus_3_pred$mean, model = paste0('NTBATS(', narfima_rus_3$p, ',', narfima_rus_3$q, ',', narfima_rus_3$size, ',', narfima_rus_3$skip,')')))
+model_evaluate_rus_3 <- rbind(model_evaluate_rus_3, evaluate(test_rus_3, narfima_rus_3_pred$mean, model = paste0('NNaive(', narfima_rus_3$p, ',', narfima_rus_3$q, ',', narfima_rus_3$size, ',', narfima_rus_3$skip,')')))
+
+
+# 4- NTBATS - TBATS Error
+#tbats_rus_3 <- tbats(train_rus_3)
+#tbats_er_rus_3 <-  residuals(tbats_rus_3)
+#tbats_er_rus_3[is.na(tbats_er_rus_3)] <-  0
+#set.seed(100)
+#narfima_rus_3 <-  auto.narfima(train_rus_3, tbats_er_rus_3, p = 1, q = 1, size = 1, skip = F, xreg = train_reg_rus_3, lambda = 0, lambdae = 0, repeats = 1000)
+#set.seed(100)
+#narfima_rus_3_pred <-  forecast.narfima(narfima_rus_3, PI = FALSE, h = n, xreg = test_reg_rus_3)
+#set.seed(100)
+#model_evaluate_rus_3 <- rbind(model_evaluate_rus_3, evaluate(test_rus_3, narfima_rus_3_pred$mean, model = paste0('NTBATS(', narfima_rus_3$p, ',', narfima_rus_3$q, ',', narfima_rus_3$size, ',', narfima_rus_3$skip,')')))
 
 
 # 5- ARNNx
@@ -720,6 +817,18 @@ set.seed(100)
 narfima_rus_6_pred <-  forecast.narfima(narfima_rus_6, PI = FALSE, h = n, xreg = test_reg_rus_6)
 set.seed(100)
 model_evaluate_rus_6 <- rbind(model_evaluate_rus_6, evaluate(test_rus_6, narfima_rus_6_pred$mean, model = paste0('NBSTS(', narfima_rus_6$p, ',', narfima_rus_6$q, ',', narfima_rus_6$size, ',', narfima_rus_6$skip,')')))
+
+
+# 4- NNaive - Naive Error
+naive_rus_6 <- naive(train_rus_6)
+naive_er_rus_6 <-  residuals(naive_rus_6)
+naive_er_rus_6[is.na(naive_er_rus_6)] <-  0
+set.seed(100)
+narfima_rus_6 <-  auto.narfima(train_rus_6, naive_er_rus_6, p = 1, q = 1, size = 1, skip = F, xreg = train_reg_rus_6, lambda = 0.00001, lambdae = 0.00001, repeats = 1000)
+set.seed(100)
+narfima_rus_6_pred <-  forecast.narfima(narfima_rus_6, PI = FALSE, h = n, xreg = test_reg_rus_6)
+set.seed(100)
+model_evaluate_rus_6 <- rbind(model_evaluate_rus_6, evaluate(test_rus_6, narfima_rus_6_pred$mean, model = paste0('NNaive(', narfima_rus_6$p, ',', narfima_rus_6$q, ',', narfima_rus_6$size, ',', narfima_rus_6$skip,')')))
 
 
 # 4- NTBATS - TBATS Error
@@ -801,16 +910,28 @@ set.seed(100)
 model_evaluate_rus_12 <- rbind(model_evaluate_rus_12, evaluate(test_rus_12, narfima_rus_12_pred$mean, model = paste0('NBSTS(', narfima_rus_12$p, ',', narfima_rus_12$q, ',', narfima_rus_12$size, ',', narfima_rus_12$skip,')')))
 
 
-# 4- NTBATS - TBATS Error
-tbats_rus_12 <- tbats(train_rus_12)
-tbats_er_rus_12 <-  residuals(tbats_rus_12)
-tbats_er_rus_12[is.na(tbats_er_rus_12)] <-  0
+# 4- NNaive - Naive Error
+naive_rus_12 <- naive(train_rus_12)
+naive_er_rus_12 <-  residuals(naive_rus_12)
+naive_er_rus_12[is.na(naive_er_rus_12)] <-  0
 set.seed(100)
-narfima_rus_12 <-  auto.narfima(train_rus_12, tbats_er_rus_12, p = 5, q = 2, size = 5, skip = T, xreg = train_reg_rus_12, lambda = 0, lambdae = 0, repeats = 1000)
+narfima_rus_12 <-  auto.narfima(train_rus_12, naive_er_rus_12, p = 5, q = 2, size = 5, skip = T, xreg = train_reg_rus_12, lambda = 0.00001, lambdae = 0.00001, repeats = 1000)
 set.seed(100)
 narfima_rus_12_pred <-  forecast.narfima(narfima_rus_12, PI = FALSE, h = n, xreg = test_reg_rus_12)
 set.seed(100)
-model_evaluate_rus_12 <- rbind(model_evaluate_rus_12, evaluate(test_rus_12, narfima_rus_12_pred$mean, model = paste0('NTBATS(', narfima_rus_12$p, ',', narfima_rus_12$q, ',', narfima_rus_12$size, ',', narfima_rus_12$skip,')')))
+model_evaluate_rus_12 <- rbind(model_evaluate_rus_12, evaluate(test_rus_12, narfima_rus_12_pred$mean, model = paste0('NNaive(', narfima_rus_12$p, ',', narfima_rus_12$q, ',', narfima_rus_12$size, ',', narfima_rus_12$skip,')')))
+
+
+# 4- NTBATS - TBATS Error
+#tbats_rus_12 <- tbats(train_rus_12)
+#tbats_er_rus_12 <-  residuals(tbats_rus_12)
+#tbats_er_rus_12[is.na(tbats_er_rus_12)] <-  0
+#set.seed(100)
+#narfima_rus_12 <-  auto.narfima(train_rus_12, tbats_er_rus_12, p = 5, q = 2, size = 5, skip = T, xreg = train_reg_rus_12, lambda = 0, lambdae = 0, repeats = 1000)
+#set.seed(100)
+#narfima_rus_12_pred <-  forecast.narfima(narfima_rus_12, PI = FALSE, h = n, xreg = test_reg_rus_12)
+#set.seed(100)
+#model_evaluate_rus_12 <- rbind(model_evaluate_rus_12, evaluate(test_rus_12, narfima_rus_12_pred$mean, model = paste0('NTBATS(', narfima_rus_12$p, ',', narfima_rus_12$q, ',', narfima_rus_12$size, ',', narfima_rus_12$skip,')')))
 
 
 # 5- ARNNx
@@ -879,17 +1000,28 @@ narfima_rus_24_pred <-  forecast.narfima(narfima_rus_24, PI = FALSE, h = n, xreg
 set.seed(100)
 model_evaluate_rus_24 <- rbind(model_evaluate_rus_24, evaluate(test_rus_24, narfima_rus_24_pred$mean, model = paste0('NBSTS(', narfima_rus_24$p, ',', narfima_rus_24$q, ',', narfima_rus_24$size, ',', narfima_rus_24$skip,')')))
 
-
-# 4- NTBATS - TBATS Error
-tbats_rus_24 <- tbats(train_rus_24)
-tbats_er_rus_24 <-  residuals(tbats_rus_24)
-tbats_er_rus_24[is.na(tbats_er_rus_24)] <-  0
+# 4- NNaive - Naive Error
+naive_rus_24 <- naive(train_rus_24)
+naive_er_rus_24 <-  residuals(naive_rus_24)
+naive_er_rus_24[is.na(naive_er_rus_24)] <-  0
 set.seed(100)
-narfima_rus_24 <-  auto.narfima(train_rus_24, tbats_er_rus_24, p = 1, q = 1, size = 5, skip = T, xreg = train_reg_rus_24, lambda = 0, lambdae = 0, repeats = 1000)
+narfima_rus_24 <-  auto.narfima(train_rus_24, naive_er_rus_24, p = 1, q = 1, size = 5, skip = T, xreg = train_reg_rus_24, lambda = 0.00001, lambdae = 0.00001, repeats = 1000)
 set.seed(100)
 narfima_rus_24_pred <-  forecast.narfima(narfima_rus_24, PI = FALSE, h = n, xreg = test_reg_rus_24)
 set.seed(100)
-model_evaluate_rus_24 <- rbind(model_evaluate_rus_24, evaluate(test_rus_24, narfima_rus_24_pred$mean, model = paste0('NTBATS(', narfima_rus_24$p, ',', narfima_rus_24$q, ',', narfima_rus_24$size, ',', narfima_rus_24$skip,')')))
+model_evaluate_rus_24 <- rbind(model_evaluate_rus_24, evaluate(test_rus_24, narfima_rus_24_pred$mean, model = paste0('NNaive(', narfima_rus_24$p, ',', narfima_rus_24$q, ',', narfima_rus_24$size, ',', narfima_rus_24$skip,')')))
+
+
+# 4- NTBATS - TBATS Error
+#tbats_rus_24 <- tbats(train_rus_24)
+#tbats_er_rus_24 <-  residuals(tbats_rus_24)
+#tbats_er_rus_24[is.na(tbats_er_rus_24)] <-  0
+#set.seed(100)
+#narfima_rus_24 <-  auto.narfima(train_rus_24, tbats_er_rus_24, p = 1, q = 1, size = 5, skip = T, xreg = train_reg_rus_24, lambda = 0, lambdae = 0, repeats = 1000)
+#set.seed(100)
+#narfima_rus_24_pred <-  forecast.narfima(narfima_rus_24, PI = FALSE, h = n, xreg = test_reg_rus_24)
+#set.seed(100)
+#model_evaluate_rus_24 <- rbind(model_evaluate_rus_24, evaluate(test_rus_24, narfima_rus_24_pred$mean, model = paste0('NTBATS(', narfima_rus_24$p, ',', narfima_rus_24$q, ',', narfima_rus_24$size, ',', narfima_rus_24$skip,')')))
 
 
 # 5- ARNNx
@@ -959,16 +1091,28 @@ set.seed(100)
 model_evaluate_rus_48 <- rbind(model_evaluate_rus_48, evaluate(test_rus_48, narfima_rus_48_pred$mean, model = paste0('NBSTS(', narfima_rus_48$p, ',', narfima_rus_48$q, ',', narfima_rus_48$size, ',', narfima_rus_48$skip,')')))
 
 
-# 4- NTBATS - TBATS Error
-tbats_rus_48 <- tbats(train_rus_48)
-tbats_er_rus_48 <-  residuals(tbats_rus_48)
-tbats_er_rus_48[is.na(tbats_er_rus_48)] <-  0
+# 4- NNaive - Naive Error
+naive_rus_48 <- naive(train_rus_48)
+naive_er_rus_48 <-  residuals(naive_rus_48)
+naive_er_rus_48[is.na(naive_er_rus_48)] <-  0
 set.seed(100)
-narfima_rus_48 <-  auto.narfima(train_rus_48, tbats_er_rus_48, p = 3, q = 2, size = 1, skip = F, xreg = train_reg_rus_48, lambda = 0, lambdae = 0, repeats = 1000)
+narfima_rus_48 <-  auto.narfima(train_rus_48, naive_er_rus_48, p = 3, q = 2, size = 1, skip = F, xreg = train_reg_rus_48, lambda = 0.00001, lambdae = 0.00001, repeats = 1000)
 set.seed(100)
 narfima_rus_48_pred <-  forecast.narfima(narfima_rus_48, PI = FALSE, h = n, xreg = test_reg_rus_48)
 set.seed(100)
-model_evaluate_rus_48 <- rbind(model_evaluate_rus_48, evaluate(test_rus_48, narfima_rus_48_pred$mean, model = paste0('NTBATS(', narfima_rus_48$p, ',', narfima_rus_48$q, ',', narfima_rus_48$size, ',', narfima_rus_48$skip,')')))
+model_evaluate_rus_48 <- rbind(model_evaluate_rus_48, evaluate(test_rus_48, narfima_rus_48_pred$mean, model = paste0('NNaive(', narfima_rus_48$p, ',', narfima_rus_48$q, ',', narfima_rus_48$size, ',', narfima_rus_48$skip,')')))
+
+
+# 4- NTBATS - TBATS Error
+#tbats_rus_48 <- tbats(train_rus_48)
+#tbats_er_rus_48 <-  residuals(tbats_rus_48)
+#tbats_er_rus_48[is.na(tbats_er_rus_48)] <-  0
+#set.seed(100)
+#narfima_rus_48 <-  auto.narfima(train_rus_48, tbats_er_rus_48, p = 3, q = 2, size = 1, skip = F, xreg = train_reg_rus_48, lambda = 0, lambdae = 0, repeats = 1000)
+#set.seed(100)
+#narfima_rus_48_pred <-  forecast.narfima(narfima_rus_48, PI = FALSE, h = n, xreg = test_reg_rus_48)
+#set.seed(100)
+#model_evaluate_rus_48 <- rbind(model_evaluate_rus_48, evaluate(test_rus_48, narfima_rus_48_pred$mean, model = paste0('NTBATS(', narfima_rus_48$p, ',', narfima_rus_48$q, ',', narfima_rus_48$size, ',', narfima_rus_48$skip,')')))
 
 
 # 5- ARNNx
@@ -1047,16 +1191,28 @@ set.seed(100)
 model_evaluate_ind_1 <- rbind(model_evaluate_ind_1, evaluate(test_ind_1, narfima_ind_1_pred$mean, model = paste0('NBSTS(', narfima_ind_1$p, ',', narfima_ind_1$q, ',', narfima_ind_1$size, ',', narfima_ind_1$skip,')')))
 
 
-# 4- NTBATS - TBATS Error
-tbats_ind_1 <- tbats(train_ind_1)
-tbats_er_ind_1 <-  residuals(tbats_ind_1)
-tbats_er_ind_1[is.na(tbats_er_ind_1)] <-  0
+# 4- NNaive - Naive Error
+naive_ind_1 <- naive(train_ind_1)
+naive_er_ind_1 <-  residuals(naive_ind_1)
+naive_er_ind_1[is.na(naive_er_ind_1)] <-  0
 set.seed(100)
-narfima_ind_1 <-  auto.narfima(train_ind_1, tbats_er_ind_1, p = 2, q = 1, size = 1, skip = T, xreg = train_reg_ind_1, lambda = 0, lambdae = 0, repeats = 1000)
+narfima_ind_1 <-  auto.narfima(train_ind_1, naive_er_ind_1, p = 2, q = 1, size = 1, skip = T, xreg = train_reg_ind_1, lambda = 0.00001, lambdae = 0.00001, repeats = 1000)
 set.seed(100)
 narfima_ind_1_pred <-  forecast.narfima(narfima_ind_1, PI = FALSE, h = n, xreg = test_reg_ind_1)
 set.seed(100)
-model_evaluate_ind_1 <- rbind(model_evaluate_ind_1, evaluate(test_ind_1, narfima_ind_1_pred$mean, model = paste0('NTBATS(', narfima_ind_1$p, ',', narfima_ind_1$q, ',', narfima_ind_1$size, ',', narfima_ind_1$skip,')')))
+model_evaluate_ind_1 <- rbind(model_evaluate_ind_1, evaluate(test_ind_1, narfima_ind_1_pred$mean, model = paste0('NNaive(', narfima_ind_1$p, ',', narfima_ind_1$q, ',', narfima_ind_1$size, ',', narfima_ind_1$skip,')')))
+
+
+# 4- NTBATS - TBATS Error
+#tbats_ind_1 <- tbats(train_ind_1)
+#tbats_er_ind_1 <-  residuals(tbats_ind_1)
+#tbats_er_ind_1[is.na(tbats_er_ind_1)] <-  0
+#set.seed(100)
+#narfima_ind_1 <-  auto.narfima(train_ind_1, tbats_er_ind_1, p = 2, q = 1, size = 1, skip = T, xreg = train_reg_ind_1, lambda = 0, lambdae = 0, repeats = 1000)
+#set.seed(100)
+#narfima_ind_1_pred <-  forecast.narfima(narfima_ind_1, PI = FALSE, h = n, xreg = test_reg_ind_1)
+#set.seed(100)
+#model_evaluate_ind_1 <- rbind(model_evaluate_ind_1, evaluate(test_ind_1, narfima_ind_1_pred$mean, model = paste0('NTBATS(', narfima_ind_1$p, ',', narfima_ind_1$q, ',', narfima_ind_1$size, ',', narfima_ind_1$skip,')')))
 
 
 # 5- ARNNx
@@ -1126,16 +1282,28 @@ set.seed(100)
 model_evaluate_ind_3 <- rbind(model_evaluate_ind_3, evaluate(test_ind_3, narfima_ind_3_pred$mean, model = paste0('NBSTS(', narfima_ind_3$p, ',', narfima_ind_3$q, ',', narfima_ind_3$size, ',', narfima_ind_3$skip,')')))
 
 
-# 4- NTBATS - TBATS Error
-tbats_ind_3 <- tbats(train_ind_3)
-tbats_er_ind_3 <-  residuals(tbats_ind_3)
-tbats_er_ind_3[is.na(tbats_er_ind_3)] <-  0
+# 4- NNaive - Naive Error
+naive_ind_3 <- naive(train_ind_3)
+naive_er_ind_3 <-  residuals(naive_ind_3)
+naive_er_ind_3[is.na(naive_er_ind_3)] <-  0
 set.seed(100)
-narfima_ind_3 <-  auto.narfima(train_ind_3, tbats_er_ind_3, p = 4, q = 3, size = 4, skip = T, xreg = train_reg_ind_3, lambda = 0, lambdae = 0, repeats = 1000)
+narfima_ind_3 <-  auto.narfima(train_ind_3, naive_er_ind_3, p = 4, q = 3, size = 4, skip = T, xreg = train_reg_ind_3, lambda = 0.00001, lambdae = 0.00001, repeats = 1000)
 set.seed(100)
 narfima_ind_3_pred <-  forecast.narfima(narfima_ind_3, PI = FALSE, h = n, xreg = test_reg_ind_3)
 set.seed(100)
-model_evaluate_ind_3 <- rbind(model_evaluate_ind_3, evaluate(test_ind_3, narfima_ind_3_pred$mean, model = paste0('NTBATS(', narfima_ind_3$p, ',', narfima_ind_3$q, ',', narfima_ind_3$size, ',', narfima_ind_3$skip,')')))
+model_evaluate_ind_3 <- rbind(model_evaluate_ind_3, evaluate(test_ind_3, narfima_ind_3_pred$mean, model = paste0('NNaive(', narfima_ind_3$p, ',', narfima_ind_3$q, ',', narfima_ind_3$size, ',', narfima_ind_3$skip,')')))
+
+
+# 4- NTBATS - TBATS Error
+#tbats_ind_3 <- tbats(train_ind_3)
+#tbats_er_ind_3 <-  residuals(tbats_ind_3)
+#tbats_er_ind_3[is.na(tbats_er_ind_3)] <-  0
+#set.seed(100)
+#narfima_ind_3 <-  auto.narfima(train_ind_3, tbats_er_ind_3, p = 4, q = 3, size = 4, skip = T, xreg = train_reg_ind_3, lambda = 0, lambdae = 0, repeats = 1000)
+#set.seed(100)
+#narfima_ind_3_pred <-  forecast.narfima(narfima_ind_3, PI = FALSE, h = n, xreg = test_reg_ind_3)
+#set.seed(100)
+#model_evaluate_ind_3 <- rbind(model_evaluate_ind_3, evaluate(test_ind_3, narfima_ind_3_pred$mean, model = paste0('NTBATS(', narfima_ind_3$p, ',', narfima_ind_3$q, ',', narfima_ind_3$size, ',', narfima_ind_3$skip,')')))
 
 
 # 5- ARNNx
@@ -1202,16 +1370,28 @@ set.seed(100)
 model_evaluate_ind_6 <- rbind(model_evaluate_ind_6, evaluate(test_ind_6, narfima_ind_6_pred$mean, model = paste0('NBSTS(', narfima_ind_6$p, ',', narfima_ind_6$q, ',', narfima_ind_6$size, ',', narfima_ind_6$skip,')')))
 
 
-# 4- NTBATS - TBATS Error
-tbats_ind_6 <- tbats(train_ind_6)
-tbats_er_ind_6 <-  residuals(tbats_ind_6)
-tbats_er_ind_6[is.na(tbats_er_ind_6)] <-  0
+# 4- NNaive - Naive Error
+naive_ind_6 <- naive(train_ind_6)
+naive_er_ind_6 <-  residuals(naive_ind_6)
+naive_er_ind_6[is.na(naive_er_ind_6)] <-  0
 set.seed(100)
-narfima_ind_6 <-  auto.narfima(train_ind_6, tbats_er_ind_6, p = 4, q = 2, size = 1, skip = T, xreg = train_reg_ind_6, lambda = 0, lambdae = 0, repeats = 1000)
+narfima_ind_6 <-  auto.narfima(train_ind_6, naive_er_ind_6, p = 4, q = 2, size = 1, skip = T, xreg = train_reg_ind_6, lambda = 0.00001, lambdae = 0.00001, repeats = 1000)
 set.seed(100)
 narfima_ind_6_pred <-  forecast.narfima(narfima_ind_6, PI = FALSE, h = n, xreg = test_reg_ind_6)
 set.seed(100)
-model_evaluate_ind_6 <- rbind(model_evaluate_ind_6, evaluate(test_ind_6, narfima_ind_6_pred$mean, model = paste0('NTBATS(', narfima_ind_6$p, ',', narfima_ind_6$q, ',', narfima_ind_6$size, ',', narfima_ind_6$skip,')')))
+model_evaluate_ind_6 <- rbind(model_evaluate_ind_6, evaluate(test_ind_6, narfima_ind_6_pred$mean, model = paste0('NNaive(', narfima_ind_6$p, ',', narfima_ind_6$q, ',', narfima_ind_6$size, ',', narfima_ind_6$skip,')')))
+
+
+# 4- NTBATS - TBATS Error
+#tbats_ind_6 <- tbats(train_ind_6)
+#tbats_er_ind_6 <-  residuals(tbats_ind_6)
+#tbats_er_ind_6[is.na(tbats_er_ind_6)] <-  0
+#set.seed(100)
+#narfima_ind_6 <-  auto.narfima(train_ind_6, tbats_er_ind_6, p = 4, q = 2, size = 1, skip = T, xreg = train_reg_ind_6, lambda = 0, lambdae = 0, repeats = 1000)
+#set.seed(100)
+#narfima_ind_6_pred <-  forecast.narfima(narfima_ind_6, PI = FALSE, h = n, xreg = test_reg_ind_6)
+#set.seed(100)
+#model_evaluate_ind_6 <- rbind(model_evaluate_ind_6, evaluate(test_ind_6, narfima_ind_6_pred$mean, model = paste0('NTBATS(', narfima_ind_6$p, ',', narfima_ind_6$q, ',', narfima_ind_6$size, ',', narfima_ind_6$skip,')')))
 
 
 # 5- ARNNx
@@ -1280,17 +1460,28 @@ narfima_ind_12_pred <-  forecast.narfima(narfima_ind_12, PI = FALSE, h = n, xreg
 set.seed(100)
 model_evaluate_ind_12 <- rbind(model_evaluate_ind_12, evaluate(test_ind_12, narfima_ind_12_pred$mean, model = paste0('NBSTS(', narfima_ind_12$p, ',', narfima_ind_12$q, ',', narfima_ind_12$size, ',', narfima_ind_12$skip,')')))
 
-
-# 4- NTBATS - TBATS Error
-tbats_ind_12 <- tbats(train_ind_12)
-tbats_er_ind_12 <-  residuals(tbats_ind_12)
-tbats_er_ind_12[is.na(tbats_er_ind_12)] <-  0
+# 4- NNaive - Naive Error
+naive_ind_12 <- naive(train_ind_12)
+naive_er_ind_12 <-  residuals(naive_ind_12)
+naive_er_ind_12[is.na(naive_er_ind_12)] <-  0
 set.seed(100)
-narfima_ind_12 <-  auto.narfima(train_ind_12, tbats_er_ind_12, p = 1, q = 3, size = 4, skip = T, xreg = train_reg_ind_12, lambda = 0, lambdae = 0, repeats = 1000)
+narfima_ind_12 <-  auto.narfima(train_ind_12, naive_er_ind_12, p = 1, q = 3, size = 4, skip = T, xreg = train_reg_ind_12, lambda = 0.00001, lambdae = 0.00001, repeats = 1000)
 set.seed(100)
 narfima_ind_12_pred <-  forecast.narfima(narfima_ind_12, PI = FALSE, h = n, xreg = test_reg_ind_12)
 set.seed(100)
-model_evaluate_ind_12 <- rbind(model_evaluate_ind_12, evaluate(test_ind_12, narfima_ind_12_pred$mean, model = paste0('NTBATS(', narfima_ind_12$p, ',', narfima_ind_12$q, ',', narfima_ind_12$size, ',', narfima_ind_12$skip,')')))
+model_evaluate_ind_12 <- rbind(model_evaluate_ind_12, evaluate(test_ind_12, narfima_ind_12_pred$mean, model = paste0('NNaive(', narfima_ind_12$p, ',', narfima_ind_12$q, ',', narfima_ind_12$size, ',', narfima_ind_12$skip,')')))
+
+
+# 4- NTBATS - TBATS Error
+#tbats_ind_12 <- tbats(train_ind_12)
+#tbats_er_ind_12 <-  residuals(tbats_ind_12)
+#tbats_er_ind_12[is.na(tbats_er_ind_12)] <-  0
+#set.seed(100)
+#narfima_ind_12 <-  auto.narfima(train_ind_12, tbats_er_ind_12, p = 1, q = 3, size = 4, skip = T, xreg = train_reg_ind_12, lambda = 0, lambdae = 0, repeats = 1000)
+#set.seed(100)
+#narfima_ind_12_pred <-  forecast.narfima(narfima_ind_12, PI = FALSE, h = n, xreg = test_reg_ind_12)
+#set.seed(100)
+#model_evaluate_ind_12 <- rbind(model_evaluate_ind_12, evaluate(test_ind_12, narfima_ind_12_pred$mean, model = paste0('NTBATS(', narfima_ind_12$p, ',', narfima_ind_12$q, ',', narfima_ind_12$size, ',', narfima_ind_12$skip,')')))
 
 
 # 5- ARNNx
@@ -1360,16 +1551,28 @@ set.seed(100)
 model_evaluate_ind_24 <- rbind(model_evaluate_ind_24, evaluate(test_ind_24, narfima_ind_24_pred$mean, model = paste0('NBSTS(', narfima_ind_24$p, ',', narfima_ind_24$q, ',', narfima_ind_24$size, ',', narfima_ind_24$skip,')')))
 
 
-# 4- NTBATS - TBATS Error
-tbats_ind_24 <- tbats(train_ind_24)
-tbats_er_ind_24 <-  residuals(tbats_ind_24)
-tbats_er_ind_24[is.na(tbats_er_ind_24)] <-  0
+# 4- NNaive - Naive Error
+naive_ind_24 <- naive(train_ind_24)
+naive_er_ind_24 <-  residuals(naive_ind_24)
+naive_er_ind_24[is.na(naive_er_ind_24)] <-  0
 set.seed(100)
-narfima_ind_24 <-  auto.narfima(train_ind_24, tbats_er_ind_24, p = 5, q = 4, size = 1, skip = T, xreg = train_reg_ind_24, lambda = 0, lambdae = 0, repeats = 1000)
+narfima_ind_24 <-  auto.narfima(train_ind_24, naive_er_ind_24, p = 5, q = 4, size = 1, skip = T, xreg = train_reg_ind_24, lambda = 0.00001, lambdae = 0.00001, repeats = 1000)
 set.seed(100)
 narfima_ind_24_pred <-  forecast.narfima(narfima_ind_24, PI = FALSE, h = n, xreg = test_reg_ind_24)
 set.seed(100)
-model_evaluate_ind_24 <- rbind(model_evaluate_ind_24, evaluate(test_ind_24, narfima_ind_24_pred$mean, model = paste0('NTBATS(', narfima_ind_24$p, ',', narfima_ind_24$q, ',', narfima_ind_24$size, ',', narfima_ind_24$skip,')')))
+model_evaluate_ind_24 <- rbind(model_evaluate_ind_24, evaluate(test_ind_24, narfima_ind_24_pred$mean, model = paste0('NNaive(', narfima_ind_24$p, ',', narfima_ind_24$q, ',', narfima_ind_24$size, ',', narfima_ind_24$skip,')')))
+
+
+# 4- NTBATS - TBATS Error
+#tbats_ind_24 <- tbats(train_ind_24)
+#tbats_er_ind_24 <-  residuals(tbats_ind_24)
+#tbats_er_ind_24[is.na(tbats_er_ind_24)] <-  0
+#set.seed(100)
+#narfima_ind_24 <-  auto.narfima(train_ind_24, tbats_er_ind_24, p = 5, q = 4, size = 1, skip = T, xreg = train_reg_ind_24, lambda = 0, lambdae = 0, repeats = 1000)
+#set.seed(100)
+#narfima_ind_24_pred <-  forecast.narfima(narfima_ind_24, PI = FALSE, h = n, xreg = test_reg_ind_24)
+#set.seed(100)
+#model_evaluate_ind_24 <- rbind(model_evaluate_ind_24, evaluate(test_ind_24, narfima_ind_24_pred$mean, model = paste0('NTBATS(', narfima_ind_24$p, ',', narfima_ind_24$q, ',', narfima_ind_24$size, ',', narfima_ind_24$skip,')')))
 
 
 # 5- ARNNx
@@ -1439,16 +1642,28 @@ set.seed(100)
 model_evaluate_ind_48 <- rbind(model_evaluate_ind_48, evaluate(test_ind_48, narfima_ind_48_pred$mean, model = paste0('NBSTS(', narfima_ind_48$p, ',', narfima_ind_48$q, ',', narfima_ind_48$size, ',', narfima_ind_48$skip,')')))
 
 
-# 4- NTBATS - TBATS Error
-tbats_ind_48 <- tbats(train_ind_48)
-tbats_er_ind_48 <-  residuals(tbats_ind_48)
-tbats_er_ind_48[is.na(tbats_er_ind_48)] <-  0
+# 4- NNaive - Naive Error
+naive_ind_48 <- naive(train_ind_48)
+naive_er_ind_48 <-  residuals(naive_ind_48)
+naive_er_ind_48[is.na(naive_er_ind_48)] <-  0
 set.seed(100)
-narfima_ind_48 <-  auto.narfima(train_ind_48, tbats_er_ind_48, p = 2, q = 4, size = 4, skip = T, xreg = train_reg_ind_48, lambda = 0, lambdae = 0, repeats = 1000)
+narfima_ind_48 <-  auto.narfima(train_ind_48, naive_er_ind_48, p = 2, q = 4, size = 4, skip = T, xreg = train_reg_ind_48, lambda = 0.00001, lambdae = 0.00001, repeats = 1000)
 set.seed(100)
 narfima_ind_48_pred <-  forecast.narfima(narfima_ind_48, PI = FALSE, h = n, xreg = test_reg_ind_48)
 set.seed(100)
-model_evaluate_ind_48 <- rbind(model_evaluate_ind_48, evaluate(test_ind_48, narfima_ind_48_pred$mean, model = paste0('NTBATS(', narfima_ind_48$p, ',', narfima_ind_48$q, ',', narfima_ind_48$size, ',', narfima_ind_48$skip,')')))
+model_evaluate_ind_48 <- rbind(model_evaluate_ind_48, evaluate(test_ind_48, narfima_ind_48_pred$mean, model = paste0('NNaive(', narfima_ind_48$p, ',', narfima_ind_48$q, ',', narfima_ind_48$size, ',', narfima_ind_48$skip,')')))
+
+
+# 4- NTBATS - TBATS Error
+#tbats_ind_48 <- tbats(train_ind_48)
+#tbats_er_ind_48 <-  residuals(tbats_ind_48)
+#tbats_er_ind_48[is.na(tbats_er_ind_48)] <-  0
+#set.seed(100)
+#narfima_ind_48 <-  auto.narfima(train_ind_48, tbats_er_ind_48, p = 2, q = 4, size = 4, skip = T, xreg = train_reg_ind_48, lambda = 0, lambdae = 0, repeats = 1000)
+#set.seed(100)
+#narfima_ind_48_pred <-  forecast.narfima(narfima_ind_48, PI = FALSE, h = n, xreg = test_reg_ind_48)
+#set.seed(100)
+#model_evaluate_ind_48 <- rbind(model_evaluate_ind_48, evaluate(test_ind_48, narfima_ind_48_pred$mean, model = paste0('NTBATS(', narfima_ind_48$p, ',', narfima_ind_48$q, ',', narfima_ind_48$size, ',', narfima_ind_48$skip,')')))
 
 
 # 5- ARNNx
@@ -1527,16 +1742,28 @@ set.seed(100)
 model_evaluate_chn_1 <- rbind(model_evaluate_chn_1, evaluate(test_chn_1, narfima_chn_1_pred$mean, model = paste0('NBSTS(', narfima_chn_1$p, ',', narfima_chn_1$q, ',', narfima_chn_1$size, ',', narfima_chn_1$skip,')')))
 
 
-# 4- NTBATS - TBATS Error
-tbats_chn_1 <- tbats(train_chn_1)
-tbats_er_chn_1 <-  residuals(tbats_chn_1)
-tbats_er_chn_1[is.na(tbats_er_chn_1)] <-  0
+# 4- NNaive - Naive Error
+naive_chn_1 <- naive(train_chn_1)
+naive_er_chn_1 <-  residuals(naive_chn_1)
+naive_er_chn_1[is.na(naive_er_chn_1)] <-  0
 set.seed(100)
-narfima_chn_1 <-  auto.narfima(train_chn_1, tbats_er_chn_1, p = 5, q = 4, size = 1, skip = T, xreg = train_reg_chn_1, lambda = 0, lambdae = 0, repeats = 1000)
+narfima_chn_1 <-  auto.narfima(train_chn_1, naive_er_chn_1, p = 5, q = 4, size = 1, skip = T, xreg = train_reg_chn_1, lambda = 0.00001, lambdae = 0.00001, repeats = 1000)
 set.seed(100)
 narfima_chn_1_pred <-  forecast.narfima(narfima_chn_1, PI = FALSE, h = n, xreg = test_reg_chn_1)
 set.seed(100)
-model_evaluate_chn_1 <- rbind(model_evaluate_chn_1, evaluate(test_chn_1, narfima_chn_1_pred$mean, model = paste0('NTBATS(', narfima_chn_1$p, ',', narfima_chn_1$q, ',', narfima_chn_1$size, ',', narfima_chn_1$skip,')')))
+model_evaluate_chn_1 <- rbind(model_evaluate_chn_1, evaluate(test_chn_1, narfima_chn_1_pred$mean, model = paste0('NNaive(', narfima_chn_1$p, ',', narfima_chn_1$q, ',', narfima_chn_1$size, ',', narfima_chn_1$skip,')')))
+
+
+# 4- NTBATS - TBATS Error
+#tbats_chn_1 <- tbats(train_chn_1)
+#tbats_er_chn_1 <-  residuals(tbats_chn_1)
+#tbats_er_chn_1[is.na(tbats_er_chn_1)] <-  0
+#set.seed(100)
+#narfima_chn_1 <-  auto.narfima(train_chn_1, tbats_er_chn_1, p = 5, q = 4, size = 1, skip = T, xreg = train_reg_chn_1, lambda = 0, lambdae = 0, repeats = 1000)
+#set.seed(100)
+#narfima_chn_1_pred <-  forecast.narfima(narfima_chn_1, PI = FALSE, h = n, xreg = test_reg_chn_1)
+#set.seed(100)
+#model_evaluate_chn_1 <- rbind(model_evaluate_chn_1, evaluate(test_chn_1, narfima_chn_1_pred$mean, model = paste0('NTBATS(', narfima_chn_1$p, ',', narfima_chn_1$q, ',', narfima_chn_1$size, ',', narfima_chn_1$skip,')')))
 
 
 # 5- ARNNx
@@ -1606,16 +1833,28 @@ set.seed(100)
 model_evaluate_chn_3 <- rbind(model_evaluate_chn_3, evaluate(test_chn_3, narfima_chn_3_pred$mean, model = paste0('NBSTS(', narfima_chn_3$p, ',', narfima_chn_3$q, ',', narfima_chn_3$size, ',', narfima_chn_3$skip,')')))
 
 
-# 4- NTBATS - TBATS Error
-tbats_chn_3 <- tbats(train_chn_3)
-tbats_er_chn_3 <-  residuals(tbats_chn_3)
-tbats_er_chn_3[is.na(tbats_er_chn_3)] <-  0
+# 4- NNaive - Naive Error
+naive_chn_3 <- naive(train_chn_3)
+naive_er_chn_3 <-  residuals(naive_chn_3)
+naive_er_chn_3[is.na(naive_er_chn_3)] <-  0
 set.seed(100)
-narfima_chn_3 <-  auto.narfima(train_chn_3, tbats_er_chn_3, p = 1, q = 2, size = 1, skip = T, xreg = train_reg_chn_3, lambda = 0, lambdae = 0, repeats = 1000)
+narfima_chn_3 <-  auto.narfima(train_chn_3, naive_er_chn_3, p = 1, q = 2, size = 1, skip = T, xreg = train_reg_chn_3, lambda = 0.00001, lambdae = 0.00001, repeats = 1000)
 set.seed(100)
 narfima_chn_3_pred <-  forecast.narfima(narfima_chn_3, PI = FALSE, h = n, xreg = test_reg_chn_3)
 set.seed(100)
-model_evaluate_chn_3 <- rbind(model_evaluate_chn_3, evaluate(test_chn_3, narfima_chn_3_pred$mean, model = paste0('NTBATS(', narfima_chn_3$p, ',', narfima_chn_3$q, ',', narfima_chn_3$size, ',', narfima_chn_3$skip,')')))
+model_evaluate_chn_3 <- rbind(model_evaluate_chn_3, evaluate(test_chn_3, narfima_chn_3_pred$mean, model = paste0('NNaive(', narfima_chn_3$p, ',', narfima_chn_3$q, ',', narfima_chn_3$size, ',', narfima_chn_3$skip,')')))
+
+
+# 4- NTBATS - TBATS Error
+#tbats_chn_3 <- tbats(train_chn_3)
+#tbats_er_chn_3 <-  residuals(tbats_chn_3)
+#tbats_er_chn_3[is.na(tbats_er_chn_3)] <-  0
+#set.seed(100)
+#narfima_chn_3 <-  auto.narfima(train_chn_3, tbats_er_chn_3, p = 1, q = 2, size = 1, skip = T, xreg = train_reg_chn_3, lambda = 0, lambdae = 0, repeats = 1000)
+#set.seed(100)
+#narfima_chn_3_pred <-  forecast.narfima(narfima_chn_3, PI = FALSE, h = n, xreg = test_reg_chn_3)
+#set.seed(100)
+#model_evaluate_chn_3 <- rbind(model_evaluate_chn_3, evaluate(test_chn_3, narfima_chn_3_pred$mean, model = paste0('NTBATS(', narfima_chn_3$p, ',', narfima_chn_3$q, ',', narfima_chn_3$size, ',', narfima_chn_3$skip,')')))
 
 
 # 5- ARNNx
@@ -1682,16 +1921,28 @@ set.seed(100)
 model_evaluate_chn_6 <- rbind(model_evaluate_chn_6, evaluate(test_chn_6, narfima_chn_6_pred$mean, model = paste0('NBSTS(', narfima_chn_6$p, ',', narfima_chn_6$q, ',', narfima_chn_6$size, ',', narfima_chn_6$skip,')')))
 
 
-# 4- NTBATS - TBATS Error
-tbats_chn_6 <- tbats(train_chn_6)
-tbats_er_chn_6 <-  residuals(tbats_chn_6)
-tbats_er_chn_6[is.na(tbats_er_chn_6)] <-  0
+# 4- NNaive - Naive Error
+naive_chn_6 <- naive(train_chn_6)
+naive_er_chn_6 <-  residuals(naive_chn_6)
+naive_er_chn_6[is.na(naive_er_chn_6)] <-  0
 set.seed(100)
-narfima_chn_6 <-  auto.narfima(train_chn_6, tbats_er_chn_6, p = 1, q = 1, size = 2, skip = F, xreg = train_reg_chn_6, lambda = 0, lambdae = 0, repeats = 1000)
+narfima_chn_6 <-  auto.narfima(train_chn_6, naive_er_chn_6, p = 1, q = 1, size = 2, skip = F, xreg = train_reg_chn_6, lambda = 0.00001, lambdae = 0.00001, repeats = 1000)
 set.seed(100)
 narfima_chn_6_pred <-  forecast.narfima(narfima_chn_6, PI = FALSE, h = n, xreg = test_reg_chn_6)
 set.seed(100)
-model_evaluate_chn_6 <- rbind(model_evaluate_chn_6, evaluate(test_chn_6, narfima_chn_6_pred$mean, model = paste0('NTBATS(', narfima_chn_6$p, ',', narfima_chn_6$q, ',', narfima_chn_6$size, ',', narfima_chn_6$skip,')')))
+model_evaluate_chn_6 <- rbind(model_evaluate_chn_6, evaluate(test_chn_6, narfima_chn_6_pred$mean, model = paste0('NNaive(', narfima_chn_6$p, ',', narfima_chn_6$q, ',', narfima_chn_6$size, ',', narfima_chn_6$skip,')')))
+
+
+# 4- NTBATS - TBATS Error
+#tbats_chn_6 <- tbats(train_chn_6)
+#tbats_er_chn_6 <-  residuals(tbats_chn_6)
+#tbats_er_chn_6[is.na(tbats_er_chn_6)] <-  0
+#set.seed(100)
+#narfima_chn_6 <-  auto.narfima(train_chn_6, tbats_er_chn_6, p = 1, q = 1, size = 2, skip = F, xreg = train_reg_chn_6, lambda = 0, lambdae = 0, repeats = 1000)
+#set.seed(100)
+#narfima_chn_6_pred <-  forecast.narfima(narfima_chn_6, PI = FALSE, h = n, xreg = test_reg_chn_6)
+#set.seed(100)
+#model_evaluate_chn_6 <- rbind(model_evaluate_chn_6, evaluate(test_chn_6, narfima_chn_6_pred$mean, model = paste0('NTBATS(', narfima_chn_6$p, ',', narfima_chn_6$q, ',', narfima_chn_6$size, ',', narfima_chn_6$skip,')')))
 
 
 # 5- ARNNx
@@ -1761,16 +2012,28 @@ set.seed(100)
 model_evaluate_chn_12 <- rbind(model_evaluate_chn_12, evaluate(test_chn_12, narfima_chn_12_pred$mean, model = paste0('NBSTS(', narfima_chn_12$p, ',', narfima_chn_12$q, ',', narfima_chn_12$size, ',', narfima_chn_12$skip,')')))
 
 
-# 4- NTBATS - TBATS Error
-tbats_chn_12 <- tbats(train_chn_12)
-tbats_er_chn_12 <-  residuals(tbats_chn_12)
-tbats_er_chn_12[is.na(tbats_er_chn_12)] <-  0
+# 4- NNaive - Naive Error
+naive_chn_12 <- naive(train_chn_12)
+naive_er_chn_12 <-  residuals(naive_chn_12)
+naive_er_chn_12[is.na(naive_er_chn_12)] <-  0
 set.seed(100)
-narfima_chn_12 <-  auto.narfima(train_chn_12, tbats_er_chn_12, p = 5, q = 4, size = 1, skip = T, xreg = train_reg_chn_12, lambda = 0, lambdae = 0, repeats = 1000)
+narfima_chn_12 <-  auto.narfima(train_chn_12, naive_er_chn_12, p = 5, q = 4, size = 1, skip = T, xreg = train_reg_chn_12, lambda = 0.00001, lambdae = 0.00001, repeats = 1000)
 set.seed(100)
 narfima_chn_12_pred <-  forecast.narfima(narfima_chn_12, PI = FALSE, h = n, xreg = test_reg_chn_12)
 set.seed(100)
-model_evaluate_chn_12 <- rbind(model_evaluate_chn_12, evaluate(test_chn_12, narfima_chn_12_pred$mean, model = paste0('NTBATS(', narfima_chn_12$p, ',', narfima_chn_12$q, ',', narfima_chn_12$size, ',', narfima_chn_12$skip,')')))
+model_evaluate_chn_12 <- rbind(model_evaluate_chn_12, evaluate(test_chn_12, narfima_chn_12_pred$mean, model = paste0('NNaive(', narfima_chn_12$p, ',', narfima_chn_12$q, ',', narfima_chn_12$size, ',', narfima_chn_12$skip,')')))
+
+
+# 4- NTBATS - TBATS Error
+#tbats_chn_12 <- tbats(train_chn_12)
+#tbats_er_chn_12 <-  residuals(tbats_chn_12)
+#tbats_er_chn_12[is.na(tbats_er_chn_12)] <-  0
+#set.seed(100)
+#narfima_chn_12 <-  auto.narfima(train_chn_12, tbats_er_chn_12, p = 5, q = 4, size = 1, skip = T, xreg = train_reg_chn_12, lambda = 0, lambdae = 0, repeats = 1000)
+#set.seed(100)
+#narfima_chn_12_pred <-  forecast.narfima(narfima_chn_12, PI = FALSE, h = n, xreg = test_reg_chn_12)
+#set.seed(100)
+#model_evaluate_chn_12 <- rbind(model_evaluate_chn_12, evaluate(test_chn_12, narfima_chn_12_pred$mean, model = paste0('NTBATS(', narfima_chn_12$p, ',', narfima_chn_12$q, ',', narfima_chn_12$size, ',', narfima_chn_12$skip,')')))
 
 
 # 5- ARNNx
@@ -1840,16 +2103,28 @@ set.seed(100)
 model_evaluate_chn_24 <- rbind(model_evaluate_chn_24, evaluate(test_chn_24, narfima_chn_24_pred$mean, model = paste0('NBSTS(', narfima_chn_24$p, ',', narfima_chn_24$q, ',', narfima_chn_24$size, ',', narfima_chn_24$skip,')')))
 
 
-# 4- NTBATS - TBATS Error
-tbats_chn_24 <- tbats(train_chn_24)
-tbats_er_chn_24 <-  residuals(tbats_chn_24)
-tbats_er_chn_24[is.na(tbats_er_chn_24)] <-  0
+# 4- NNaive - Naive Error
+naive_chn_24 <- naive(train_chn_24)
+naive_er_chn_24 <-  residuals(naive_chn_24)
+naive_er_chn_24[is.na(naive_er_chn_24)] <-  0
 set.seed(100)
-narfima_chn_24 <-  auto.narfima(train_chn_24, tbats_er_chn_24, p = 1, q = 2, size = 4, skip = T, xreg = train_reg_chn_24, lambda = 0, lambdae = 0, repeats = 1000)
+narfima_chn_24 <-  auto.narfima(train_chn_24, naive_er_chn_24, p = 1, q = 2, size = 4, skip = T, xreg = train_reg_chn_24, lambda = 0.00001, lambdae = 0.00001, repeats = 1000)
 set.seed(100)
 narfima_chn_24_pred <-  forecast.narfima(narfima_chn_24, PI = FALSE, h = n, xreg = test_reg_chn_24)
 set.seed(100)
-model_evaluate_chn_24 <- rbind(model_evaluate_chn_24, evaluate(test_chn_24, narfima_chn_24_pred$mean, model = paste0('NTBATS(', narfima_chn_24$p, ',', narfima_chn_24$q, ',', narfima_chn_24$size, ',', narfima_chn_24$skip,')')))
+model_evaluate_chn_24 <- rbind(model_evaluate_chn_24, evaluate(test_chn_24, narfima_chn_24_pred$mean, model = paste0('NNaive(', narfima_chn_24$p, ',', narfima_chn_24$q, ',', narfima_chn_24$size, ',', narfima_chn_24$skip,')')))
+
+
+# 4- NTBATS - TBATS Error
+#tbats_chn_24 <- tbats(train_chn_24)
+#tbats_er_chn_24 <-  residuals(tbats_chn_24)
+#tbats_er_chn_24[is.na(tbats_er_chn_24)] <-  0
+#set.seed(100)
+#narfima_chn_24 <-  auto.narfima(train_chn_24, tbats_er_chn_24, p = 1, q = 2, size = 4, skip = T, xreg = train_reg_chn_24, lambda = 0, lambdae = 0, repeats = 1000)
+#set.seed(100)
+#narfima_chn_24_pred <-  forecast.narfima(narfima_chn_24, PI = FALSE, h = n, xreg = test_reg_chn_24)
+#set.seed(100)
+#model_evaluate_chn_24 <- rbind(model_evaluate_chn_24, evaluate(test_chn_24, narfima_chn_24_pred$mean, model = paste0('NTBATS(', narfima_chn_24$p, ',', narfima_chn_24$q, ',', narfima_chn_24$size, ',', narfima_chn_24$skip,')')))
 
 
 # 5- ARNNx
@@ -1919,16 +2194,28 @@ set.seed(100)
 model_evaluate_chn_48 <- rbind(model_evaluate_chn_48, evaluate(test_chn_48, narfima_chn_48_pred$mean, model = paste0('NBSTS(', narfima_chn_48$p, ',', narfima_chn_48$q, ',', narfima_chn_48$size, ',', narfima_chn_48$skip,')')))
 
 
-# 4- NTBATS - TBATS Error
-tbats_chn_48 <- tbats(train_chn_48)
-tbats_er_chn_48 <-  residuals(tbats_chn_48)
-tbats_er_chn_48[is.na(tbats_er_chn_48)] <-  0
+# 4- NNaive - Naive Error
+naive_chn_48 <- naive(train_chn_48)
+naive_er_chn_48 <-  residuals(naive_chn_48)
+naive_er_chn_48[is.na(naive_er_chn_48)] <-  0
 set.seed(100)
-narfima_chn_48 <-  auto.narfima(train_chn_48, tbats_er_chn_48, p = 4, q = 1, size = 2, skip = T, xreg = train_reg_chn_48, lambda = 0, lambdae = 0, repeats = 1000)
+narfima_chn_48 <-  auto.narfima(train_chn_48, naive_er_chn_48, p = 4, q = 1, size = 2, skip = T, xreg = train_reg_chn_48, lambda = 0.00001, lambdae = 0.00001, repeats = 1000)
 set.seed(100)
 narfima_chn_48_pred <-  forecast.narfima(narfima_chn_48, PI = FALSE, h = n, xreg = test_reg_chn_48)
 set.seed(100)
-model_evaluate_chn_48 <- rbind(model_evaluate_chn_48, evaluate(test_chn_48, narfima_chn_48_pred$mean, model = paste0('NTBATS(', narfima_chn_48$p, ',', narfima_chn_48$q, ',', narfima_chn_48$size, ',', narfima_chn_48$skip,')')))
+model_evaluate_chn_48 <- rbind(model_evaluate_chn_48, evaluate(test_chn_48, narfima_chn_48_pred$mean, model = paste0('NNaive(', narfima_chn_48$p, ',', narfima_chn_48$q, ',', narfima_chn_48$size, ',', narfima_chn_48$skip,')')))
+
+
+# 4- NTBATS - TBATS Error
+#tbats_chn_48 <- tbats(train_chn_48)
+#tbats_er_chn_48 <-  residuals(tbats_chn_48)
+#tbats_er_chn_48[is.na(tbats_er_chn_48)] <-  0
+#set.seed(100)
+#narfima_chn_48 <-  auto.narfima(train_chn_48, tbats_er_chn_48, p = 4, q = 1, size = 2, skip = T, xreg = train_reg_chn_48, lambda = 0, lambdae = 0, repeats = 1000)
+#set.seed(100)
+#narfima_chn_48_pred <-  forecast.narfima(narfima_chn_48, PI = FALSE, h = n, xreg = test_reg_chn_48)
+#set.seed(100)
+#model_evaluate_chn_48 <- rbind(model_evaluate_chn_48, evaluate(test_chn_48, narfima_chn_48_pred$mean, model = paste0('NTBATS(', narfima_chn_48$p, ',', narfima_chn_48$q, ',', narfima_chn_48$size, ',', narfima_chn_48$skip,')')))
 
 
 # 5- ARNNx
