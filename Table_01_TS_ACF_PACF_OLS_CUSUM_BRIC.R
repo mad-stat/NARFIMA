@@ -14,12 +14,11 @@
  
  
  ##############################################################################################
- # This function automatically generates four key plots:
+ # This function automatically generates three key plots:
  # 1. Time Series Plot.
  # 2. ACF Plot: analyze the autocorrelations in the time series.
- # 3. PACF Plot: examine the partial correlations.
- # 4. OLS-based CUSUM Plot:  test for any structural changes in the series.
- # After running, you'll get a combined plot with all four visualizations side by side.
+ # 3. OLS-based CUSUM Plot:  test for any structural changes in the series.
+ # After running, you'll get a combined plot with all three visualizations side by side.
  
  ts_analysis_plots <- function(train_series, start_date) {
    
@@ -63,7 +62,7 @@
        axis.text.y = element_text(size = 18, face = 'bold'))    
    
    # ACF Plot
-   diff_train_series <- diff(train_series, differences = ndiffs(train_series))
+   diff_train_series <- diff(train_series, differences = ndiffs(train_series), ci = 0.8)
    acf_plot <- ggAcf(diff_train_series, size = 1.5) +
      geom_point(color = 'navy blue', size = 1.5) +
      ggtitle(NULL) +
@@ -73,19 +72,7 @@
        axis.title.x = element_text(size = 20, face = 'bold'), 
        axis.title.y = element_text(size = 20, face = 'bold'), 
        axis.text.x = element_text(size = 18, face = 'bold'),  
-       axis.text.y = element_text(size = 18, face = 'bold'))     
-   
-   # PACF Plot
-   pacf_plot <- ggPacf(train_series, size = 1.5) +
-     geom_point(color = 'navy blue', size = 1.5) +
-     ggtitle(NULL) +
-     theme_classic() +
-     theme(plot.title = element_text(hjust = 0.5)) +
-     theme(
-       axis.title.x = element_text(size = 20, face = 'bold'), 
-       axis.title.y = element_text(size = 20, face = 'bold'), 
-       axis.text.x = element_text(size = 18, face = 'bold'),  
-       axis.text.y = element_text(size = 18, face = 'bold'))    
+       axis.text.y = element_text(size = 18, face = 'bold'))       
    
    # CUSUM Plot
    cusum_test <- efp(train_series ~ 1, type = "OLS-CUSUM", dynamic = TRUE)
@@ -118,7 +105,7 @@
        legend.position = "none")
    
    # Combine all plots
-   combined_plot <- grid.arrange(time_series_plot, acf_plot, pacf_plot, cusum_plot, ncol = 4)
+   combined_plot <- grid.arrange(time_series_plot, acf_plot, cusum_plot, ncol = 3)
    
    # Return the combined plot
    return(combined_plot)
