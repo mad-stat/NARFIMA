@@ -2,7 +2,7 @@
 
 * To view the full list of packages (both R and Python) along with their respective versions, please refer to the following files [R_package_version.txt](https://github.com/mad-stat/NARFIMA/blob/main/R_package_version.txt) and [Python_Package_Version.txt](https://github.com/mad-stat/NARFIMA/blob/main/Python_Package_Version.txt).
 
-* To view "Table 1: Training data for exchange rates of BRIC nations, along with ACF, PACF plots, and OLS-based CUSUM test results.", please refer to [Table_01_TS_ACF_PACF_OLS_CUSUM_BRIC.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_01_TS_ACF_PACF_OLS_CUSUM_BRIC.R).
+* To view "Table 1: Training data for exchange rates of BRIC nations, along with the ACF plot and OLS-based CUSUM test results.", please refer to [Table_01_TS_ACF_OLS_CUSUM_BRIC.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_01_TS_ACF_OLS_CUSUM_BRIC.R).
 
 * To view "Figure 1: Illustration of the proposed NARFIMA model.", please refer to [Figure_01_Model_Illustration.R](https://github.com/mad-stat/NARFIMA/blob/main/Figure_01_Model_Illustration.R).
 
