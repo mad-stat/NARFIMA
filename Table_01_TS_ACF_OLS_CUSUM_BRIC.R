@@ -94,6 +94,7 @@
      geom_line(color = "black", size = 1.5) +
      geom_hline(data = bounds_df, aes(yintercept = Value, color = Bound), linetype = "dashed", size = 1.5) +
      scale_color_manual(values = c("Upper Bound" = "red", "Lower Bound" = "red", "Mean" = "blue")) +
+     scale_y_continuous(breaks = function(x) seq(floor(min(x)), ceiling(max(x)), by = 1)) +
      labs(x = "Time", y = "Empirical Fluctuation Process") +
      theme_classic() +
      theme(plot.title = element_text(hjust = 0.5)) +
