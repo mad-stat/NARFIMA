@@ -1,13 +1,8 @@
 library(forecast)
 library(tidyverse)
 library(Metrics)
-library(ggplot2)
 library(tsDyn)
-library(forecastHybrid)
-library(WaveletArima)
-library(FinTS)
 library(tseries)
-library(rugarch)
 library(bsts)
 library(readxl)
 
@@ -20,7 +15,6 @@ reg_braz <- as.matrix(data[,c(4,3,5,6,7)], ncol = 5)
 
 
 ##################################################### Evaluation Function #####################################################
-
 
 evaluate <- function(test,pred,model){
   MAPE <- mape(test,pred)*100
