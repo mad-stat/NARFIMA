@@ -1,4 +1,4 @@
-############################# Figures 04 and 05: Murphy Diagrams - BRIC #############################
+############################# Figures 02: Murphy Diagrams - BRIC #############################
 
 
 ##################################################### Brazil 48 #####################################################
@@ -13,14 +13,14 @@ df <- data.frame("Date" = tml, "Actual" = test.data.48M, "NARFIMA" = NARFIMA, "A
 murphydiagram(NARFIMA , ARIMAx, df$Actual, labels = c("NARFIMA", "ARIMAx"))
 title(main = "Brazil Murphy Diagram") 
 
-murphydiagram_diff(NARFIMA , ARIMAx, df$Actual, lag_truncate = 1, conf_level = 0.95)
-title(main = "Brazil Murphy Difference Diagram: NARFIMA - ARIMAx") 
+#murphydiagram_diff(NARFIMA , ARIMAx, df$Actual, lag_truncate = 1, conf_level = 0.95)
+#title(main = "Brazil Murphy Difference Diagram: NARFIMA - ARIMAx") 
 
 murphydiagram(NARFIMA , ARIMAx, df$Actual, labels = c("NARFIMA", "BSTSx"))
 title(main = "Brazil Murphy Diagram") 
 
-murphydiagram_diff(NARFIMA , ARIMAx, df$Actual, lag_truncate = 1, conf_level = 0.95)
-title(main = "Brazil Murphy Difference Diagram: NARFIMA - BSTSx")
+#murphydiagram_diff(NARFIMA , ARIMAx, df$Actual, lag_truncate = 1, conf_level = 0.95)
+#title(main = "Brazil Murphy Difference Diagram: NARFIMA - BSTSx")
 
 
 ##################################################### Russia 48 #####################################################
@@ -35,14 +35,14 @@ df <- data.frame("Date" = tml, "Actual" = test.data.48M, "NARFIMA" = NARFIMA, "A
 murphydiagram(NARFIMA , ARIMAx, df$Actual, labels = c("NARFIMA", "ARIMAx"))
 title(main = "Russia Murphy Diagram") 
 
-murphydiagram_diff(NARFIMA , ARIMAx, df$Actual, lag_truncate = 1, conf_level = 0.95)
-title(main = "Russia Murphy Difference Diagram: NARFIMA - ARIMAx") 
+#murphydiagram_diff(NARFIMA , ARIMAx, df$Actual, lag_truncate = 1, conf_level = 0.95)
+#title(main = "Russia Murphy Difference Diagram: NARFIMA - ARIMAx") 
 
 murphydiagram(NARFIMA , BSTSx, df$Actual, labels = c("NARFIMA", "BSTSx"))
 title(main = "Russia Murphy Diagram") 
 
-murphydiagram_diff(NARFIMA , BSTSx, df$Actual, lag_truncate = 1, conf_level = 0.95)
-title(main = "Russia Murphy Difference Diagram: NARFIMA - BSTSx")
+#murphydiagram_diff(NARFIMA , BSTSx, df$Actual, lag_truncate = 1, conf_level = 0.95)
+#title(main = "Russia Murphy Difference Diagram: NARFIMA - BSTSx")
 
 
 ##################################################### India 48 #####################################################
@@ -57,14 +57,14 @@ df <- data.frame("Date" = tml, "Actual" = test.data.48M, "NARFIMA" = NARFIMA, "A
 murphydiagram(NARFIMA , ARIMAx, df$Actual, labels = c("NARFIMA", "ARIMAx"))
 title(main = "India Murphy Diagram") 
 
-murphydiagram_diff(NARFIMA , ARIMAx, df$Actual, lag_truncate = 1, conf_level = 0.95)
-title(main = "India Murphy Difference Diagram: NARFIMA - ARIMAx") 
+#murphydiagram_diff(NARFIMA , ARIMAx, df$Actual, lag_truncate = 1, conf_level = 0.95)
+#title(main = "India Murphy Difference Diagram: NARFIMA - ARIMAx") 
 
 murphydiagram(NARFIMA , BSTSx, df$Actual, labels = c("NARFIMA", "BSTSx"))
 title(main = "India Murphy Diagram") 
 
-murphydiagram_diff(NARFIMA , BSTSx, df$Actual, lag_truncate = 1, conf_level = 0.95)
-title(main = "India Murphy Difference Diagram: NARFIMA - BSTSx")
+#murphydiagram_diff(NARFIMA , BSTSx, df$Actual, lag_truncate = 1, conf_level = 0.95)
+#title(main = "India Murphy Difference Diagram: NARFIMA - BSTSx")
 
 
 ##################################################### China 48 #####################################################
@@ -79,11 +79,11 @@ df <- data.frame("Date" = tml, "Actual" = test.data.48M, "NARFIMA" = NARFIMA, "A
 murphydiagram(NARFIMA , ARIMAx, df$Actual, labels = c("NARFIMA", "ARIMAx"))
 title(main = "China Murphy Diagram") 
 
-murphydiagram_diff(NARFIMA , ARIMAx, df$Actual, lag_truncate = 1, conf_level = 0.95)
-title(main = "China Murphy Difference Diagram: NARFIMA - ARIMAx") 
+#murphydiagram_diff(NARFIMA , ARIMAx, df$Actual, lag_truncate = 1, conf_level = 0.95)
+#title(main = "China Murphy Difference Diagram: NARFIMA - ARIMAx") 
 
 murphydiagram(NARFIMA , BSTSx, df$Actual, labels = c("NARFIMA", "BSTSx"))
 title(main = "China Murphy Diagram") 
 
-murphydiagram_diff(NARFIMA , BSTSx, df$Actual, lag_truncate = 1, conf_level = 0.95)
-title(main = "China Murphy Difference Diagram: NARFIMA - BSTSx")
+#murphydiagram_diff(NARFIMA , BSTSx, df$Actual, lag_truncate = 1, conf_level = 0.95)
+#title(main = "China Murphy Difference Diagram: NARFIMA - BSTSx")
