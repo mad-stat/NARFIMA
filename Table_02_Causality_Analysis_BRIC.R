@@ -1,4 +1,4 @@
-############################# Table 04: Causality Analysis - BRIC #############################
+############################# Table 02: Causality Analysis - BRIC #############################
  
 # For reproducibility, we are using this seed value
 set.seed(100) 
@@ -9,9 +9,7 @@ library(readxl)
 library(RTransferEntropy)
 library(NlinTS)
 
-##############################################################################################
- 
- 
+
 ########################################### Brazil ###########################################
 # Set the working directory
 setwd("NARFIMA/Dataset/Dataset_All_Exogenous")
@@ -69,20 +67,6 @@ train_cpi_us_1 <- cbind(Date = 1:length(train_cpi_us_1), CPI_Inflation_US = trai
 
 train_cpi_diff_1 <- cpi_diff[1:(length(cpi_diff) - n)]
 train_cpi_diff_1 <- cbind(Date = 1:length(train_cpi_diff_1), CPI_Inflation_Brazil_US_Difference = train_cpi_diff_1)
-
-# Transfer Entropy
-transfer_entropy_braz <- tibble()
-transfer_entropy_braz <- rbind(transfer_entropy_braz, calc_te(train_global_epu_braz_1[,2],train_braz_1[,2], 10,10))
-transfer_entropy_braz <- rbind(transfer_entropy_braz, calc_te(train_emv_us_1[,2],train_braz_1[,2], 10,10))
-transfer_entropy_braz <- rbind(transfer_entropy_braz, calc_te(train_mpu_us_1[,2],train_braz_1[,2], 10,10))
-transfer_entropy_braz <- rbind(transfer_entropy_braz, calc_te(train_gprc_braz_1[,2],train_braz_1[,2], 1,1))
-transfer_entropy_braz <- rbind(transfer_entropy_braz, calc_te(train_oil_braz_1[,2],train_braz_1[,2], 10,10))
-transfer_entropy_braz <- rbind(transfer_entropy_braz, calc_te(train_ir_braz_1[,2],train_braz_1[,2], 1,1))
-transfer_entropy_braz <- rbind(transfer_entropy_braz, calc_te(train_ir_us_1[,2],train_braz_1[,2], 1,1))
-transfer_entropy_braz <- rbind(transfer_entropy_braz, calc_te(train_ir_diff_1[,2],train_braz_1[,2], 10,10))
-transfer_entropy_braz <- rbind(transfer_entropy_braz, calc_te(train_cpi_braz_1[,2],train_braz_1[,2],1,1))
-transfer_entropy_braz <- rbind(transfer_entropy_braz, calc_te(train_cpi_us_1[,2],train_braz_1[,2], 1,1))
-transfer_entropy_braz <- rbind(transfer_entropy_braz, calc_te(train_cpi_diff_1[,2],train_braz_1[,2], 1,1))
 
 # Non-linear Granger Test
 nlin_causality.test(exchange_rate_braz, global_epu_braz,  1, c(3), c(2), 50, 0.01, seed = 11)$summary()
@@ -157,20 +141,6 @@ train_cpi_us_1 <- cbind(Date = 1:length(train_cpi_us_1), CPI_Inflation_US = trai
 train_cpi_diff_1 <- cpi_diff[1:(length(cpi_diff) - n)]
 train_cpi_diff_1 <- cbind(Date = 1:length(train_cpi_diff_1), CPI_Inflation_russia_US_Difference = train_cpi_diff_1)
 
-# Transfer Entropy
-transfer_entropy_rus <- tibble()
-transfer_entropy_rus <- rbind(transfer_entropy_rus, calc_te(train_global_epu_rus_1[,2],train_rus_1[,2], 5,5))
-transfer_entropy_rus <- rbind(transfer_entropy_rus, calc_te(train_emv_us_1[,2],train_rus_1[,2], 5,5))
-transfer_entropy_rus <- rbind(transfer_entropy_rus, calc_te(train_mpu_us_1[,2],train_rus_1[,2], 5,5))
-transfer_entropy_rus <- rbind(transfer_entropy_rus, calc_te(train_gprc_rus_1[,2],train_rus_1[,2], 1,1))
-transfer_entropy_rus <- rbind(transfer_entropy_rus, calc_te(train_oil_rus_1[,2],train_rus_1[,2], 5,5))
-transfer_entropy_rus <- rbind(transfer_entropy_rus, calc_te(train_ir_rus_1[,2],train_rus_1[,2], 1,1))
-transfer_entropy_rus <- rbind(transfer_entropy_rus, calc_te(train_ir_us_1[,2],train_rus_1[,2], 1,1))
-transfer_entropy_rus <- rbind(transfer_entropy_rus, calc_te(train_ir_diff_1[,2],train_rus_1[,2], 5,5))
-transfer_entropy_rus <- rbind(transfer_entropy_rus, calc_te(train_cpi_rus_1[,2],train_rus_1[,2],1,1))
-transfer_entropy_rus <- rbind(transfer_entropy_rus, calc_te(train_cpi_us_1[,2],train_rus_1[,2], 1,1))
-transfer_entropy_rus <- rbind(transfer_entropy_rus, calc_te(train_cpi_diff_1[,2],train_rus_1[,2], 1,1))
-
 # Non-linear Granger Test
 nlin_causality.test(exchange_rate_rus, global_epu_rus,  1, c(2), c(1), 50, 0.01, seed = 11)$summary()
 nlin_causality.test(exchange_rate_rus, emv_us,  1, c(2), c(1), 50, 0.01, seed = 11)$summary()
@@ -243,20 +213,6 @@ train_cpi_us_1 <- cbind(Date = 1:length(train_cpi_us_1), CPI_Inflation_US = trai
 
 train_cpi_diff_1 <- cpi_diff[1:(length(cpi_diff) - n)]
 train_cpi_diff_1 <- cbind(Date = 1:length(train_cpi_diff_1), CPI_Inflation_india_US_Difference = train_cpi_diff_1)
-
-# Transfer Entropy
-transfer_entropy_ind <- tibble()
-transfer_entropy_ind <- rbind(transfer_entropy_ind, calc_te(train_global_epu_ind_1[,2],train_ind_1[,2], 10,10))
-transfer_entropy_ind <- rbind(transfer_entropy_ind, calc_te(train_emv_us_1[,2],train_ind_1[,2], 10,10))
-transfer_entropy_ind <- rbind(transfer_entropy_ind, calc_te(train_mpu_us_1[,2],train_ind_1[,2], 10,10))
-transfer_entropy_ind <- rbind(transfer_entropy_ind, calc_te(train_gprc_ind_1[,2],train_ind_1[,2], 1,1))
-transfer_entropy_ind <- rbind(transfer_entropy_ind, calc_te(train_oil_ind_1[,2],train_ind_1[,2], 10,10))
-transfer_entropy_ind <- rbind(transfer_entropy_ind, calc_te(train_ir_ind_1[,2],train_ind_1[,2], 1,1))
-transfer_entropy_ind <- rbind(transfer_entropy_ind, calc_te(train_ir_us_1[,2],train_ind_1[,2], 1,1))
-transfer_entropy_ind <- rbind(transfer_entropy_ind, calc_te(train_ir_diff_1[,2],train_ind_1[,2], 10,10))
-transfer_entropy_ind <- rbind(transfer_entropy_ind, calc_te(train_cpi_ind_1[,2],train_ind_1[,2],1,1))
-transfer_entropy_ind <- rbind(transfer_entropy_ind, calc_te(train_cpi_us_1[,2],train_ind_1[,2], 1,1))
-transfer_entropy_ind <- rbind(transfer_entropy_ind, calc_te(train_cpi_diff_1[,2],train_ind_1[,2], 1,1))
 
 # Non-linear Granger Test
 nlin_causality.test(exchange_rate_braz, global_epu_braz,  1, c(3), c(2), 50, 0.01, seed = 11)$summary()
@@ -336,20 +292,6 @@ train_cpi_us_1 <- cbind(Date = 1:length(train_cpi_us_1), CPI_Inflation_US = trai
 
 train_cpi_diff_1 <- cpi_diff[1:(length(cpi_diff) - n)]
 train_cpi_diff_1 <- cbind(Date = 1:length(train_cpi_diff_1), CPI_Inflation_china_US_Difference = train_cpi_diff_1)
-
-# Transfer Entropy
-transfer_entropy_chn <- tibble()
-transfer_entropy_chn <- rbind(transfer_entropy_chn, calc_te(train_global_epu_chn_1[,2],train_chn_1[,2], 5,5))
-transfer_entropy_chn <- rbind(transfer_entropy_chn, calc_te(train_emv_us_1[,2],train_chn_1[,2], 5,5))
-transfer_entropy_chn <- rbind(transfer_entropy_chn, calc_te(train_mpu_us_1[,2],train_chn_1[,2], 5,5))
-transfer_entropy_chn <- rbind(transfer_entropy_chn, calc_te(train_gprc_chn_1[,2],train_chn_1[,2], 1,1))
-transfer_entropy_chn <- rbind(transfer_entropy_chn, calc_te(train_oil_chn_1[,2],train_chn_1[,2], 5,5))
-transfer_entropy_chn <- rbind(transfer_entropy_chn, calc_te(train_ir_chn_1[,2],train_chn_1[,2], 1,1))
-transfer_entropy_chn <- rbind(transfer_entropy_chn, calc_te(train_ir_us_1[,2],train_chn_1[,2], 1,1))
-transfer_entropy_chn <- rbind(transfer_entropy_chn, calc_te(train_ir_diff_1[,2],train_chn_1[,2], 5,5))
-transfer_entropy_chn <- rbind(transfer_entropy_chn, calc_te(train_cpi_chn_1[,2],train_chn_1[,2],1,1))
-transfer_entropy_chn <- rbind(transfer_entropy_chn, calc_te(train_cpi_us_1[,2],train_chn_1[,2], 1,1))
-transfer_entropy_chn <- rbind(transfer_entropy_chn, calc_te(train_cpi_diff_1[,2],train_chn_1[,2], 1,1))
 
 # Non-linear Granger Test
 nlin_causality.test(exchange_rate_chn, global_epu_chn,  1, c(2), c(1), 50, 0.01, seed = 11)$summary()
