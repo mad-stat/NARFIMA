@@ -22,7 +22,7 @@
 
 * To view "Figure 3: Visualization of the actual exchange rate series (red dots) with point forecasts from NARFIMA (blue line), BSTSx (green line), and ARIMAx (violet line), along with the conformal prediction interval for NARFIMA (yellow shaded region). Forecasts are for a 48-month horizon for (a) Brazil, (b) Russia, (c) India, and (d) China.", please refer to [Figure_03_Conformal_Prediction_Interval_48.R](https://github.com/mad-stat/NARFIMA/blob/main/Figure_03_Conformal_Prediction_Interval_48.R).
 
-* To view "Figure 4: MCB plot comparing the performance of NARFIMA and its variants based on RMSE metrics. In the plot, `NARFIMA - 1.38' indicates that the average rank of NARFIMA is 1.38, similar for other models.", please refer to [Figure_04_MCB_Ablation_Study.R](https://github.com/mad-stat/NARFIMA/blob/main/Figure_04_MCB_Ablation_Study).
+* To view "Figure 4: MCB plot comparing the performance of NARFIMA and its variants based on RMSE metrics. In the plot, `NARFIMA - 1.38' indicates that the average rank of NARFIMA is 1.38, similar for other models.", please refer to [Figure_04_MCB_Ablation_Study.R](https://github.com/mad-stat/NARFIMA/blob/main/Figure_04_MCB_Ablation_Study). The performance evaluation summary can be found in [BRIC NARFIMA Variants Evaluation](https://github.com/mad-stat/NARFIMA/blob/main/Dataset/Dataset_Model_Evaluation/BRIC%20NARFIMA%20Variants%20Evaluation.xlsx)]. To check the code, please refer to [Ablation_Study.R](https://github.com/mad-stat/NARFIMA/blob/main/Ablation_Study.R).
   
 * To view "Table 10: Summary statistics of the datasets utilized in this analysis.", please refer to [Table_10_Summary_Statistics_BRIC.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_10_Summary_Statistics_BRIC.R)
 
