@@ -25,20 +25,7 @@ bric <- read_excel('BRIC MCB RMSE.xlsx')
 abs_err_bric <- bric[-1]
 
 # MCB Plot
-tsutils::nemenyi(abs_err_bric, plottype = "mcb", main = 'BRIC MCB Plot for RMSE Metric')
-
-
-##################################################### BRIC SMAPE #####################################################
-
-# Read the data
-bric <- read_excel('BRIC MCB SMAPE.xlsx')
-
-# Extract the errors
-abs_err_bric <- bric[-1]
-
-# MCB Plot
-tsutils::nemenyi(abs_err_bric, plottype = "mcb", main = 'BRIC MCB Plot for SMAPE Metric')
-
+tsutils::nemenyi(abs_err_bric, plottype = "vmcb", main = 'BRIC MCB Plot for RMSE Metric')
 
 
 ##################################################### BRIC MAE #####################################################
@@ -50,4 +37,29 @@ bric <- read_excel('BRIC MCB MAE.xlsx')
 abs_err_bric <- bric[-1]
 
 # MCB Plot
-tsutils::nemenyi(abs_err_bric, plottype = "mcb", main = 'BRIC MCB Plot for MAE Metric')
+tsutils::nemenyi(abs_err_bric, plottype = "vmcb", main = 'BRIC MCB Plot for MAE Metric')
+
+
+##################################################### BRIC SMAPE #####################################################
+
+# Read the data
+bric <- read_excel('BRIC MCB SMAPE.xlsx')
+
+# Extract the errors
+abs_err_bric <- bric[-1]
+
+# MCB Plot
+tsutils::nemenyi(abs_err_bric, plottype = "vmcb", main = 'BRIC MCB Plot for SMAPE Metric')
+
+
+##################################################### BRIC MAPE #####################################################
+
+# Read the data
+bric <- read_excel('BRIC MCB MAPE.xlsx')
+
+# Extract the errors
+abs_err_bric <- bric[-1]
+
+# MCB Plot
+tsutils::nemenyi(abs_err_bric, plottype = "vmcb", main = 'BRIC MCB Plot for MAPE Metric')
+
