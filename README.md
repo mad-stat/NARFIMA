@@ -2,11 +2,11 @@
 
 * To view the full list of packages (both R and Python) along with their respective versions, please refer to the following files [R_package_version.txt](https://github.com/mad-stat/NARFIMA/blob/main/R_package_version.txt) and [Python_Package_Version.txt](https://github.com/mad-stat/NARFIMA/blob/main/Python_Package_Version.txt).
 
-* To view "Table 1: Training data for exchange rates of BRIC nations, along with the ACF plot and OLS-based CUSUM test results.", please refer to [Table_01_TS_ACF_OLS_CUSUM_BRIC.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_01_TS_ACF_OLS_CUSUM_BRIC.R).
+* To view "Table 1: Training data for exchange rates of BRIC nations, alongside the ACF plot and OLS-based CUSUM test results.", please refer to [Table_01_TS_ACF_OLS_CUSUM_BRIC.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_01_TS_ACF_OLS_CUSUM_BRIC.R).
 
-* To view "Figure 1: Illustration of the proposed NARFIMA model.", please refer to [Figure_01_Model_Illustration.R](https://github.com/mad-stat/NARFIMA/blob/main/Figure_01_Model_Illustration.R).
+* To view "Table 2: Nonlinear Granger causality test results assessing the influence of exogenous covariates on exchange rates in BRIC countries.", please refer to [Table_02_Causality Analysis_BRIC.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_02_Causality_Analysis_BRIC.R).
 
-* To view "Table 2: Nonlinear Granger causality test results assessing the influence of exogenous covariates on exchange rates in BRIC countries", please refer to [Table_02_Causality Analysis_BRIC.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_02_Causality_Analysis_BRIC.R).
+* To view "Table 3: Empirical Validation of Assumptions~\eqref{A3} and~\eqref{A7} for the NARFIMA model. Long horizons with $skip = \text{FALSE}$ are omitted, as skip connections were removed.", please refer to [Table_03_Empirical Validation_BRIC.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_02_Causality_Analysis_BRIC.R).
 
 * To view "Figure 2: Impulse response functions (generated using the local projections method) of spot exchange rates to GEPU, GPR, US EMV, and US MPU shocks for the BRIC nations. The reaction is represented by the solid black line and corresponding 95% confidence bands by grey shading. The dashed black line displays the zero line. The sample period runs from 1997-01 to 2023-10.", please refer to [Figure_02_Impulse_Response_Functions.R](https://github.com/mad-stat/NARFIMA/blob/main/Figure_02_Impulse_Response_Functions.R).
 
