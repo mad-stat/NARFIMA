@@ -36,7 +36,7 @@ ser = narfimaT_braz_48$model[[1]]$wts[18:19])
 View(as.data.frame(ser)
 # Assumption 3
 sum(sy) + sum(ser)     
-# Assumption 7
+# Assumption 5
 abs(sum(sy))
 
 
@@ -67,7 +67,7 @@ ser = narfimaT_rus_12$model[[1]]$wts[76:77]
 View(as.data.frame(ser))
 # Assumption 3
 sum(sy) + sum(ser)
-# Assumption 7
+# Assumption 5
 abs(sum(sy))
 
      
@@ -94,7 +94,7 @@ ser = narfimaT_rus_24$model[[1]]$wts[47]
 View(as.data.frame(ser))
 # Assumption 3
 sum(sy) + sum(ser)
-# Assumption 7
+# Assumption 5
 abs(sum(sy))
 
 
@@ -125,7 +125,7 @@ ser = narfimaT_ind_12$model[[1]]$wts[46:48]
 View(as.data.frame(ser))
 # Assumption 3
 sum(sy) + sum(ser)
-# Assumption 7
+# Assumption 5
 abs(sum(sy))     
 
 
@@ -152,7 +152,7 @@ ser = narfimaT_ind_24$model[[1]]$wts[22:25]
 View(as.data.frame(ser))
 # Assumption 3
 sum(sy) + sum(ser)
-# Assumption 7
+# Assumption 5
 abs(sum(sy))
 
      
@@ -179,7 +179,7 @@ ser = narfimaT_ind_48$model[[1]]$wts[55:58]
 View(as.data.frame(ser))
 # Assumption 3
 sum(sy) + sum(ser)
-# Assumption 7
+# Assumption 5
 abs(sum(sy))
 
      
@@ -210,7 +210,7 @@ ser = narfimaT_chn_12$model[[1]]$wts[22:25]
 View(as.data.frame(ser))
 # Assumption 3
 sum(sy) + sum(ser)
-# Assumption 7
+# Assumption 5
 abs(sum(sy))
 
      
@@ -237,7 +237,7 @@ ser = narfimaT_chn_24$model[[1]]$wts[42:43]
 View(as.data.frame(ser))
 # Assumption 3
 sum(sy) + sum(ser)
-# Assumption 7
+# Assumption 5
 abs(sum(sy))
 
 
@@ -264,5 +264,5 @@ ser = narfimaT_chn_48$model[[1]]$wts[29]
 View(as.data.frame(ser))
 # Assumption 3
 sum(sy) + sum(ser)
-# Assumption 7
+# Assumption 5
 abs(sum(sy))
