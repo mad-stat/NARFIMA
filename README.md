@@ -6,7 +6,7 @@
 
 * To view "Table 2: Nonlinear Granger causality test results assessing the influence of exogenous covariates on exchange rates in BRIC countries.", please refer to [Table_02_Causality Analysis_BRIC.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_02_Causality_Analysis_BRIC.R).
 
-* To view "Table 5: Empirical Validation of Assumptions (3) and (7) for the NARFIMA model. Long horizons with $skip = \text{FALSE}$ are omitted, as skip connections were removed.", please refer to [Table_05_Empirical Validation_BRIC.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_05_Empirical_Validation_BRIC.R).
+* To view "Table 5: Empirical Validation of Assumptions (3) and (5) for the NARFIMA model. Long horizons with $skip = \text{FALSE}$ are omitted, as skip connections were removed.", please refer to [Table_05_Empirical Validation_BRIC.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_05_Empirical_Validation_BRIC.R).
 
 * To generate "Table 6: Evaluation of the proposed NARFIMA model’s performance relative to baseline forecasters across all forecast horizons for Brazil (**`best`** and ***`second-best`*** results are highlighted).", please refer to [Table_06_Evaluation_Comparison_Brazil.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_06_Evaluation_Comparison_Brazil.R). To check the forecasts across various algorithms, please refer to the following folder [Brazil Forecasts](https://github.com/mad-stat/NARFIMA/tree/main/Dataset/Dataset_Model_Forecasts/Brazil). The performance evaluation summary can be found in [Brazil Evaluation](https://github.com/mad-stat/NARFIMA/blob/main/Dataset/Dataset_Model_Evaluation/Brazil%20Evaluation.xlsx).
 
