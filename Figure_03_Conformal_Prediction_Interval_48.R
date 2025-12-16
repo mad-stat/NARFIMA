@@ -76,7 +76,7 @@ ggplot(data = braz_48, aes(x = as.Date(Date))) +
   geom_ribbon(aes(ymin = posterior_interval_brazT_48$L, ymax = posterior_interval_brazT_48$U), fill = 'gold', alpha = .25) +
   scale_x_date(date_breaks = "8 month", date_labels = "%Y-%m-%d", limits = c(ymd("2019-11-01"), ymd("2023-10-01"))) +
   scale_y_continuous(
-    limits = round(c(min(posterior_interval_brazT_48$L), max(posterior_interval_brazT_48$U) + 0.1),1),  
+    limits = round(c(min(posterior_interval_brazT_48$L) - 0.1, max(posterior_interval_brazT_48$U) + 0.1),1),  
     breaks = function(limits) seq(limits[1], limits[2], length.out = 5)
   ) +
   ylab('Exchange Rate') +
@@ -362,9 +362,9 @@ ggplot(data = chn_48, aes(x = as.Date(Date))) +
   geom_ribbon(aes(ymin = posterior_interval_chnT_48$L, ymax = posterior_interval_chnT_48$U), fill = 'gold', alpha = .25) +
   scale_x_date(date_breaks = "8 month", date_labels = "%Y-%m-%d", limits = c(ymd("2019-11-01"), ymd("2023-10-01"))) +
   scale_y_continuous(
-    limits = round(c(min(posterior_interval_chnT_48$L), max(posterior_interval_chnT_48$U)),1),  
+    limits = round(c(min(posterior_interval_chnT_48$L) - 0.1, max(posterior_interval_chnT_48$U) + 0.1),1),  
     breaks = function(limits) seq(limits[1], limits[2], length.out = 5)
-  ) +
+  ) + 
   ylab('Exchange Rate') +
   xlab('Time') +
   labs(color = 'Models') +
