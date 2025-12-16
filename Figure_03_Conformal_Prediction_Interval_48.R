@@ -70,9 +70,9 @@ braz_48 <- data[(nrow(data) - n + 1):nrow(data),]
 
 ggplot(data = braz_48, aes(x = as.Date(Date))) +
   geom_point(aes(y = Exchange_Rate_braz, color = 'Ground Truth')) +
-  geom_line(aes(y = NARFIMAXT, color = 'NARFIMA'), linewidth = 2) +
-  geom_line(aes(y = ARIMAX, color = 'ARIMA'), linewidth = 2) +
-  geom_line(aes(y = BSTSX, color = 'BSTS'), linewidth = 2) +
+  geom_line(aes(y = narfimaT_braz_48_pred, color = 'NARFIMA'), linewidth = 2) +
+  geom_line(aes(y = arima_braz_48_pred, color = 'ARIMA'), linewidth = 2) +
+  geom_line(aes(y = bsts_braz_48_pred, color = 'BSTS'), linewidth = 2) +
   geom_ribbon(aes(ymin = posterior_interval_brazT_48$L, ymax = posterior_interval_brazT_48$U), fill = 'gold', alpha = .25) +
   scale_x_date(date_breaks = "8 month", date_labels = "%Y-%m-%d", limits = c(ymd("2019-11-01"), ymd("2023-10-01"))) +
   scale_y_continuous(
@@ -164,9 +164,9 @@ rus_48 <- data[(nrow(data) - n + 1):nrow(data),]
 
 ggplot(data = rus_48, aes(x = as.Date(Date))) +
   geom_point(aes(y = Exchange_Rate_rus, color = 'Ground Truth')) +
-  geom_line(aes(y = NARFIMAX, color = 'NARFIMA'), linewidth = 2) +
-  geom_line(aes(y = ARIMAX, color = 'ARIMA'), linewidth = 2) +
-  geom_line(aes(y = BSTSX, color = 'BSTS'), linewidth = 2) +
+  geom_line(aes(y = narfima_rus_48_pred, color = 'NARFIMA'), linewidth = 2) +
+  geom_line(aes(y = arima_rus_48_pred, color = 'ARIMA'), linewidth = 2) +
+  geom_line(aes(y = bsts_rus_48_pred, color = 'BSTS'), linewidth = 2) +
   geom_ribbon(aes(ymin = posterior_interval_rus_48$L, ymax = posterior_interval_rus_48$U), fill = 'gold', alpha = .25) +
   scale_x_date(date_breaks = "8 month", date_labels = "%Y-%m-%d", limits = c(ymd("2019-11-01"), ymd("2023-10-01"))) +
   scale_y_continuous(
@@ -260,9 +260,9 @@ ind_48 <- data[(nrow(data) - n + 1):nrow(data),]
 
 ggplot(data = ind_48, aes(x = as.Date(Date))) +
   geom_point(aes(y = Exchange_Rate_ind, color = 'Ground Truth')) +
-  geom_line(aes(y = NARFIMAXT, color = 'NARFIMA'), linewidth = 2) +
-  geom_line(aes(y = ARIMAX, color = 'ARIMA'), linewidth = 2) +
-  geom_line(aes(y = BSTSX, color = 'BSTS'), linewidth = 2) +
+  geom_line(aes(y = narfimaT_ind_48_pred, color = 'NARFIMA'), linewidth = 2) +
+  geom_line(aes(y = arima_ind_48_pred, color = 'ARIMA'), linewidth = 2) +
+  geom_line(aes(y = bsts_ind_48_pred, color = 'BSTS'), linewidth = 2) +
   geom_ribbon(aes(ymin = posterior_interval_indT_48$L, ymax = posterior_interval_indT_48$U), fill = 'gold', alpha = .25) +
   scale_x_date(date_breaks = "8 month", date_labels = "%Y-%m-%d", limits = c(ymd("2019-11-01"), ymd("2023-10-01"))) +
   scale_y_continuous(
@@ -356,9 +356,9 @@ chn_48 <- data[(nrow(data) - n + 1):nrow(data),]
 
 ggplot(data = chn_48, aes(x = as.Date(Date))) +
   geom_point(aes(y = Exchange_Rate_chn, color = 'Ground Truth')) +
-  geom_line(aes(y = NARFIMAXT, color = 'NARFIMA'), linewidth = 2) +
-  geom_line(aes(y = ARIMAX, color = 'ARIMA'), linewidth = 2) +
-  geom_line(aes(y = BSTSX, color = 'BSTS'), linewidth = 2) +
+  geom_line(aes(y = narfimaT_chn_48_pred, color = 'NARFIMA'), linewidth = 2) +
+  geom_line(aes(y = arima_chn_48_pred, color = 'ARIMA'), linewidth = 2) +
+  geom_line(aes(y = bsts_chn_48_pred, color = 'BSTS'), linewidth = 2) +
   geom_ribbon(aes(ymin = posterior_interval_chnT_48$L, ymax = posterior_interval_chnT_48$U), fill = 'gold', alpha = .25) +
   scale_x_date(date_breaks = "8 month", date_labels = "%Y-%m-%d", limits = c(ymd("2019-11-01"), ymd("2023-10-01"))) +
   scale_y_continuous(
