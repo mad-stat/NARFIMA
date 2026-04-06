@@ -30,7 +30,7 @@
 
 * To view "Table 12: Estimates of the fractional differencing parameter $d$ using Whittle likelihood for BRIC exchange rates and macroeconomic variables, with associated standard errors and tests of $H_0: d = 0.$.", please refer to [Table_12_Whittle_Estimator.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_12_Whittle_Estimator.R).
 
-* To view "Table 13: Model Confidence Set (MCS) results for all countries evaluated across the baseline forecasters (✔ indicates the model belongs to the MCS set, while ✗ denotes elimination). Superscripts indicate the significance level at which a model is excluded: $^*$ $\alpha = 0.05$, $^\dagger$ $\alpha = 0.10$, and $^\ddagger$ $\alpha = 0.15$.", please refer to [Table_13_MCS_BRIC.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_13_MCS_BRIC.R).
+* To view "Table 13: Model Confidence Set (MCS) results for all countries evaluated across the baseline forecasters (✓ indicates the model belongs to the MCS set, while ✗ denotes elimination). Superscripts indicate the significance level at which a model is excluded: $^*$ $\alpha = 0.05$, $^\dagger$ $\alpha = 0.10$, and $^\ddagger$ $\alpha = 0.15$.", please refer to [Table_13_MCS_BRIC.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_13_MCS_BRIC.R).
 
 * To generate "Table 14: The table depicts the Terasvirta Test and the BDS Test results applied to the residuals of the ARFIMAx.", please refer to [Table_14_ARFIMAx_Residuals_Tests.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_14_ARFIMAx_Residuals_Tests.R).
 
