@@ -12,7 +12,7 @@ library(nonlinearTseries)
 library(seastests) 
 library(tseries)
 library(car)
-
+library(zoo)
  
 ##############################################################################################
 # This function performs key statistical tests on a time series:
