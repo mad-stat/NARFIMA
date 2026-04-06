@@ -111,12 +111,12 @@ gprc_braz <- ts(data$gprc_brazil)
 
 # Remove the last 48 observations (test data) -- Time frame considered: 1997M01 - 2019M10
 n = 48
-train_braz_48 <- subset(exchange_rate_braz, end = length(exchange_rate_braz) - n) 
-train_ir_braz_48 <- subset(ir_braz, end = length(ir_braz) - n) 
-train_ir_diff_48 <- subset(ir_diff, end = length(ir_diff) - n) 
-train_cpi_braz_48 <- subset(cpi_braz, end = length(cpi_braz) - n) 
-train_cpi_diff_48 <- subset(cpi_diff, end = length(cpi_diff) - n) 
-train_gprc_braz_48 <- subset(gprc_braz, end = length(gprc_braz) - n) 
+train_braz_48 <- window(exchange_rate_braz, end = length(exchange_rate_braz) - n) 
+train_ir_braz_48 <- window(ir_braz, end = length(ir_braz) - n) 
+train_ir_diff_48 <- window(ir_diff, end = length(ir_diff) - n) 
+train_cpi_braz_48 <- window(cpi_braz, end = length(cpi_braz) - n) 
+train_cpi_diff_48 <- window(cpi_diff, end = length(cpi_diff) - n) 
+train_gprc_braz_48 <- window(gprc_braz, end = length(gprc_braz) - n) 
 
 # Perform key statistical tests:
 summ_stat_braz_48 <- tibble()
@@ -167,12 +167,12 @@ gprc_rus <- ts(data$gprc_russia)
 
 # Remove the last 48 observations (test data) -- Time frame considered: 1997M01 - 2019M10
 n = 48
-train_rus_48 <- subset(exchange_rate_rus, end = length(exchange_rate_rus) - n) 
-train_ir_rus_48 <- subset(ir_rus, end = length(ir_rus) - n) 
-train_ir_diff_48 <- subset(ir_diff, end = length(ir_diff) - n) 
-train_cpi_rus_48 <- subset(cpi_rus, end = length(cpi_rus) - n) 
-train_cpi_diff_48 <- subset(cpi_diff, end = length(cpi_diff) - n) 
-train_gprc_rus_48 <- subset(gprc_rus, end = length(gprc_rus) - n) 
+train_rus_48 <- window(exchange_rate_rus, end = length(exchange_rate_rus) - n) 
+train_ir_rus_48 <- window(ir_rus, end = length(ir_rus) - n) 
+train_ir_diff_48 <- window(ir_diff, end = length(ir_diff) - n) 
+train_cpi_rus_48 <- window(cpi_rus, end = length(cpi_rus) - n) 
+train_cpi_diff_48 <- window(cpi_diff, end = length(cpi_diff) - n) 
+train_gprc_rus_48 <- window(gprc_rus, end = length(gprc_rus) - n) 
 
 # Perform key statistical tests:
 summ_stat_rus_48 <- tibble()
@@ -223,12 +223,12 @@ gprc_ind <- ts(data$gprc_india)
 
 # Remove the last 48 observations (test data) -- Time frame considered: 1997M01 - 2019M10
 n = 48
-train_ind_48 <- subset(exchange_rate_ind, end = length(exchange_rate_ind) - n) 
-train_ir_ind_48 <- subset(ir_ind, end = length(ir_ind) - n) 
-train_ir_diff_48 <- subset(ir_diff, end = length(ir_diff) - n) 
-train_cpi_ind_48 <- subset(cpi_ind, end = length(cpi_ind) - n) 
-train_cpi_diff_48 <- subset(cpi_diff, end = length(cpi_diff) - n) 
-train_gprc_ind_48 <- subset(gprc_ind, end = length(gprc_ind) - n) 
+train_ind_48 <- window(exchange_rate_ind, end = length(exchange_rate_ind) - n) 
+train_ir_ind_48 <- window(ir_ind, end = length(ir_ind) - n) 
+train_ir_diff_48 <- window(ir_diff, end = length(ir_diff) - n) 
+train_cpi_ind_48 <- window(cpi_ind, end = length(cpi_ind) - n) 
+train_cpi_diff_48 <- window(cpi_diff, end = length(cpi_diff) - n) 
+train_gprc_ind_48 <- window(gprc_ind, end = length(gprc_ind) - n) 
 
 # Perform key statistical tests:
 summ_stat_ind_48 <- tibble()
@@ -279,12 +279,12 @@ gprc_chn <- ts(data$gprc_china)
 
 # Remove the last 48 observations (test data) -- Time frame considered: 1997M01 - 2019M10
 n = 48
-train_chn_48 <- subset(exchange_rate_chn, end = length(exchange_rate_chn) - n) 
-train_ir_chn_48 <- subset(ir_chn, end = length(ir_chn) - n) 
-train_ir_diff_48 <- subset(ir_diff, end = length(ir_diff) - n) 
-train_cpi_chn_48 <- subset(cpi_chn, end = length(cpi_chn) - n) 
-train_cpi_diff_48 <- subset(cpi_diff, end = length(cpi_diff) - n) 
-train_gprc_chn_48 <- subset(gprc_chn, end = length(gprc_chn) - n) 
+train_chn_48 <- window(exchange_rate_chn, end = length(exchange_rate_chn) - n) 
+train_ir_chn_48 <- window(ir_chn, end = length(ir_chn) - n) 
+train_ir_diff_48 <- window(ir_diff, end = length(ir_diff) - n) 
+train_cpi_chn_48 <- window(cpi_chn, end = length(cpi_chn) - n) 
+train_cpi_diff_48 <- window(cpi_diff, end = length(cpi_diff) - n) 
+train_gprc_chn_48 <- window(gprc_chn, end = length(gprc_chn) - n) 
 
 # Perform key statistical tests:
 summ_stat_chn_48 <- tibble()
@@ -335,12 +335,12 @@ cpi_us <- ts(data$CPI_inflation_USA)
 
 # Remove the last 48 observations (test data) -- Time frame considered: 1997M01 - 2019M10
 n = 48
-train_global_epu_braz_48 <- subset(global_epu_braz, end = length(global_epu_braz) - n) 
-train_emv_us_48 <- subset(emv_us, end = length(emv_us) - n) 
-train_mpu_us_48 <- subset(mpu_us, end = length(mpu_us) - n) 
-train_oil_braz_48 <- subset(oil_braz, end = length(oil_braz) - n) 
-train_ir_us_48 <- subset(ir_us, end = length(ir_us) - n) 
-train_cpi_us_48 <- subset(cpi_us, end = length(cpi_us) - n) 
+train_global_epu_braz_48 <- window(global_epu_braz, end = length(global_epu_braz) - n) 
+train_emv_us_48 <- window(emv_us, end = length(emv_us) - n) 
+train_mpu_us_48 <- window(mpu_us, end = length(mpu_us) - n) 
+train_oil_braz_48 <- window(oil_braz, end = length(oil_braz) - n) 
+train_ir_us_48 <- window(ir_us, end = length(ir_us) - n) 
+train_cpi_us_48 <- window(cpi_us, end = length(cpi_us) - n) 
 
 # Perform key statistical tests:
 summ_stat_global_48 <- tibble()
