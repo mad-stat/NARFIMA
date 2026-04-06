@@ -1,4 +1,4 @@
-############################# Table 03: Global Characteristics - BRIC #############################
+############################# Table 11: Global Characteristics - BRIC #############################
  
 # For reproducibility, we are using this seed value
 set.seed(100) 
