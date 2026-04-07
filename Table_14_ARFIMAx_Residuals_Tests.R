@@ -77,10 +77,10 @@ arfima_braz_1 <- arfima(train_braz_1, xreg = train_reg_braz_1)
 arfima_braz_1_pred <- forecast(arfima_braz_1, h = n, xreg = test_reg_braz_1)
 arfima_er_braz_1 <-  residuals(arfima_braz_1)
 arfima_er_braz_1[is.na(arfima_er_braz_1)] <-  0
+adf.test(arfima_er_braz_1)
 
 summ <- tibble()
 summ <- rbind(summ,nonlinearity_tests_summary(arfima_er_braz_1))
-
 
 
 n = 3
@@ -94,8 +94,9 @@ arfima_braz_3 <- arfima(train_braz_3, xreg = train_reg_braz_3)
 arfima_braz_3_pred <- forecast(arfima_braz_3, h = n, xreg = test_reg_braz_3)
 arfima_er_braz_3 <-  residuals(arfima_braz_3)
 arfima_er_braz_3[is.na(arfima_er_braz_3)] <-  0
-summ <- rbind(summ,nonlinearity_tests_summary(arfima_er_braz_3))
+adf.test(arfima_er_braz_3)
 
+summ <- rbind(summ,nonlinearity_tests_summary(arfima_er_braz_3))
 
 
 n = 6
@@ -109,8 +110,9 @@ arfima_braz_6 <- arfima(train_braz_6, xreg = train_reg_braz_6)
 arfima_braz_6_pred <- forecast(arfima_braz_6, h = n, xreg = test_reg_braz_6)
 arfima_er_braz_6 <-  residuals(arfima_braz_6)
 arfima_er_braz_6[is.na(arfima_er_braz_6)] <-  0
-summ <- rbind(summ,nonlinearity_tests_summary(arfima_er_braz_6))
+adf.test(arfima_er_braz_6)
 
+summ <- rbind(summ,nonlinearity_tests_summary(arfima_er_braz_6))
 
 
 
@@ -125,8 +127,9 @@ arfima_braz_12 <- arfima(train_braz_12, xreg = train_reg_braz_12)
 arfima_braz_12_pred <- forecast(arfima_braz_12, h = n, xreg = test_reg_braz_12)
 arfima_er_braz_12 <-  residuals(arfima_braz_12)
 arfima_er_braz_12[is.na(arfima_er_braz_12)] <-  0
-summ <- rbind(summ,nonlinearity_tests_summary(arfima_er_braz_12))
+adf.test(arfima_er_braz_12)
 
+summ <- rbind(summ,nonlinearity_tests_summary(arfima_er_braz_12))
 
 
 
@@ -141,7 +144,10 @@ arfima_braz_24 <- arfima(train_braz_24, xreg = train_reg_braz_24)
 arfima_braz_24_pred <- forecast(arfima_braz_24, h = n, xreg = test_reg_braz_24)
 arfima_er_braz_24 <-  residuals(arfima_braz_24)
 arfima_er_braz_24[is.na(arfima_er_braz_24)] <-  0
+adf.test(arfima_er_braz_24)
+
 summ <- rbind(summ,nonlinearity_tests_summary(arfima_er_braz_24))
+
 
 
 n = 48
@@ -155,6 +161,8 @@ arfima_braz_48 <- arfima(train_braz_48, xreg = train_reg_braz_48)
 arfima_braz_48_pred <- forecast(arfima_braz_48, h = n, xreg = test_reg_braz_48)
 arfima_er_braz_48 <-  residuals(arfima_braz_48)
 arfima_er_braz_48[is.na(arfima_er_braz_48)] <-  0
+adf.test(arfima_er_braz_48)
+
 summ <- rbind(summ,nonlinearity_tests_summary(arfima_er_braz_48))
 
 
@@ -180,8 +188,9 @@ arfima_rus_1 <- arfima(train_rus_1, xreg = train_reg_rus_1)
 arfima_rus_1_pred <- forecast(arfima_rus_1, h = n, xreg = test_reg_rus_1)
 arfima_er_rus_1 <-  residuals(arfima_rus_1)
 arfima_er_rus_1[is.na(arfima_er_rus_1)] <-  0
-summ <- rbind(summ,nonlinearity_tests_summary(arfima_er_rus_1))
+adf.test(arfima_er_rus_1)
 
+summ <- rbind(summ,nonlinearity_tests_summary(arfima_er_rus_1))
 
 
 n = 3
@@ -195,6 +204,8 @@ arfima_rus_3 <- arfima(train_rus_3, xreg = train_reg_rus_3)
 arfima_rus_3_pred <- forecast(arfima_rus_3, h = n, xreg = test_reg_rus_3)
 arfima_er_rus_3 <-  residuals(arfima_rus_3)
 arfima_er_rus_3[is.na(arfima_er_rus_3)] <-  0
+adf.test(arfima_er_rus_3)
+
 summ <- rbind(summ,nonlinearity_tests_summary(arfima_er_rus_3))
 
 
@@ -210,8 +221,9 @@ arfima_rus_6 <- arfima(train_rus_6, xreg = train_reg_rus_6)
 arfima_rus_6_pred <- forecast(arfima_rus_6, h = n, xreg = test_reg_rus_6)
 arfima_er_rus_6 <-  residuals(arfima_rus_6)
 arfima_er_rus_6[is.na(arfima_er_rus_6)] <-  0
-summ <- rbind(summ,nonlinearity_tests_summary(arfima_er_rus_6))
+adf.test(arfima_er_rus_6)
 
+summ <- rbind(summ,nonlinearity_tests_summary(arfima_er_rus_6))
 
 
 
@@ -226,8 +238,9 @@ arfima_rus_12 <- arfima(train_rus_12, xreg = train_reg_rus_12)
 arfima_rus_12_pred <- forecast(arfima_rus_12, h = n, xreg = test_reg_rus_12)
 arfima_er_rus_12 <-  residuals(arfima_rus_12)
 arfima_er_rus_12[is.na(arfima_er_rus_12)] <-  0
-summ <- rbind(summ,nonlinearity_tests_summary(arfima_er_rus_12))
+adf.test(arfima_er_rus_12)
 
+summ <- rbind(summ,nonlinearity_tests_summary(arfima_er_rus_12))
 
 
 
@@ -242,6 +255,8 @@ arfima_rus_24 <- arfima(train_rus_24, xreg = train_reg_rus_24)
 arfima_rus_24_pred <- forecast(arfima_rus_24, h = n, xreg = test_reg_rus_24)
 arfima_er_rus_24 <-  residuals(arfima_rus_24)
 arfima_er_rus_24[is.na(arfima_er_rus_24)] <-  0
+adf.test(arfima_er_rus_24)
+
 summ <- rbind(summ,nonlinearity_tests_summary(arfima_er_rus_24))
 
 
@@ -257,6 +272,8 @@ arfima_rus_48 <- arfima(train_rus_48, xreg = train_reg_rus_48)
 arfima_rus_48_pred <- forecast(arfima_rus_48, h = n, xreg = test_reg_rus_48)
 arfima_er_rus_48 <-  residuals(arfima_rus_48)
 arfima_er_rus_48[is.na(arfima_er_rus_48)] <-  0
+adf.test(arfima_er_rus_48)
+
 summ <- rbind(summ,nonlinearity_tests_summary(arfima_er_rus_48))
 
 
@@ -283,6 +300,8 @@ arfima_ind_1 <- arfima(train_ind_1, xreg = train_reg_ind_1)
 arfima_ind_1_pred <- forecast(arfima_ind_1, h = n, xreg = test_reg_ind_1)
 arfima_er_ind_1 <-  residuals(arfima_ind_1)
 arfima_er_ind_1[is.na(arfima_er_ind_1)] <-  0
+adf.test(arfima_er_ind_1)
+
 summ <- rbind(summ,nonlinearity_tests_summary(arfima_er_ind_1))
 
 
@@ -298,6 +317,8 @@ arfima_ind_3 <- arfima(train_ind_3, xreg = train_reg_ind_3)
 arfima_ind_3_pred <- forecast(arfima_ind_3, h = n, xreg = test_reg_ind_3)
 arfima_er_ind_3 <-  residuals(arfima_ind_3)
 arfima_er_ind_3[is.na(arfima_er_ind_3)] <-  0
+adf.test(arfima_er_ind_3)
+
 summ <- rbind(summ,nonlinearity_tests_summary(arfima_er_ind_3))
 
 
@@ -313,8 +334,9 @@ arfima_ind_6 <- arfima(train_ind_6, xreg = train_reg_ind_6)
 arfima_ind_6_pred <- forecast(arfima_ind_6, h = n, xreg = test_reg_ind_6)
 arfima_er_ind_6 <-  residuals(arfima_ind_6)
 arfima_er_ind_6[is.na(arfima_er_ind_6)] <-  0
-summ <- rbind(summ,nonlinearity_tests_summary(arfima_er_ind_6))
+adf.test(arfima_er_ind_6)
 
+summ <- rbind(summ,nonlinearity_tests_summary(arfima_er_ind_6))
 
 
 
@@ -329,6 +351,8 @@ arfima_ind_12 <- arfima(train_ind_12, xreg = train_reg_ind_12)
 arfima_ind_12_pred <- forecast(arfima_ind_12, h = n, xreg = test_reg_ind_12)
 arfima_er_ind_12 <-  residuals(arfima_ind_12)
 arfima_er_ind_12[is.na(arfima_er_ind_12)] <-  0
+adf.test(arfima_er_ind_12)
+
 summ <- rbind(summ,nonlinearity_tests_summary(arfima_er_ind_12))
 
 
@@ -345,6 +369,8 @@ arfima_ind_24 <- arfima(train_ind_24, xreg = train_reg_ind_24)
 arfima_ind_24_pred <- forecast(arfima_ind_24, h = n, xreg = test_reg_ind_24)
 arfima_er_ind_24 <-  residuals(arfima_ind_24)
 arfima_er_ind_24[is.na(arfima_er_ind_24)] <-  0
+adf.test(arfima_er_ind_24)
+
 summ <- rbind(summ,nonlinearity_tests_summary(arfima_er_ind_24))
 
 
@@ -359,6 +385,8 @@ arfima_ind_48 <- arfima(train_ind_48, xreg = train_reg_ind_48)
 arfima_ind_48_pred <- forecast(arfima_ind_48, h = n, xreg = test_reg_ind_48)
 arfima_er_ind_48 <-  residuals(arfima_ind_48)
 arfima_er_ind_48[is.na(arfima_er_ind_48)] <-  0
+adf.test(arfima_er_ind_48)
+
 summ <- rbind(summ,nonlinearity_tests_summary(arfima_er_ind_48))
 
 
@@ -384,6 +412,9 @@ arfima_chn_1 <- arfima(train_chn_1, xreg = train_reg_chn_1)
 arfima_chn_1_pred <- forecast(arfima_chn_1, h = n, xreg = test_reg_chn_1)
 arfima_er_chn_1 <-  residuals(arfima_chn_1)
 arfima_er_chn_1[is.na(arfima_er_chn_1)] <-  0
+adf.test(arfima_er_chn_1)
+kpss.test(arfima_er_chn_1)
+
 summ <- rbind(summ,nonlinearity_tests_summary(arfima_er_chn_1))
 
 
@@ -399,6 +430,9 @@ arfima_chn_3 <- arfima(train_chn_3, xreg = train_reg_chn_3)
 arfima_chn_3_pred <- forecast(arfima_chn_3, h = n, xreg = test_reg_chn_3)
 arfima_er_chn_3 <-  residuals(arfima_chn_3)
 arfima_er_chn_3[is.na(arfima_er_chn_3)] <-  0
+adf.test(arfima_er_chn_3)
+kpss.test(arfima_er_chn_3)
+
 summ <- rbind(summ,nonlinearity_tests_summary(arfima_er_chn_3))
 
 
@@ -414,8 +448,10 @@ arfima_chn_6 <- arfima(train_chn_6, xreg = train_reg_chn_6)
 arfima_chn_6_pred <- forecast(arfima_chn_6, h = n, xreg = test_reg_chn_6)
 arfima_er_chn_6 <-  residuals(arfima_chn_6)
 arfima_er_chn_6[is.na(arfima_er_chn_6)] <-  0
-summ <- rbind(summ,nonlinearity_tests_summary(arfima_er_chn_6))
+adf.test(arfima_er_chn_6)
+kpss.test(arfima_er_chn_6)
 
+summ <- rbind(summ,nonlinearity_tests_summary(arfima_er_chn_6))
 
 
 
@@ -430,8 +466,10 @@ arfima_chn_12 <- arfima(train_chn_12, xreg = train_reg_chn_12)
 arfima_chn_12_pred <- forecast(arfima_chn_12, h = n, xreg = test_reg_chn_12)
 arfima_er_chn_12 <-  residuals(arfima_chn_12)
 arfima_er_chn_12[is.na(arfima_er_chn_12)] <-  0
-summ <- rbind(summ,nonlinearity_tests_summary(arfima_er_chn_12))
+adf.test(arfima_er_chn_12)
+kpss.test(arfima_er_chn_12)
 
+summ <- rbind(summ,nonlinearity_tests_summary(arfima_er_chn_12))
 
 
 
@@ -446,6 +484,9 @@ arfima_chn_24 <- arfima(train_chn_24, xreg = train_reg_chn_24)
 arfima_chn_24_pred <- forecast(arfima_chn_24, h = n, xreg = test_reg_chn_24)
 arfima_er_chn_24 <-  residuals(arfima_chn_24)
 arfima_er_chn_24[is.na(arfima_er_chn_24)] <-  0
+adf.test(arfima_er_chn_24)
+kpss.test(arfima_er_chn_24)
+
 summ <- rbind(summ,nonlinearity_tests_summary(arfima_er_chn_24))
 
 
@@ -461,4 +502,7 @@ arfima_chn_48 <- arfima(train_chn_48, xreg = train_reg_chn_48)
 arfima_chn_48_pred <- forecast(arfima_chn_48, h = n, xreg = test_reg_chn_48)
 arfima_er_chn_48 <-  residuals(arfima_chn_48)
 arfima_er_chn_48[is.na(arfima_er_chn_48)] <-  0
+adf.test(arfima_er_chn_48)
+kpss.test(arfima_er_chn_48)
+
 summ <- rbind(summ,nonlinearity_tests_summary(arfima_er_chn_48))
