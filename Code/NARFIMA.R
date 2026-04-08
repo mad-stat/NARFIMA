@@ -352,7 +352,7 @@ print.nnetarmodels <- function(x, ...) {
 }
 
 
-forecast_narfima_class <- function(object, h = ifelse(object$m > 1, 2 * object$m, 10), PI = FALSE, level = 80, fan = FALSE, bootstrap = FALSE, npaths = 1000, innov = NULL, xreg = NULL, lambda = object$lambda, lambdae = object$lambdae, ...) {
+forecast_narfima <- function(object, h = ifelse(object$m > 1, 2 * object$m, 10), PI = FALSE, level = 80, fan = FALSE, bootstrap = FALSE, npaths = 1000, innov = NULL, xreg = NULL, lambda = object$lambda, lambdae = object$lambdae, ...) {
 
   out <- object
   tspx <- tsp(out$y)
