@@ -8,7 +8,7 @@ library(readxl)
 setwd('Dataset/Dataset_Model_Forecasts/ConfPI')
 braz_data <- read.csv("Brazil ConfPI 48.csv")
 
-ggplot(data = braz_48, aes(x = Date)) +
+ggplot(data = braz_data, aes(x = as.Date(Date))) +
   geom_point(aes(y = Observed, color = 'Ground Truth')) +
   geom_line(aes(y = NARFIMAx, color = 'NARFIMA'), linewidth = 2) +
   geom_line(aes(y = ARIMAx, color = 'ARIMA'), linewidth = 2) +
@@ -45,7 +45,7 @@ ggplot(data = braz_48, aes(x = Date)) +
 setwd('Dataset/Dataset_Model_Forecasts/ConfPI')
 rus_data <- read.csv("Russia ConfPI 48.csv")
 
-ggplot(data = rus_48, aes(x = as.Date(Date))) +
+ggplot(data = rus_data, aes(x = as.Date(Date))) +
   geom_point(aes(y = Observed, color = 'Ground Truth')) +
   geom_line(aes(y = NARFIMAx, color = 'NARFIMA'), linewidth = 2) +
   geom_line(aes(y = ARIMAx, color = 'ARIMA'), linewidth = 2) +
