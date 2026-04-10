@@ -439,7 +439,7 @@ arfima_er_rus_12 <-  residuals(arfima_rus_12)
 arfima_er_rus_12[is.na(arfima_er_rus_12)] <-  0
 
 set.seed(100)
-rus_12 <- bootstrap_narfima_params(train_data = train_rus_12, error_data = arfima_er_rus_12, p = 5, q = 2, size = 5, skip = TRUE, xreg = train_reg_rus_12, sy_idx = 71:75, ser_idx = 76:77, iterations = 1000, decay = 0.005, rang = 3)
+rus_12 <- bootstrap_narfima_params(train_data = train_rus_12, error_data = arfima_er_rus_12, p = 5, q = 2, size = 5, skip = TRUE, xreg = train_reg_rus_12, sy_idx = 71:75, ser_idx = 76:77, iterations = 1000, decay = 0, rang = 0.7)
 rus_12
                       
 ##################################################### Russia 24 #####################################################
@@ -543,18 +543,8 @@ arfima_er_chn_24 <-  residuals(arfima_chn_24)
 arfima_er_chn_24[is.na(arfima_er_chn_24)] <-  0
 
 set.seed(100)
-narfimaT_chn_24 <-  auto_narfima(train_chn_24, arfima_er_chn_24, p = 1, q = 2, size = 4, lambda = 0, lambdae = 0, repeats = 1000, skip = T, xreg = train_reg_chn_24)
-
-# AR skip weights
-sy = narfimaT_chn_24$model[[1]]$wts[41]
-View(as.data.frame(sy))
-# Error skip weights
-ser = narfimaT_chn_24$model[[1]]$wts[42:43]
-View(as.data.frame(ser))
-# Assumption 3
-sum(sy) + sum(ser)
-# Assumption 5
-abs(sum(sy))
+chn_24 <- bootstrap_narfima_params(train_data = train_chn_24, error_data = arfima_er_chn_24, p = 1, q = 2, size = 4, skip = TRUE, xreg = train_reg_chn_24, sy_idx = 41, ser_idx = 42:43, iterations = 1000, decay = 0, rang = 0.7)
+chn_24
 
 ##################################################### China 48 #####################################################
 
@@ -569,15 +559,5 @@ arfima_er_chn_48 <-  residuals(arfima_chn_48)
 arfima_er_chn_48[is.na(arfima_er_chn_48)] <-  0
 
 set.seed(100)
-narfimaT_chn_48 <-  auto_narfima(train_chn_48, arfima_er_chn_48, p = 4, q = 1, size = 2, lambda = 0, lambdae = 0, repeats = 1000, skip = T, xreg = train_reg_chn_48)
-
-# AR skip weights
-sy = narfimaT_chn_48$model[[1]]$wts[25:28]
-View(as.data.frame(sy))
-# Error skip weights
-ser = narfimaT_chn_48$model[[1]]$wts[29]
-View(as.data.frame(ser))
-# Assumption 3
-sum(sy) + sum(ser)
-# Assumption 5
-abs(sum(sy))
+chn_48 <- bootstrap_narfima_params(train_data = train_chn_48, error_data = arfima_er_chn_48, p = 4, q = 1, size = 2, skip = TRUE, xreg = train_reg_chn_48, sy_idx = 25:28, ser_idx = 29, iterations = 1000, decay = 0, rang = 0.7)
+chn_48
