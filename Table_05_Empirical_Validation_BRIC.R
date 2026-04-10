@@ -559,5 +559,5 @@ arfima_er_chn_48 <-  residuals(arfima_chn_48)
 arfima_er_chn_48[is.na(arfima_er_chn_48)] <-  0
 
 set.seed(100)
-chn_48 <- bootstrap_narfima_params(train_data = train_chn_48, error_data = arfima_er_chn_48, p = 4, q = 1, size = 2, skip = TRUE, xreg = train_reg_chn_48, sy_idx = 25:28, ser_idx = 29, iterations = 1000, decay = 0, rang = 0.7)
+chn_48 <- bootstrap_narfima_params(train_data = train_chn_48, error_data = arfima_er_chn_48, p = 4, q = 1, size = 2, skip = TRUE, xreg = train_reg_chn_48, sy_idx = 25:28, ser_idx = 29, iterations = 1000, decay = 0.001, rang = 2.1)
 chn_48
