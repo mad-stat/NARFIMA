@@ -29,11 +29,11 @@ set.seed(100)
 narfimaT_braz_48 <-  auto_narfima(train_braz_48, arfima_er_braz_48, p = 4, q = 2, size = 1, lambda = 0, lambdae = 0, repeats = 1000, skip = T, xreg = train_reg_braz_48)
 
 # AR skip weights
-sy = narfimaT_braz_48$model[[1]]$wts[14:17])
-View(as.data.frame(sy)
+sy = narfimaT_braz_48$model[[1]]$wts[14:17]
+View(as.data.frame(sy))
 # Error skip weights
-ser = narfimaT_braz_48$model[[1]]$wts[18:19])
-View(as.data.frame(ser)
+ser = narfimaT_braz_48$model[[1]]$wts[18:19]
+View(as.data.frame(ser))
 # Assumption 3
 sum(sy) + sum(ser)     
 # Assumption 5
