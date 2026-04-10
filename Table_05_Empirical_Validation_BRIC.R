@@ -31,7 +31,7 @@ bootstrap_narfima_params <- function(train_data, error_data, p, q, size, skip = 
     if(i %% 100 == 0) message(paste("Processed iteration", i))
   }
   
-  # # Calculate Medians
+  # Calculate Medians
   median_sy <- apply(sy_matrix, 2, median)
   median_ser <- apply(ser_matrix, 2, median)
   
@@ -398,6 +398,7 @@ avnnet <- function(x, y, repeats, linout = TRUE, trace = FALSE, ...) {
 avnnet_T <- function(x, y, repeats, linout = TRUE, trace = FALSE, ...) {
   mods <- list()
   for (i in 1:repeats) {
+    # Ensure each repeat has a unique initialization based on the parent seed
     set.seed(runif(1, 0, 1e8) + i)
     mods[[i]] <- nnet::nnet(x, y, linout = linout, trace = trace, skip = TRUE, ...)
   }
