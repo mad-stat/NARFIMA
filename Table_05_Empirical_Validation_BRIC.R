@@ -425,9 +425,7 @@ arfima_er_braz_48[is.na(arfima_er_braz_48)] <-  0
 set.seed(100)
 braz_48 <- bootstrap_narfima_params(train_data = train_braz_48, error_data = arfima_er_braz_48, p = 4, q = 2, size = 1, skip = TRUE, xreg = train_reg_braz_48, sy_idx = 14:17, ser_idx = 18:19, iterations = 1000, decay = 0.005, rang = 3)
 braz_48
-
-
-                               
+                          
 ##################################################### Russia 12 #####################################################
 
 data <- read_excel('Russia_Data.xlsx') %>% rename('Exchange_Rate_rus' = spot_ER_Russia)                   
@@ -447,9 +445,7 @@ arfima_er_rus_12[is.na(arfima_er_rus_12)] <-  0
 set.seed(100)
 rus_12 <- bootstrap_narfima_params(train_data = train_rus_12, error_data = arfima_er_rus_12, p = 5, q = 2, size = 5, skip = TRUE, xreg = train_reg_rus_12, sy_idx = 71:75, ser_idx = 76:77, iterations = 1000, decay = 0.005, rang = 3)
 rus_12
-
-
-                               
+                      
 ##################################################### Russia 24 #####################################################
      
 n = 24
@@ -465,8 +461,6 @@ arfima_er_rus_24[is.na(arfima_er_rus_24)] <-  0
 set.seed(100)
 rus_24 <- bootstrap_narfima_params(train_data = train_rus_24, error_data = arfima_er_rus_24, p = 1, q = 1, size = 5, skip = TRUE, xreg = train_reg_rus_24, sy_idx = 46, ser_idx = 47, iterations = 1000, decay = 0, rang = 0.7)
 rus_24
-
-                               
 
 ##################################################### India 12 #####################################################
 
@@ -485,19 +479,8 @@ arfima_er_ind_12 <-  residuals(arfima_ind_12)
 arfima_er_ind_12[is.na(arfima_er_ind_12)] <-  0
 
 set.seed(100)
-narfimaT_ind_12 <-  auto_narfima(train_ind_12, arfima_er_ind_12, p = 1, q = 3, size = 4, lambda = 0, lambdae = 0, repeats = 1000, skip = T, xreg = train_reg_ind_12)
-
-# AR skip weights
-sy = narfimaT_ind_12$model[[1]]$wts[45]
-View(as.data.frame(sy))
-# Error skip weights
-ser = narfimaT_ind_12$model[[1]]$wts[46:48]
-View(as.data.frame(ser))
-# Assumption 3
-sum(sy) + sum(ser)
-# Assumption 5
-abs(sum(sy))     
-
+ind_12 <- bootstrap_narfima_params(train_data = train_ind_12, error_data = arfima_er_ind_12, p = 1, q = 3, size = 4, skip = TRUE, xreg = train_reg_ind_12, sy_idx = 45, ser_idx = 46:48, iterations = 1000, decay = 0, rang = 0.7)
+ind_12
 
 ##################################################### India 24 #####################################################
 
@@ -512,20 +495,9 @@ arfima_er_ind_24 <-  residuals(arfima_ind_24)
 arfima_er_ind_24[is.na(arfima_er_ind_24)] <-  0
 
 set.seed(100)
-narfimaT_ind_24 <-  auto_narfima(train_ind_24, arfima_er_ind_24, p = 5, q = 4, size = 1, lambda = 0, lambdae = 0, repeats = 1000, skip = T, xreg = train_reg_ind_24)
-     
-# AR skip weights
-sy = narfimaT_ind_24$model[[1]]$wts[17:21]
-View(as.data.frame(sy))
-# Error skip weights
-ser = narfimaT_ind_24$model[[1]]$wts[22:25]
-View(as.data.frame(ser))
-# Assumption 3
-sum(sy) + sum(ser)
-# Assumption 5
-abs(sum(sy))
-
-     
+ind_24 <- bootstrap_narfima_params(train_data = train_ind_24, error_data = arfima_er_ind_24, p = 5, q = 4, size = 1, skip = TRUE, xreg = train_reg_ind_24, sy_idx = 17:21, ser_idx = 22:25, iterations = 1000, decay = 0, rang = 0.7)
+ind_24
+                               
 ##################################################### India 48 #####################################################
 
 n = 48
@@ -539,19 +511,8 @@ arfima_er_ind_48 <-  residuals(arfima_ind_48)
 arfima_er_ind_48[is.na(arfima_er_ind_48)] <-  0
 
 set.seed(100)
-narfimaT_ind_48 <-  auto_narfima(train_ind_48, arfima_er_ind_48, p = 2, q = 4, size = 4, lambda = 0, lambdae = 0, repeats = 1000, skip = T, xreg = train_reg_ind_48)
-
-# AR skip weights
-sy = narfimaT_ind_48$model[[1]]$wts[53:54]
-View(as.data.frame(sy))
-# Error skip weights
-ser = narfimaT_ind_48$model[[1]]$wts[55:58]
-View(as.data.frame(ser))
-# Assumption 3
-sum(sy) + sum(ser)
-# Assumption 5
-abs(sum(sy))
-
+ind_48 <- bootstrap_narfima_params(train_data = train_ind_48, error_data = arfima_er_ind_48, p = 2, q = 4, size = 4, skip = TRUE, xreg = train_reg_ind_48, sy_idx = 53:54, ser_idx = 55:58, iterations = 1000, decay = 0, rang = 0.7)
+ind_48
      
 ##################################################### China 12 #####################################################
      
@@ -570,19 +531,8 @@ arfima_er_chn_12 <-  residuals(arfima_chn_12)
 arfima_er_chn_12[is.na(arfima_er_chn_12)] <-  0
 
 set.seed(100)
-narfimaT_chn_12 <-  auto_narfima(train_chn_12, arfima_er_chn_12, p = 5, q = 4, size = 1, lambda = 0, lambdae = 0, repeats = 1000, skip = T, xreg = train_reg_chn_12)
-
-# AR skip weights
-sy = narfimaT_chn_12$model[[1]]$wts[17:21]
-View(as.data.frame(sy))
-# Error skip weights
-ser = narfimaT_chn_12$model[[1]]$wts[22:25]
-View(as.data.frame(ser))
-# Assumption 3
-sum(sy) + sum(ser)
-# Assumption 5
-abs(sum(sy))
-
+chn_12 <- bootstrap_narfima_params(train_data = train_chn_12, error_data = arfima_er_chn_12, p = 5, q = 4, size = 1, skip = TRUE, xreg = train_reg_chn_12, sy_idx = 17:21, ser_idx = 22:25, iterations = 1000, decay = 0, rang = 0.7)
+chn_12
      
 ##################################################### China 24 #####################################################
 
@@ -609,7 +559,6 @@ View(as.data.frame(ser))
 sum(sy) + sum(ser)
 # Assumption 5
 abs(sum(sy))
-
 
 ##################################################### China 48 #####################################################
 
