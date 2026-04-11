@@ -11,6 +11,7 @@ library(rugarch)
 library(bsts)
 library(readxl)
 library(nonlinearTseries)
+library(urca)
 
 
 ##################################################### Non-Linearity Function #####################################################
@@ -414,6 +415,7 @@ arfima_er_chn_1 <-  residuals(arfima_chn_1)
 arfima_er_chn_1[is.na(arfima_er_chn_1)] <-  0
 adf.test(arfima_er_chn_1)
 kpss.test(arfima_er_chn_1)
+summary(ur.za(arfima_er_chn_1, model = "intercept"))
 
 summ <- rbind(summ,nonlinearity_tests_summary(arfima_er_chn_1))
 
@@ -432,6 +434,7 @@ arfima_er_chn_3 <-  residuals(arfima_chn_3)
 arfima_er_chn_3[is.na(arfima_er_chn_3)] <-  0
 adf.test(arfima_er_chn_3)
 kpss.test(arfima_er_chn_3)
+summary(ur.za(arfima_er_chn_3, model = "intercept"))
 
 summ <- rbind(summ,nonlinearity_tests_summary(arfima_er_chn_3))
 
@@ -450,6 +453,7 @@ arfima_er_chn_6 <-  residuals(arfima_chn_6)
 arfima_er_chn_6[is.na(arfima_er_chn_6)] <-  0
 adf.test(arfima_er_chn_6)
 kpss.test(arfima_er_chn_6)
+summary(ur.za(arfima_er_chn_6, model = "intercept"))
 
 summ <- rbind(summ,nonlinearity_tests_summary(arfima_er_chn_6))
 
@@ -468,6 +472,7 @@ arfima_er_chn_12 <-  residuals(arfima_chn_12)
 arfima_er_chn_12[is.na(arfima_er_chn_12)] <-  0
 adf.test(arfima_er_chn_12)
 kpss.test(arfima_er_chn_12)
+summary(ur.za(arfima_er_chn_12, model = "intercept"))
 
 summ <- rbind(summ,nonlinearity_tests_summary(arfima_er_chn_12))
 
@@ -486,6 +491,7 @@ arfima_er_chn_24 <-  residuals(arfima_chn_24)
 arfima_er_chn_24[is.na(arfima_er_chn_24)] <-  0
 adf.test(arfima_er_chn_24)
 kpss.test(arfima_er_chn_24)
+summary(ur.za(arfima_er_chn_24, model = "intercept"))
 
 summ <- rbind(summ,nonlinearity_tests_summary(arfima_er_chn_24))
 
@@ -504,5 +510,6 @@ arfima_er_chn_48 <-  residuals(arfima_chn_48)
 arfima_er_chn_48[is.na(arfima_er_chn_48)] <-  0
 adf.test(arfima_er_chn_48)
 kpss.test(arfima_er_chn_48)
+summary(ur.za(arfima_er_chn_48, model = "intercept"))
 
 summ <- rbind(summ,nonlinearity_tests_summary(arfima_er_chn_48))
