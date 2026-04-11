@@ -28,7 +28,7 @@
 
 * To view "Table 11: Global characteristics of the economic time series under study for BRIC countries.", please refer to [Table_11_Global_Characteristics_BRIC.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_11_Global_Characteristics_BRIC.R).
 
-* To view "Table 12: Estimates of the fractional differencing parameter $d$ using Whittle likelihood for BRIC exchange rates and macroeconomic variables, with associated standard errors and tests of $H_0: d = 0.$.", please refer to [Table_12_Whittle_Estimator.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_12_Whittle_Estimator.R).
+* To view "Table 12: Estimates of the fractional differencing parameter $d$ using Whittle likelihood for BRIC exchange rates and macroeconomic variables, with associated standard errors and tests of $H_0: d = 0.$. The $z$-statistics are evaluated against the asymptotic standard normal distribution at the 1\% significance level, corresponding to a critical value of $\pm 2.576$.", please refer to [Table_12_Whittle_Estimator.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_12_Whittle_Estimator.R).
 
 * To view "Table 13: Model Confidence Set (MCS) results for all countries evaluated across the baseline forecasters (✓ indicates the model belongs to the MCS set, while ✗ denotes elimination). Superscripts indicate the significance level at which a model is excluded: $^*$ $\alpha = 0.05$, $^\dagger$ $\alpha = 0.10$, and $^\ddagger$ $\alpha = 0.15$.", please refer to [Table_13_MCS_BRIC.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_13_MCS_BRIC.R).
 
