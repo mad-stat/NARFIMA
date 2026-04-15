@@ -2,7 +2,7 @@
 
 * To view the full list of packages (both R and Python) along with their respective versions, please refer to the following files [R_package_version.txt](https://github.com/mad-stat/NARFIMA/blob/main/R_package_version.txt) and [Python_Package_Version.txt](https://github.com/mad-stat/NARFIMA/blob/main/Python_Package_Version.txt).
 
-* To view "Table 1: Training data for exchange rates of BRIC nations, alongside the ACF plot and OLS-based CUSUM test results.", please refer to [Table_01_TS_ACF_OLS_CUSUM_BRIC.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_01_TS_ACF_OLS_CUSUM_BRIC.R).
+* To view "Table 1: Time plots of the training data for exchange rates of BRIC nations, alongside the ACF plots and OLS-based CUSUM test results.", please refer to [Table_01_TS_ACF_OLS_CUSUM_BRIC.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_01_TS_ACF_OLS_CUSUM_BRIC.R).
 
 * To view "Table 2: Nonlinear Granger causality test results assessing the influence of exogenous covariates on exchange rates in BRIC countries.", please refer to [Table_02_Causality Analysis_BRIC.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_02_Causality_Analysis_BRIC.R).
 
