@@ -1,0 +1,40 @@
+The StatsForecast module could not be imported. To enable support for the AutoARIMA, AutoETS and Croston models, please consider installing it.
+The `XGBoost` module could not be imported. To enable XGBoost support in Darts, follow the detailed instructions in the installation guide: https://github.com/unit8co/darts/blob/master/INSTALL.md
+The `XGBoost` module could not be imported. To enable XGBoost support in Darts, follow the detailed instructions in the installation guide: https://github.com/unit8co/darts/blob/master/INSTALL.md
+{'Country': 'India', 'Horizon': 1, 'Model': 'DeepAR', 'Seconds_total': 1.429, 'N_params': 726}
+{'Country': 'India', 'Horizon': 1, 'Model': 'NBEATSx', 'Seconds_total': 48.975, 'N_params': 7432535}
+{'Country': 'India', 'Horizon': 1, 'Model': 'NHiTSx', 'Seconds_total': 6.596, 'N_params': 1046778}
+{'Country': 'India', 'Horizon': 1, 'Model': 'DLinearx', 'Seconds_total': 0.884, 'N_params': 4706}
+{'Country': 'India', 'Horizon': 1, 'Model': 'NLinearx', 'Seconds_total': 0.761, 'N_params': 2353}
+{'Country': 'India', 'Horizon': 1, 'Model': 'TSMixerx', 'Seconds_total': 3.246, 'N_params': 30848}
+{'Country': 'India', 'Horizon': 3, 'Model': 'DeepAR', 'Seconds_total': 1.234, 'N_params': 726}
+{'Country': 'India', 'Horizon': 3, 'Model': 'NBEATSx', 'Seconds_total': 49.382, 'N_params': 7432535}
+{'Country': 'India', 'Horizon': 3, 'Model': 'NHiTSx', 'Seconds_total': 6.158, 'N_params': 1046778}
+{'Country': 'India', 'Horizon': 3, 'Model': 'DLinearx', 'Seconds_total': 0.92, 'N_params': 4706}
+{'Country': 'India', 'Horizon': 3, 'Model': 'NLinearx', 'Seconds_total': 0.725, 'N_params': 2353}
+{'Country': 'India', 'Horizon': 3, 'Model': 'TSMixerx', 'Seconds_total': 3.394, 'N_params': 30848}
+{'Country': 'India', 'Horizon': 6, 'Model': 'DeepAR', 'Seconds_total': 1.346, 'N_params': 726}
+{'Country': 'India', 'Horizon': 6, 'Model': 'NBEATSx', 'Seconds_total': 45.597, 'N_params': 7432535}
+{'Country': 'India', 'Horizon': 6, 'Model': 'NHiTSx', 'Seconds_total': 6.231, 'N_params': 1046778}
+{'Country': 'India', 'Horizon': 6, 'Model': 'DLinearx', 'Seconds_total': 0.962, 'N_params': 4706}
+{'Country': 'India', 'Horizon': 6, 'Model': 'NLinearx', 'Seconds_total': 0.775, 'N_params': 2353}
+{'Country': 'India', 'Horizon': 6, 'Model': 'TSMixerx', 'Seconds_total': 3.391, 'N_params': 30848}
+{'Country': 'India', 'Horizon': 12, 'Model': 'DeepAR', 'Seconds_total': 1.248, 'N_params': 726}
+{'Country': 'India', 'Horizon': 12, 'Model': 'NBEATSx', 'Seconds_total': 47.071, 'N_params': 7432535}
+{'Country': 'India', 'Horizon': 12, 'Model': 'NHiTSx', 'Seconds_total': 6.121, 'N_params': 1046778}
+{'Country': 'India', 'Horizon': 12, 'Model': 'DLinearx', 'Seconds_total': 0.936, 'N_params': 4706}
+{'Country': 'India', 'Horizon': 12, 'Model': 'NLinearx', 'Seconds_total': 0.718, 'N_params': 2353}
+{'Country': 'India', 'Horizon': 12, 'Model': 'TSMixerx', 'Seconds_total': 3.222, 'N_params': 30848}
+{'Country': 'India', 'Horizon': 24, 'Model': 'DeepAR', 'Seconds_total': 1.19, 'N_params': 726}
+{'Country': 'India', 'Horizon': 24, 'Model': 'NBEATSx', 'Seconds_total': 42.484, 'N_params': 7445495}
+{'Country': 'India', 'Horizon': 24, 'Model': 'NHiTSx', 'Seconds_total': 5.499, 'N_params': 1065759}
+{'Country': 'India', 'Horizon': 24, 'Model': 'DLinearx', 'Seconds_total': 1.107, 'N_params': 9050}
+{'Country': 'India', 'Horizon': 24, 'Model': 'NLinearx', 'Seconds_total': 0.818, 'N_params': 4525}
+{'Country': 'India', 'Horizon': 24, 'Model': 'TSMixerx', 'Seconds_total': 6.365, 'N_params': 39836}
+{'Country': 'India', 'Horizon': 48, 'Model': 'DeepAR', 'Seconds_total': 1.123, 'N_params': 726}
+{'Country': 'India', 'Horizon': 48, 'Model': 'NBEATSx', 'Seconds_total': 38.123, 'N_params': 7472495}
+{'Country': 'India', 'Horizon': 48, 'Model': 'NHiTSx', 'Seconds_total': 5.372, 'N_params': 1143735}
+{'Country': 'India', 'Horizon': 48, 'Model': 'DLinearx', 'Seconds_total': 0.841, 'N_params': 18100}
+{'Country': 'India', 'Horizon': 48, 'Model': 'NLinearx', 'Seconds_total': 0.716, 'N_params': 9050}
+{'Country': 'India', 'Horizon': 48, 'Model': 'TSMixerx', 'Seconds_total': 6.498, 'N_params': 60411}
+exit=0

@@ -1,3 +1,78 @@
+# NARFIMA: Neural ARFIMA for Forecasting BRIC Exchange Rates with Long Memory
+
+This repository holds the data, code and forecasts for the paper *Neural ARFIMA for Forecasting BRIC Exchange Rates with Long Memory*. It has been public since March 2025.
+
+## R package `narfima` (CRAN)
+
+The method is released as the R package **`narfima`** on CRAN:
+* Version 0.1.0, published 21 September 2025.
+* DOI [10.32614/CRAN.package.narfima](https://doi.org/10.32614/CRAN.package.narfima).
+* Listed in the CRAN Time Series task view.
+
+The package implements NARFIMA and the residual-feedback variants used in the ablation study:
+
+| Function | Model |
+|---|---|
+| `auto_narfima()` | NARFIMA |
+| `auto_narima()` | NARIMA |
+| `auto_nbsts()` | NBSTS |
+| `auto_nnaive()` | NNaive |
+| `forecast_narfima_class()` | Point forecasts and prediction intervals |
+
+```r
+install.packages("narfima")
+library(narfima)
+h <- 3
+data  <- EuStockMarkets[(nrow(EuStockMarkets) - 83):nrow(EuStockMarkets), 3]
+train <- data[1:(length(data) - h)]
+narfima_model    <- auto_narfima(train)
+narfima_forecast <- forecast_narfima_class(narfima_model, h)
+```
+
+Package page: <https://CRAN.R-project.org/package=narfima>. Preprint: <https://doi.org/10.48550/arXiv.2509.06697>.
+
+## Repository layout
+
+| Folder or file | Content |
+|---|---|
+| `Dataset/` | Raw data with all candidate covariates (`Dataset_All_Exogenous`) and the five selected covariates (`Dataset_Selected_Exogenous`); forecasts of all models (`Dataset_Model_Forecasts`, `Dataset_Deep_Learning_Models_Forecasts`); evaluation summaries and MCB inputs |
+| `Code/NARFIMA.R` | NARFIMA implementation used for the paper |
+| `Code/Deep_Learning.ipynb` | Deep-learning baselines (Darts) |
+| `Table_*.R`, `Figure_*.R`, `Ablation_Study.R` | One script per table or figure of the paper (see the list below) |
+| `Supplementary_Analysis/` | Analyses added in the revision for *Studies in Nonlinear Dynamics & Econometrics* (see below) |
+| `R_package_version.txt`, `Python_Package_Version.txt` | Package versions used for the original results |
+
+## Revision for Studies in Nonlinear Dynamics & Econometrics: supplementary analyses
+
+All code and outputs added in the revision are in [`Supplementary_Analysis/`](Supplementary_Analysis/README.md). Each analysis has its own entry script, and the README in that folder explains how to run it and maps each table and figure of the revised paper to its script and output.
+
+1. **Additional baselines** (`additional_baselines.py`, `additional_baselines.R`):
+   * CatBoost and LightGBM (gradient boosting);
+   * TiDE (deep neural network);
+   * GRU and LSTM (recurrent networks);
+   * ARIMA–ANN, ARFIMA–ANN and EWNet (hybrids).
+
+   They use the same splits, horizons and evaluation function as Tables 6–9. Comparison tables are built by `make_comparison_tables.py`.
+2. **MCB and MCS with the additional baselines** (`significance_tests_extended.R`).
+3. **Long-memory analysis** (`long_memory_analysis.R`, `long_memory_montecarlo.R`, `R/long_memory_estimators.R`):
+   * GPH, bias-reduced GPH, local Whittle, exact and feasible exact local Whittle estimates;
+   * tests of d = 0, 1/2 and 1;
+   * Qu's test against spurious long memory, rolling estimates and Bai–Perron breaks;
+   * a Monte Carlo check of all estimators;
+   * a re-run of the Whittle table of the original submission.
+4. **Computational cost** (`timing_original_models.R`, `timing_original_dl.py`, `make_cost_tables.py`): wall-clock time and parameter counts for every model, and NARFIMA accuracy against ensemble size.
+5. **Citation check** (`citation_check.py`): DOI and metadata verification of every new reference.
+
+Pinned versions: `Supplementary_Analysis/requirements.txt` (Python) and the `sessionInfo` files in `Supplementary_Analysis/results/` (R).
+
+## Data sources
+
+Spot exchange rates and macroeconomic indicators come from FRED (<https://fred.stlouisfed.org>). The uncertainty indices come from <https://www.policyuncertainty.com>. The sample covers January 1997 to October 2023 at monthly frequency.
+
+<!-- TODO (authors): add the FRED series identifiers and the download date of each series here. -->
+
+---
+
 # Reproducibility Checks: NARFIMA
 
 * To view the full list of packages (both R and Python) along with their respective versions, please refer to the following files [R_package_version.txt](https://github.com/mad-stat/NARFIMA/blob/main/R_package_version.txt) and [Python_Package_Version.txt](https://github.com/mad-stat/NARFIMA/blob/main/Python_Package_Version.txt).

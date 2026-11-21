@@ -1,0 +1,12 @@
+catboost==1.2.10
+lightgbm==4.7.0
+numpy==2.2.6
+openpyxl==3.1.5
+pandas==2.3.3
+pytorch-lightning==2.5.2
+scikit-learn==1.7.2
+scipy==1.15.3
+statsmodels==0.15.0
+torch==2.14.1
+u8darts[torch]==0.41.0
+# Python 3.10.20

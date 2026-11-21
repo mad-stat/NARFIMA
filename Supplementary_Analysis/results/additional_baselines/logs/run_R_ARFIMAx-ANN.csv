@@ -1,0 +1,25 @@
+"Country","Horizon","Model","Config","Seconds_linear_stage","Seconds_ANN_stage","Seconds_total","N_params","Test_RMSE"
+"Brazil",1,"ARFIMAx-ANN","ARFIMAx(0,0.493,5) + NNAR(6,4) on residuals; 20 nets x 5 seeds",NA,NA,0.547,3311,0.140881209108895
+"Brazil",3,"ARFIMAx-ANN","ARFIMAx(0,0.492,5) + NNAR(6,4) on residuals; 20 nets x 5 seeds",NA,NA,0.521,3311,0.308756350027905
+"Brazil",6,"ARFIMAx-ANN","ARFIMAx(0,0.492,5) + NNAR(6,4) on residuals; 20 nets x 5 seeds",NA,NA,0.509,3311,0.296206728046483
+"Brazil",12,"ARFIMAx-ANN","ARFIMAx(0,0.492,5) + NNAR(6,4) on residuals; 20 nets x 5 seeds",NA,NA,0.513,3311,0.403917665543703
+"Brazil",24,"ARFIMAx-ANN","ARFIMAx(0,0.493,5) + NNAR(6,4) on residuals; 20 nets x 5 seeds",NA,NA,0.511,3311,0.58866517947127
+"Brazil",48,"ARFIMAx-ANN","ARFIMAx(2,0.036,0) + NNAR(1,1) on residuals; 20 nets x 5 seeds",NA,NA,0.194,408,1.48956746672721
+"Russia",1,"ARFIMAx-ANN","ARFIMAx(0,0.490,5) + NNAR(7,4) on residuals; 20 nets x 5 seeds",NA,NA,0.561,3711,3.97230624776708
+"Russia",3,"ARFIMAx-ANN","ARFIMAx(0,0.490,5) + NNAR(7,4) on residuals; 20 nets x 5 seeds",NA,NA,0.546,3711,6.0318273490318
+"Russia",6,"ARFIMAx-ANN","ARFIMAx(0,0.492,3) + NNAR(5,3) on residuals; 20 nets x 5 seeds",NA,NA,0.361,2209,18.4022637505431
+"Russia",12,"ARFIMAx-ANN","ARFIMAx(0,0.494,2) + NNAR(6,4) on residuals; 20 nets x 5 seeds",NA,NA,0.514,3308,22.3720714707499
+"Russia",24,"ARFIMAx-ANN","ARFIMAx(0,0.489,5) + NNAR(8,4) on residuals; 20 nets x 5 seeds",NA,NA,0.562,4111,19.2373999912659
+"Russia",48,"ARFIMAx-ANN","ARFIMAx(0,0.492,3) + NNAR(20,10) on residuals; 20 nets x 5 seeds",NA,NA,2.491,22109,22.9610744526947
+"India",1,"ARFIMAx-ANN","ARFIMAx(0,0.494,5) + NNAR(6,4) on residuals; 20 nets x 5 seeds",NA,NA,0.523,3311,0.010971346771413
+"India",3,"ARFIMAx-ANN","ARFIMAx(0,0.493,5) + NNAR(6,4) on residuals; 20 nets x 5 seeds",NA,NA,0.522,3311,2.27713815930114
+"India",6,"ARFIMAx-ANN","ARFIMAx(0,0.493,5) + NNAR(6,4) on residuals; 20 nets x 5 seeds",NA,NA,0.523,3311,4.32417237961331
+"India",12,"ARFIMAx-ANN","ARFIMAx(0,0.493,5) + NNAR(6,4) on residuals; 20 nets x 5 seeds",NA,NA,0.56,3311,6.17297692341079
+"India",24,"ARFIMAx-ANN","ARFIMAx(0,0.492,5) + NNAR(6,4) on residuals; 20 nets x 5 seeds",NA,NA,0.517,3311,11.6158501608947
+"India",48,"ARFIMAx-ANN","ARFIMAx(0,0.491,5) + NNAR(6,4) on residuals; 20 nets x 5 seeds",NA,NA,0.499,3311,15.0672628409875
+"China",1,"ARFIMAx-ANN","ARFIMAx(0,0.498,2) + NNAR(3,2) on residuals; 20 nets x 5 seeds",NA,NA,0.29,1108,0.0232796493883267
+"China",3,"ARFIMAx-ANN","ARFIMAx(0,0.495,5) + NNAR(6,4) on residuals; 20 nets x 5 seeds",NA,NA,0.578,3311,0.148085215075806
+"China",6,"ARFIMAx-ANN","ARFIMAx(0,0.496,5) + NNAR(6,4) on residuals; 20 nets x 5 seeds",NA,NA,0.506,3311,0.389556242440536
+"China",12,"ARFIMAx-ANN","ARFIMAx(0,0.499,1) + NNAR(4,2) on residuals; 20 nets x 5 seeds",NA,NA,0.288,1307,0.222655886168868
+"China",24,"ARFIMAx-ANN","ARFIMAx(0,0.496,5) + NNAR(6,4) on residuals; 20 nets x 5 seeds",NA,NA,0.492,3311,0.327405480703628
+"China",48,"ARFIMAx-ANN","ARFIMAx(0,0.495,5) + NNAR(6,4) on residuals; 20 nets x 5 seeds",NA,NA,0.495,3311,0.340800889693948

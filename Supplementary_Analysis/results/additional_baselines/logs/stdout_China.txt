@@ -1,0 +1,34 @@
+The StatsForecast module could not be imported. To enable support for the AutoARIMA, AutoETS and Croston models, please consider installing it.
+The `XGBoost` module could not be imported. To enable XGBoost support in Darts, follow the detailed instructions in the installation guide: https://github.com/unit8co/darts/blob/master/INSTALL.md
+The `XGBoost` module could not be imported. To enable XGBoost support in Darts, follow the detailed instructions in the installation guide: https://github.com/unit8co/darts/blob/master/INSTALL.md
+China   h= 1 CatBoost  test RMSE=0.0127 val RMSE=0.0737 cfg={"lags": 12, "lags_past_covariates": 6} total=0.7s
+China   h= 1 LightGBM  test RMSE=0.0002 val RMSE=0.0720 cfg={"lags": 12, "lags_past_covariates": 1} total=0.2s
+China   h= 1 TiDE      test RMSE=0.5660 val RMSE=0.1481 cfg={"input_chunk_length": 24, "hidden_size": 32, "epochs": 5} total=8.7s
+China   h= 1 GRU       test RMSE=0.1837 val RMSE=0.2089 cfg={"input_chunk_length": 12, "hidden_dim": 16, "epochs": 13} total=3.4s
+China   h= 1 LSTM      test RMSE=0.1924 val RMSE=0.1895 cfg={"input_chunk_length": 12, "hidden_dim": 32, "epochs": 5} total=3.3s
+China   h= 3 CatBoost  test RMSE=0.0547 val RMSE=0.1866 cfg={"lags": 12, "lags_past_covariates": 1} total=1.7s
+China   h= 3 LightGBM  test RMSE=0.1155 val RMSE=0.2110 cfg={"lags": 6, "lags_past_covariates": 6} total=0.8s
+China   h= 3 TiDE      test RMSE=0.1589 val RMSE=0.2323 cfg={"input_chunk_length": 24, "hidden_size": 64, "epochs": 299} total=39.8s
+China   h= 3 GRU       test RMSE=0.3321 val RMSE=0.2399 cfg={"input_chunk_length": 24, "hidden_dim": 16, "epochs": 14} total=4.3s
+China   h= 3 LSTM      test RMSE=0.6385 val RMSE=0.2462 cfg={"input_chunk_length": 24, "hidden_dim": 16, "epochs": 14} total=4.1s
+China   h= 6 CatBoost  test RMSE=0.1021 val RMSE=0.3131 cfg={"lags": 6, "lags_past_covariates": 1} total=3.2s
+China   h= 6 LightGBM  test RMSE=0.3765 val RMSE=0.3510 cfg={"lags": 6, "lags_past_covariates": 1} total=1.3s
+China   h= 6 TiDE      test RMSE=0.2738 val RMSE=0.3450 cfg={"input_chunk_length": 12, "hidden_size": 64, "epochs": 20} total=5.2s
+China   h= 6 GRU       test RMSE=0.3540 val RMSE=0.3575 cfg={"input_chunk_length": 24, "hidden_dim": 16, "epochs": 15} total=3.9s
+China   h= 6 LSTM      test RMSE=0.5119 val RMSE=0.3226 cfg={"input_chunk_length": 24, "hidden_dim": 16, "epochs": 14} total=3.9s
+China   h=12 CatBoost  test RMSE=0.1883 val RMSE=0.4331 cfg={"lags": 6, "lags_past_covariates": 1} total=5.8s
+China   h=12 LightGBM  test RMSE=0.3003 val RMSE=0.3490 cfg={"lags": 6, "lags_past_covariates": 6} total=2.8s
+China   h=12 TiDE      test RMSE=0.4738 val RMSE=0.3160 cfg={"input_chunk_length": 24, "hidden_size": 32, "epochs": 49} total=8.4s
+China   h=12 GRU       test RMSE=0.5799 val RMSE=0.3085 cfg={"input_chunk_length": 24, "hidden_dim": 16, "epochs": 17} total=4.0s
+China   h=12 LSTM      test RMSE=0.2099 val RMSE=0.3307 cfg={"input_chunk_length": 24, "hidden_dim": 16, "epochs": 5} total=2.5s
+China   h=24 CatBoost  test RMSE=0.6508 val RMSE=0.3956 cfg={"lags": 6, "lags_past_covariates": 6} total=13.1s
+China   h=24 LightGBM  test RMSE=0.6076 val RMSE=0.4373 cfg={"lags": 6, "lags_past_covariates": 6} total=5.2s
+China   h=24 TiDE      test RMSE=0.4839 val RMSE=0.2644 cfg={"input_chunk_length": 12, "hidden_size": 32, "epochs": 97} total=14.8s
+China   h=24 GRU       test RMSE=0.4413 val RMSE=0.2662 cfg={"input_chunk_length": 12, "hidden_dim": 32, "epochs": 65} total=9.9s
+China   h=24 LSTM      test RMSE=0.4413 val RMSE=0.2380 cfg={"input_chunk_length": 12, "hidden_dim": 32, "epochs": 73} total=10.2s
+China   h=48 CatBoost  test RMSE=0.6636 val RMSE=0.7133 cfg={"lags": 6, "lags_past_covariates": 6} total=21.3s
+China   h=48 LightGBM  test RMSE=1.0073 val RMSE=0.7217 cfg={"lags": 12, "lags_past_covariates": 1} total=6.4s
+China   h=48 TiDE      test RMSE=0.3252 val RMSE=0.5251 cfg={"input_chunk_length": 12, "hidden_size": 64, "epochs": 26} total=4.2s
+China   h=48 GRU       test RMSE=0.4114 val RMSE=0.7075 cfg={"input_chunk_length": 12, "hidden_dim": 32, "epochs": 12} total=2.6s
+China   h=48 LSTM      test RMSE=0.3958 val RMSE=0.5265 cfg={"input_chunk_length": 12, "hidden_dim": 16, "epochs": 16} total=2.6s
+exit=0

@@ -1,0 +1,9 @@
+Model,Median_seconds_total,Max_seconds_total,Median_params_or_trees
+CatBoostx,4.6365,21.28,2700.0
+LightGBMx,2.1665,6.593,2700.0
+TiDEx,15.5775,44.182,23518.0
+GRUx,8.7415,27.202,3873.0
+LSTMx,5.8665,35.96,5153.0
+ARIMA-ANN,0.1245,1.818,402.0
+ARFIMA-ANN,0.548,2.958,3306.0
+EWNet,37.0035,41.576,27000.0

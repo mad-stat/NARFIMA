@@ -1,0 +1,43 @@
+\begin{table}[!htbp]
+\fontsize{6}{7}\selectfont
+\caption{\rev{Re-run of the Whittle estimates reported in the original submission (\texttt{longmemo::WhittleEst}, fractional ARIMA$(0,d,0)$). The routine estimates $H = d + 1/2$ on $(0, 1)$ and stops at $H = 0.99$, i.e. $d = 0.49$; the originally reported $z$-statistic is $\hat{H}/\mathrm{SE}$, which tests $H = 0$ ($d = -1/2$) rather than $d = 0$. A simulated random walk ($d = 1$) also returns $d = 0.49$.}}
+\centering
+\begin{tabular}{llccccc}
+\hline
+Country & Series & $\hat{H}$ & $\hat{d} = \hat{H} - 1/2$ & SE & $z$ reported ($\hat{H}$/SE) & $z$ for $d=0$ \\ \hline
+Brazil & Exchange Rate & 0.990 & 0.490 & 0.047 & 20.906 & 10.347 \\
+Brazil & Short-term Interest Rate & 0.990 & 0.490 & 0.047 & 20.907 & 10.347 \\
+Brazil & Short-term IRD & 0.990 & 0.490 & 0.047 & 20.906 & 10.347 \\
+Brazil & CPI Inflation & 0.990 & 0.490 & 0.047 & 20.906 & 10.347 \\
+Brazil & CPI Inflation Differential & 0.990 & 0.490 & 0.047 & 20.906 & 10.347 \\
+Brazil & GPR & 0.807 & 0.307 & 0.047 & 17.039 & 6.480 \\
+Russia & Exchange Rate & 0.990 & 0.490 & 0.047 & 20.907 & 10.347 \\
+Russia & Short-term Interest Rate & 0.990 & 0.490 & 0.047 & 20.906 & 10.347 \\
+Russia & Short-term IRD & 0.990 & 0.490 & 0.047 & 20.906 & 10.347 \\
+Russia & CPI Inflation & 0.990 & 0.490 & 0.047 & 20.906 & 10.347 \\
+Russia & CPI Inflation Differential & 0.990 & 0.490 & 0.047 & 20.906 & 10.347 \\
+Russia & GPR & 0.979 & 0.479 & 0.047 & 20.669 & 10.110 \\
+India & Exchange Rate & 0.990 & 0.490 & 0.047 & 20.907 & 10.347 \\
+India & Short-term Interest Rate & 0.990 & 0.490 & 0.047 & 20.907 & 10.347 \\
+India & Short-term IRD & 0.990 & 0.490 & 0.047 & 20.907 & 10.347 \\
+India & CPI Inflation & 0.990 & 0.490 & 0.047 & 20.906 & 10.347 \\
+India & CPI Inflation Differential & 0.990 & 0.490 & 0.047 & 20.906 & 10.347 \\
+India & GPR & 0.923 & 0.423 & 0.047 & 19.495 & 8.935 \\
+China & Exchange Rate & 0.990 & 0.490 & 0.047 & 20.907 & 10.347 \\
+China & Short-term Interest Rate & 0.990 & 0.490 & 0.075 & 13.125 & 6.496 \\
+China & Short-term IRD & 0.990 & 0.490 & 0.047 & 20.906 & 10.347 \\
+China & CPI Inflation & 0.990 & 0.490 & 0.047 & 20.906 & 10.347 \\
+China & CPI Inflation Differential & 0.990 & 0.490 & 0.047 & 20.907 & 10.347 \\
+China & GPR & 0.990 & 0.490 & 0.047 & 20.907 & 10.347 \\
+Global & GEPU & 0.990 & 0.490 & 0.047 & 20.907 & 10.347 \\
+Global & US EMV & 0.990 & 0.490 & 0.047 & 20.906 & 10.347 \\
+Global & US MPU & 0.953 & 0.453 & 0.047 & 20.126 & 9.567 \\
+Global & Oil Price Growth Rate & 0.990 & 0.490 & 0.047 & 20.907 & 10.347 \\
+Global & US Short-term Interest Rate & 0.990 & 0.490 & 0.047 & 20.907 & 10.347 \\
+Global & US CPI Inflation & 0.990 & 0.490 & 0.047 & 20.906 & 10.347 \\
+Simulated & Random walk (true d = 1) & 0.990 & 0.490 & 0.047 & 20.907 & 10.347 \\
+Simulated & White noise (true d = 0) & 0.452 & -0.048 & 0.047 & 9.553 & -1.006 \\
+\hline
+\end{tabular}
+\label{tab:whittle_check}
+\end{table}

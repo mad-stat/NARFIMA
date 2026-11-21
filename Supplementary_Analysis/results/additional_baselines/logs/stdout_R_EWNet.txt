@@ -1,0 +1,28 @@
+Warning message:
+package ‘readxl’ was built under R version 4.6.1 
+China   h= 1 EWNet RMSE=0.0358  EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=3) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)  (37.0s)
+Russia  h= 1 EWNet RMSE=2.8110  EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=2) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)  (37.5s)
+Brazil  h= 1 EWNet RMSE=0.0674  EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=2) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)  (37.6s)
+India   h= 1 EWNet RMSE=0.0692  EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=5) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)  (40.6s)
+Brazil  h= 3 EWNet RMSE=0.1021  EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=1) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)  (34.5s)
+China   h= 3 EWNet RMSE=0.1331  EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=2) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)  (36.0s)
+Russia  h= 3 EWNet RMSE=7.1184  EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=5) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)  (41.6s)
+India   h= 3 EWNet RMSE=1.0302  EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=5) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)  (40.4s)
+Brazil  h= 6 EWNet RMSE=0.2397  EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=1) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)  (34.2s)
+China   h= 6 EWNet RMSE=0.2271  EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=5) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)  (40.2s)
+Russia  h= 6 EWNet RMSE=14.9756  EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=3) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)  (37.0s)
+India   h= 6 EWNet RMSE=1.1690  EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=5) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)  (39.8s)
+Brazil  h=12 EWNet RMSE=0.1401  EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=1) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)  (33.5s)
+China   h=12 EWNet RMSE=0.2517  EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=1) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)  (33.1s)
+Russia  h=12 EWNet RMSE=40.0518  EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=4) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)  (37.5s)
+India   h=12 EWNet RMSE=2.0491  EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=5) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)  (39.4s)
+Brazil  h=24 EWNet RMSE=0.2071  EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=1) x 500 repeats per component; p chosen from 1..5 by validation MASE (24 months)  (34.6s)
+China   h=24 EWNet RMSE=0.5678  EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=1) x 500 repeats per component; p chosen from 1..5 by validation MASE (24 months)  (33.6s)
+Russia  h=24 EWNet RMSE=13.1705  EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=1) x 500 repeats per component; p chosen from 1..5 by validation MASE (24 months)  (34.6s)
+India   h=24 EWNet RMSE=6.8939  EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=5) x 500 repeats per component; p chosen from 1..5 by validation MASE (24 months)  (40.8s)
+Brazil  h=48 EWNet RMSE=1.2651  EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=1) x 500 repeats per component; p chosen from 1..5 by validation MASE (48 months)  (35.6s)
+China   h=48 EWNet RMSE=0.3384  EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=1) x 500 repeats per component; p chosen from 1..5 by validation MASE (48 months)  (35.1s)
+Russia  h=48 EWNet RMSE=12.1513  EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=1) x 500 repeats per component; p chosen from 1..5 by validation MASE (48 months)  (35.1s)
+India   h=48 EWNet RMSE=7.4071  EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=5) x 500 repeats per component; p chosen from 1..5 by validation MASE (48 months)  (38.9s)
+
+Evaluated 192 model-country-horizon cells; 0 forecast files missing.

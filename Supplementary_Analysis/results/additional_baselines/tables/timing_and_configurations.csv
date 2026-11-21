@@ -1,0 +1,193 @@
+Country,Horizon,Model,Config,Seconds_select,Seconds_final_fit,Seconds_predict,Seconds_total,N_params_or_trees,N_seeds
+Brazil,1,CatBoostx,"{""lags"": 12, ""lags_past_covariates"": 1}",0.536,0.083,0.0006,0.62,300,1
+Brazil,1,LightGBMx,"{""lags"": 12, ""lags_past_covariates"": 1}",0.215,0.035,0.0009,0.251,300,1
+Brazil,1,TiDEx,"{""input_chunk_length"": 24, ""hidden_size"": 32, ""epochs"": 153}",5.751,13.859,0.0246,19.641,11017,5
+Brazil,1,GRUx,"{""input_chunk_length"": 12, ""hidden_dim"": 32, ""epochs"": 200}",6.296,16.866,0.0199,23.188,3873,5
+Brazil,1,LSTMx,"{""input_chunk_length"": 12, ""hidden_dim"": 16, ""epochs"": 14}",2.928,1.098,0.0219,4.054,1553,5
+Brazil,3,CatBoostx,"{""lags"": 6, ""lags_past_covariates"": 1}",1.485,0.204,0.0017,1.69,900,1
+Brazil,3,LightGBMx,"{""lags"": 6, ""lags_past_covariates"": 1}",0.63,0.088,0.0015,0.72,900,1
+Brazil,3,TiDEx,"{""input_chunk_length"": 12, ""hidden_size"": 32, ""epochs"": 89}",5.31,8.418,0.0251,13.759,8279,5
+Brazil,3,GRUx,"{""input_chunk_length"": 24, ""hidden_dim"": 32, ""epochs"": 13}",3.111,1.876,0.0226,5.015,3873,5
+Brazil,3,LSTMx,"{""input_chunk_length"": 24, ""hidden_dim"": 32, ""epochs"": 43}",4.743,5.538,0.0206,10.308,5153,5
+Brazil,6,CatBoostx,"{""lags"": 6, ""lags_past_covariates"": 1}",2.738,0.379,0.0014,3.119,1800,1
+Brazil,6,LightGBMx,"{""lags"": 6, ""lags_past_covariates"": 1}",1.177,0.176,0.0029,1.357,1800,1
+Brazil,6,TiDEx,"{""input_chunk_length"": 12, ""hidden_size"": 64, ""epochs"": 264}",16.43,27.371,0.0252,43.833,23518,5
+Brazil,6,GRUx,"{""input_chunk_length"": 24, ""hidden_dim"": 32, ""epochs"": 14}",4.001,1.672,0.0213,5.7,3873,5
+Brazil,6,LSTMx,"{""input_chunk_length"": 24, ""hidden_dim"": 16, ""epochs"": 74}",6.706,7.248,0.0212,13.981,1553,5
+Brazil,12,CatBoostx,"{""lags"": 12, ""lags_past_covariates"": 1}",5.605,1.039,0.0022,6.647,3600,1
+Brazil,12,LightGBMx,"{""lags"": 12, ""lags_past_covariates"": 6}",2.171,0.78,0.0028,2.955,3600,1
+Brazil,12,TiDEx,"{""input_chunk_length"": 12, ""hidden_size"": 64, ""epochs"": 89}",9.032,8.978,0.0254,18.042,29932,5
+Brazil,12,GRUx,"{""input_chunk_length"": 12, ""hidden_dim"": 16, ""epochs"": 151}",10.731,8.847,0.0202,19.603,1169,5
+Brazil,12,LSTMx,"{""input_chunk_length"": 24, ""hidden_dim"": 32, ""epochs"": 83}",8.429,8.422,0.019,16.875,5153,5
+Brazil,24,CatBoostx,"{""lags"": 12, ""lags_past_covariates"": 6}",8.954,3.978,0.0043,12.938,7200,1
+Brazil,24,LightGBMx,"{""lags"": 6, ""lags_past_covariates"": 1}",3.87,0.639,0.0063,4.518,7200,1
+Brazil,24,TiDEx,"{""input_chunk_length"": 24, ""hidden_size"": 64, ""epochs"": 17}",6.241,1.591,0.0251,7.863,50728,5
+Brazil,24,GRUx,"{""input_chunk_length"": 12, ""hidden_dim"": 32, ""epochs"": 36}",5.087,2.777,0.0219,7.892,4185,5
+Brazil,24,LSTMx,"{""input_chunk_length"": 12, ""hidden_dim"": 16, ""epochs"": 38}",4.191,2.426,0.0201,6.642,1865,5
+Brazil,48,CatBoostx,"{""lags"": 6, ""lags_past_covariates"": 1}",15.99,2.092,0.0063,18.091,14400,1
+Brazil,48,LightGBMx,"{""lags"": 6, ""lags_past_covariates"": 1}",4.927,1.041,0.0102,5.985,14400,1
+Brazil,48,TiDEx,"{""input_chunk_length"": 24, ""hidden_size"": 64, ""epochs"": 125}",5.322,9.749,0.0247,15.103,76672,5
+Brazil,48,GRUx,"{""input_chunk_length"": 12, ""hidden_dim"": 32, ""epochs"": 19}",1.818,1.262,0.0208,3.106,4497,5
+Brazil,48,LSTMx,"{""input_chunk_length"": 12, ""hidden_dim"": 32, ""epochs"": 22}",1.95,1.365,0.02,3.34,5777,5
+Russia,1,CatBoostx,"{""lags"": 12, ""lags_past_covariates"": 1}",0.521,0.082,0.0009,0.604,300,1
+Russia,1,LightGBMx,"{""lags"": 6, ""lags_past_covariates"": 6}",0.213,0.062,0.0008,0.276,300,1
+Russia,1,TiDEx,"{""input_chunk_length"": 12, ""hidden_size"": 32, ""epochs"": 187}",19.13,15.851,0.0246,35.011,7165,5
+Russia,1,GRUx,"{""input_chunk_length"": 12, ""hidden_dim"": 32, ""epochs"": 76}",5.957,6.871,0.0218,12.856,3873,5
+Russia,1,LSTMx,"{""input_chunk_length"": 24, ""hidden_dim"": 32, ""epochs"": 10}",3.364,1.379,0.0206,4.77,5153,5
+Russia,3,CatBoostx,"{""lags"": 12, ""lags_past_covariates"": 1}",1.512,0.281,0.0015,1.795,900,1
+Russia,3,LightGBMx,"{""lags"": 12, ""lags_past_covariates"": 1}",0.638,0.115,0.0015,0.754,900,1
+Russia,3,TiDEx,"{""input_chunk_length"": 12, ""hidden_size"": 32, ""epochs"": 141}",10.707,12.972,0.0266,23.712,8279,5
+Russia,3,GRUx,"{""input_chunk_length"": 24, ""hidden_dim"": 16, ""epochs"": 49}",4.369,5.195,0.0219,9.591,1169,5
+Russia,3,LSTMx,"{""input_chunk_length"": 12, ""hidden_dim"": 16, ""epochs"": 41}",4.866,3.166,0.0217,8.06,1553,5
+Russia,6,CatBoostx,"{""lags"": 12, ""lags_past_covariates"": 1}",2.878,0.546,0.0014,3.425,1800,1
+Russia,6,LightGBMx,"{""lags"": 6, ""lags_past_covariates"": 6}",1.161,0.352,0.002,1.515,1800,1
+Russia,6,TiDEx,"{""input_chunk_length"": 12, ""hidden_size"": 64, ""epochs"": 53}",3.413,5.44,0.0239,8.882,23518,5
+Russia,6,GRUx,"{""input_chunk_length"": 24, ""hidden_dim"": 16, ""epochs"": 14}",2.644,1.387,0.0207,4.057,1169,5
+Russia,6,LSTMx,"{""input_chunk_length"": 24, ""hidden_dim"": 32, ""epochs"": 7}",2.662,0.925,0.0209,3.614,5153,5
+Russia,12,CatBoostx,"{""lags"": 12, ""lags_past_covariates"": 6}",5.492,1.927,0.0027,7.422,3600,1
+Russia,12,LightGBMx,"{""lags"": 6, ""lags_past_covariates"": 6}",2.203,0.702,0.0031,2.91,3600,1
+Russia,12,TiDEx,"{""input_chunk_length"": 12, ""hidden_size"": 32, ""epochs"": 203}",9.674,17.096,0.0256,26.801,13292,5
+Russia,12,GRUx,"{""input_chunk_length"": 24, ""hidden_dim"": 32, ""epochs"": 54}",7.064,6.287,0.0233,13.38,3873,5
+Russia,12,LSTMx,"{""input_chunk_length"": 12, ""hidden_dim"": 32, ""epochs"": 84}",5.801,7.908,0.0215,13.736,5153,5
+Russia,24,CatBoostx,"{""lags"": 12, ""lags_past_covariates"": 1}",9.982,2.054,0.0039,12.042,7200,1
+Russia,24,LightGBMx,"{""lags"": 6, ""lags_past_covariates"": 1}",3.9,0.573,0.0051,4.482,7200,1
+Russia,24,TiDEx,"{""input_chunk_length"": 24, ""hidden_size"": 64, ""epochs"": 39}",6.075,2.847,0.0219,8.949,50728,5
+Russia,24,GRUx,"{""input_chunk_length"": 12, ""hidden_dim"": 16, ""epochs"": 36}",3.96,2.022,0.0187,6.006,1481,5
+Russia,24,LSTMx,"{""input_chunk_length"": 12, ""hidden_dim"": 16, ""epochs"": 31}",7.318,2.438,0.0262,9.789,1865,5
+Russia,48,CatBoostx,"{""lags"": 6, ""lags_past_covariates"": 1}",15.683,2.59,0.0065,18.281,14400,1
+Russia,48,LightGBMx,"{""lags"": 6, ""lags_past_covariates"": 1}",5.539,1.04,0.0092,6.593,14400,1
+Russia,48,TiDEx,"{""input_chunk_length"": 24, ""hidden_size"": 32, ""epochs"": 65}",3.734,5.291,0.0261,9.057,37760,5
+Russia,48,GRUx,"{""input_chunk_length"": 24, ""hidden_dim"": 16, ""epochs"": 271}",7.204,19.97,0.0223,27.202,2369,5
+Russia,48,LSTMx,"{""input_chunk_length"": 12, ""hidden_dim"": 16, ""epochs"": 91}",4.787,4.794,0.0196,9.607,2177,5
+India,1,CatBoostx,"{""lags"": 6, ""lags_past_covariates"": 6}",0.523,0.143,0.0006,0.666,300,1
+India,1,LightGBMx,"{""lags"": 12, ""lags_past_covariates"": 1}",0.204,0.038,0.0009,0.243,300,1
+India,1,TiDEx,"{""input_chunk_length"": 12, ""hidden_size"": 32, ""epochs"": 298}",18.914,25.238,0.0234,44.182,7165,5
+India,1,GRUx,"{""input_chunk_length"": 12, ""hidden_dim"": 32, ""epochs"": 108}",7.983,10.252,0.0222,18.264,3873,5
+India,1,LSTMx,"{""input_chunk_length"": 12, ""hidden_dim"": 32, ""epochs"": 17}",3.167,1.789,0.0221,4.984,5153,5
+India,3,CatBoostx,"{""lags"": 12, ""lags_past_covariates"": 6}",1.548,0.527,0.0011,2.076,900,1
+India,3,LightGBMx,"{""lags"": 12, ""lags_past_covariates"": 6}",0.606,0.207,0.0013,0.815,900,1
+India,3,TiDEx,"{""input_chunk_length"": 24, ""hidden_size"": 32, ""epochs"": 283}",15.419,26.076,0.0257,41.527,12155,5
+India,3,GRUx,"{""input_chunk_length"": 12, ""hidden_dim"": 32, ""epochs"": 54}",4.986,4.938,0.022,9.952,3873,5
+India,3,LSTMx,"{""input_chunk_length"": 12, ""hidden_dim"": 32, ""epochs"": 37}",3.488,3.254,0.0196,6.766,5153,5
+India,6,CatBoostx,"{""lags"": 6, ""lags_past_covariates"": 1}",2.779,0.4,0.0015,3.18,1800,1
+India,6,LightGBMx,"{""lags"": 6, ""lags_past_covariates"": 6}",1.125,0.334,0.0023,1.463,1800,1
+India,6,TiDEx,"{""input_chunk_length"": 24, ""hidden_size"": 32, ""epochs"": 102}",14.713,8.663,0.0232,23.405,13862,5
+India,6,GRUx,"{""input_chunk_length"": 12, ""hidden_dim"": 32, ""epochs"": 49}",6.453,4.412,0.0234,10.895,3873,5
+India,6,LSTMx,"{""input_chunk_length"": 12, ""hidden_dim"": 32, ""epochs"": 21}",3.346,1.945,0.0215,5.318,5153,5
+India,12,CatBoostx,"{""lags"": 12, ""lags_past_covariates"": 1}",5.573,0.971,0.0026,6.547,3600,1
+India,12,LightGBMx,"{""lags"": 12, ""lags_past_covariates"": 6}",2.122,0.773,0.003,2.899,3600,1
+India,12,TiDEx,"{""input_chunk_length"": 24, ""hidden_size"": 64, ""epochs"": 69}",9.913,6.11,0.0229,16.052,37756,5
+India,12,GRUx,"{""input_chunk_length"": 24, ""hidden_dim"": 32, ""epochs"": 65}",7.656,6.139,0.0188,13.818,3873,5
+India,12,LSTMx,"{""input_chunk_length"": 24, ""hidden_dim"": 32, ""epochs"": 9}",5.209,1.177,0.0227,6.415,5153,5
+India,24,CatBoostx,"{""lags"": 12, ""lags_past_covariates"": 1}",10.078,2.019,0.0042,12.102,7200,1
+India,24,LightGBMx,"{""lags"": 6, ""lags_past_covariates"": 1}",3.745,0.6,0.0055,4.353,7200,1
+India,24,TiDEx,"{""input_chunk_length"": 24, ""hidden_size"": 64, ""epochs"": 112}",12.131,10.137,0.0232,22.297,50728,5
+India,24,GRUx,"{""input_chunk_length"": 12, ""hidden_dim"": 32, ""epochs"": 45}",9.772,3.082,0.0201,12.88,4185,5
+India,24,LSTMx,"{""input_chunk_length"": 24, ""hidden_dim"": 16, ""epochs"": 297}",12.754,23.181,0.0197,35.96,1553,5
+India,48,CatBoostx,"{""lags"": 12, ""lags_past_covariates"": 1}",11.989,2.563,0.0058,14.56,14400,1
+India,48,LightGBMx,"{""lags"": 12, ""lags_past_covariates"": 1}",4.595,1.185,0.0089,5.794,14400,1
+India,48,TiDEx,"{""input_chunk_length"": 24, ""hidden_size"": 32, ""epochs"": 22}",2.293,1.249,0.0216,3.568,37760,5
+India,48,GRUx,"{""input_chunk_length"": 12, ""hidden_dim"": 16, ""epochs"": 48}",2.171,2.213,0.02,4.41,1793,5
+India,48,LSTMx,"{""input_chunk_length"": 12, ""hidden_dim"": 32, ""epochs"": 23}",2.445,1.516,0.0205,3.987,5777,5
+China,1,CatBoostx,"{""lags"": 12, ""lags_past_covariates"": 6}",0.507,0.156,0.0009,0.664,300,1
+China,1,LightGBMx,"{""lags"": 12, ""lags_past_covariates"": 1}",0.204,0.036,0.0009,0.241,300,1
+China,1,TiDEx,"{""input_chunk_length"": 24, ""hidden_size"": 32, ""epochs"": 5}",8.182,0.461,0.0241,8.674,11017,5
+China,1,GRUx,"{""input_chunk_length"": 12, ""hidden_dim"": 16, ""epochs"": 13}",2.43,0.942,0.0199,3.398,1169,5
+China,1,LSTMx,"{""input_chunk_length"": 12, ""hidden_dim"": 32, ""epochs"": 5}",2.834,0.481,0.0206,3.341,5153,5
+China,3,CatBoostx,"{""lags"": 12, ""lags_past_covariates"": 1}",1.42,0.251,0.0011,1.673,900,1
+China,3,LightGBMx,"{""lags"": 6, ""lags_past_covariates"": 6}",0.579,0.171,0.0013,0.751,900,1
+China,3,TiDEx,"{""input_chunk_length"": 24, ""hidden_size"": 64, ""epochs"": 299}",8.12,31.669,0.0256,39.821,28027,5
+China,3,GRUx,"{""input_chunk_length"": 24, ""hidden_dim"": 16, ""epochs"": 14}",2.461,1.831,0.0251,4.324,1169,5
+China,3,LSTMx,"{""input_chunk_length"": 24, ""hidden_dim"": 16, ""epochs"": 14}",2.413,1.69,0.0235,4.132,1553,5
+China,6,CatBoostx,"{""lags"": 6, ""lags_past_covariates"": 1}",2.772,0.402,0.0016,3.176,1800,1
+China,6,LightGBMx,"{""lags"": 6, ""lags_past_covariates"": 1}",1.181,0.165,0.0021,1.348,1800,1
+China,6,TiDEx,"{""input_chunk_length"": 12, ""hidden_size"": 64, ""epochs"": 20}",3.142,2.001,0.0236,5.173,23518,5
+China,6,GRUx,"{""input_chunk_length"": 24, ""hidden_dim"": 16, ""epochs"": 15}",2.398,1.517,0.0227,3.944,1169,5
+China,6,LSTMx,"{""input_chunk_length"": 24, ""hidden_dim"": 16, ""epochs"": 14}",2.316,1.552,0.0222,3.896,1553,5
+China,12,CatBoostx,"{""lags"": 6, ""lags_past_covariates"": 1}",5.101,0.744,0.0021,5.848,3600,1
+China,12,LightGBMx,"{""lags"": 6, ""lags_past_covariates"": 6}",2.131,0.683,0.0035,2.818,3600,1
+China,12,TiDEx,"{""input_chunk_length"": 24, ""hidden_size"": 32, ""epochs"": 49}",3.927,4.484,0.0246,8.442,17276,5
+China,12,GRUx,"{""input_chunk_length"": 24, ""hidden_dim"": 16, ""epochs"": 17}",2.378,1.629,0.0204,4.033,1169,5
+China,12,LSTMx,"{""input_chunk_length"": 24, ""hidden_dim"": 16, ""epochs"": 5}",1.969,0.506,0.0205,2.501,1553,5
+China,24,CatBoostx,"{""lags"": 6, ""lags_past_covariates"": 6}",9.777,3.282,0.0038,13.064,7200,1
+China,24,LightGBMx,"{""lags"": 6, ""lags_past_covariates"": 6}",3.891,1.295,0.0062,5.196,7200,1
+China,24,TiDEx,"{""input_chunk_length"": 12, ""hidden_size"": 32, ""epochs"": 97}",6.593,8.178,0.0246,14.803,19976,5
+China,24,GRUx,"{""input_chunk_length"": 12, ""hidden_dim"": 32, ""epochs"": 65}",4.697,5.207,0.0208,9.93,4185,5
+China,24,LSTMx,"{""input_chunk_length"": 12, ""hidden_dim"": 32, ""epochs"": 73}",4.166,5.994,0.0217,10.188,5465,5
+China,48,CatBoostx,"{""lags"": 6, ""lags_past_covariates"": 6}",15.642,5.629,0.0066,21.28,14400,1
+China,48,LightGBMx,"{""lags"": 12, ""lags_past_covariates"": 1}",5.155,1.219,0.0102,6.391,14400,1
+China,48,TiDEx,"{""input_chunk_length"": 12, ""hidden_size"": 64, ""epochs"": 26}",2.167,1.983,0.0229,4.179,68416,5
+China,48,GRUx,"{""input_chunk_length"": 12, ""hidden_dim"": 32, ""epochs"": 12}",1.777,0.768,0.0199,2.571,4497,5
+China,48,LSTMx,"{""input_chunk_length"": 12, ""hidden_dim"": 16, ""epochs"": 16}",1.788,0.803,0.0198,2.616,2177,5
+Brazil,1,EWNet,"EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=2) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)",,37.588,,37.588,27000,5
+Brazil,3,EWNet,"EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=1) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)",,34.54,,34.54,12000,5
+Brazil,6,EWNet,"EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=1) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)",,34.185,,34.185,12000,5
+Brazil,12,EWNet,"EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=1) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)",,33.534,,33.534,12000,5
+Brazil,24,EWNet,"EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=1) x 500 repeats per component; p chosen from 1..5 by validation MASE (24 months)",,34.608,,34.608,12000,5
+Brazil,48,EWNet,"EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=1) x 500 repeats per component; p chosen from 1..5 by validation MASE (48 months)",,35.577,,35.577,12000,5
+Russia,1,EWNet,"EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=2) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)",,37.473,,37.473,27000,5
+Russia,3,EWNet,"EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=5) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)",,41.576,,41.576,66000,5
+Russia,6,EWNet,"EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=3) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)",,37.026,,37.026,33000,5
+Russia,12,EWNet,"EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=4) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)",,37.491,,37.491,39000,5
+Russia,24,EWNet,"EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=1) x 500 repeats per component; p chosen from 1..5 by validation MASE (24 months)",,34.646,,34.646,12000,5
+Russia,48,EWNet,"EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=1) x 500 repeats per component; p chosen from 1..5 by validation MASE (48 months)",,35.103,,35.103,12000,5
+India,1,EWNet,"EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=5) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)",,40.552,,40.552,66000,5
+India,3,EWNet,"EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=5) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)",,40.423,,40.423,66000,5
+India,6,EWNet,"EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=5) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)",,39.78,,39.78,66000,5
+India,12,EWNet,"EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=5) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)",,39.412,,39.412,66000,5
+India,24,EWNet,"EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=5) x 500 repeats per component; p chosen from 1..5 by validation MASE (24 months)",,40.807,,40.807,66000,5
+India,48,EWNet,"EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=5) x 500 repeats per component; p chosen from 1..5 by validation MASE (48 months)",,38.896,,38.896,66000,5
+China,1,EWNet,"EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=3) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)",,36.981,,36.981,33000,5
+China,3,EWNet,"EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=2) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)",,35.996,,35.996,27000,5
+China,6,EWNet,"EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=5) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)",,40.188,,40.188,66000,5
+China,12,EWNet,"EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=1) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)",,33.07,,33.07,12000,5
+China,24,EWNet,"EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=1) x 500 repeats per component; p chosen from 1..5 by validation MASE (24 months)",,33.576,,33.576,12000,5
+China,48,EWNet,"EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=1) x 500 repeats per component; p chosen from 1..5 by validation MASE (48 months)",,35.091,,35.091,12000,5
+Brazil,1,ARIMA-ANN,"ARIMA(0,1,1) + NNAR(1,1) on residuals; 20 nets x 5 seeds",,0.129,,0.129,401,5
+Brazil,1,ARFIMA-ANN,"ARFIMA(0,0.493,5) + NNAR(6,4) on residuals; 20 nets x 5 seeds",,0.534,,0.534,3306,5
+Brazil,3,ARIMA-ANN,"ARIMA(0,1,1) + NNAR(1,1) on residuals; 20 nets x 5 seeds",,0.103,,0.103,401,5
+Brazil,3,ARFIMA-ANN,"ARFIMA(0,0.492,5) + NNAR(6,4) on residuals; 20 nets x 5 seeds",,0.539,,0.539,3306,5
+Brazil,6,ARIMA-ANN,"ARIMA(0,1,1) + NNAR(1,1) on residuals; 20 nets x 5 seeds",,0.113,,0.113,402,5
+Brazil,6,ARFIMA-ANN,"ARFIMA(0,0.492,5) + NNAR(6,4) on residuals; 20 nets x 5 seeds",,0.536,,0.536,3306,5
+Brazil,12,ARIMA-ANN,"ARIMA(0,1,1) + NNAR(1,1) on residuals; 20 nets x 5 seeds",,0.125,,0.125,402,5
+Brazil,12,ARFIMA-ANN,"ARFIMA(0,0.492,5) + NNAR(6,4) on residuals; 20 nets x 5 seeds",,0.541,,0.541,3306,5
+Brazil,24,ARIMA-ANN,"ARIMA(0,1,1) + NNAR(1,1) on residuals; 20 nets x 5 seeds",,0.14,,0.14,402,5
+Brazil,24,ARFIMA-ANN,"ARFIMA(0,0.493,5) + NNAR(6,4) on residuals; 20 nets x 5 seeds",,0.537,,0.537,3306,5
+Brazil,48,ARIMA-ANN,"ARIMA(0,1,1) + NNAR(1,1) on residuals; 20 nets x 5 seeds",,0.119,,0.119,401,5
+Brazil,48,ARFIMA-ANN,"ARFIMA(1,0.033,1) + NNAR(1,1) on residuals; 20 nets x 5 seeds",,0.137,,0.137,403,5
+Russia,1,ARIMA-ANN,"ARIMA(0,1,3) + NNAR(1,1) on residuals; 20 nets x 5 seeds",,0.132,,0.132,404,5
+Russia,1,ARFIMA-ANN,"ARFIMA(0,0.490,5) + NNAR(7,4) on residuals; 20 nets x 5 seeds",,0.578,,0.578,3706,5
+Russia,3,ARIMA-ANN,"ARIMA(0,1,3) + NNAR(1,1) on residuals; 20 nets x 5 seeds",,0.15,,0.15,404,5
+Russia,3,ARFIMA-ANN,"ARFIMA(0,0.490,5) + NNAR(7,4) on residuals; 20 nets x 5 seeds",,0.577,,0.577,3706,5
+Russia,6,ARIMA-ANN,"ARIMA(0,1,4) + NNAR(1,1) on residuals; 20 nets x 5 seeds",,0.124,,0.124,405,5
+Russia,6,ARFIMA-ANN,"ARFIMA(0,0.496,1) + NNAR(5,3) on residuals; 20 nets x 5 seeds",,0.404,,0.404,2202,5
+Russia,12,ARIMA-ANN,"ARIMA(2,1,2) + NNAR(1,1) on residuals; 20 nets x 5 seeds",,0.173,,0.173,404,5
+Russia,12,ARFIMA-ANN,"ARFIMA(0,0.494,2) + NNAR(6,4) on residuals; 20 nets x 5 seeds",,0.559,,0.559,3303,5
+Russia,24,ARIMA-ANN,"ARIMA(0,1,1) + NNAR(3,2) on residuals; 20 nets x 5 seeds",,0.245,,0.245,1102,5
+Russia,24,ARFIMA-ANN,"ARFIMA(0,0.489,5) + NNAR(8,4) on residuals; 20 nets x 5 seeds",,0.587,,0.587,4106,5
+Russia,48,ARIMA-ANN,"ARIMA(0,1,1) + NNAR(15,8) on residuals; 20 nets x 5 seeds",,1.818,,1.818,13702,5
+Russia,48,ARFIMA-ANN,"ARFIMA(0,0.492,3) + NNAR(20,10) on residuals; 20 nets x 5 seeds",,2.958,,2.958,22104,5
+India,1,ARIMA-ANN,"ARIMA(0,1,1) + NNAR(1,1) on residuals; 20 nets x 5 seeds",,0.076,,0.076,402,5
+India,1,ARFIMA-ANN,"ARFIMA(0,0.494,5) + NNAR(7,4) on residuals; 20 nets x 5 seeds",,0.569,,0.569,3706,5
+India,3,ARIMA-ANN,"ARIMA(0,1,1) + NNAR(1,1) on residuals; 20 nets x 5 seeds",,0.082,,0.082,402,5
+India,3,ARFIMA-ANN,"ARFIMA(0,0.493,5) + NNAR(7,4) on residuals; 20 nets x 5 seeds",,0.57,,0.57,3706,5
+India,6,ARIMA-ANN,"ARIMA(0,1,1) + NNAR(1,1) on residuals; 20 nets x 5 seeds",,0.086,,0.086,402,5
+India,6,ARFIMA-ANN,"ARFIMA(0,0.493,5) + NNAR(7,4) on residuals; 20 nets x 5 seeds",,0.606,,0.606,3706,5
+India,12,ARIMA-ANN,"ARIMA(0,1,1) + NNAR(1,1) on residuals; 20 nets x 5 seeds",,0.166,,0.166,402,5
+India,12,ARFIMA-ANN,"ARFIMA(0,0.493,5) + NNAR(6,4) on residuals; 20 nets x 5 seeds",,0.555,,0.555,3306,5
+India,24,ARIMA-ANN,"ARIMA(0,1,1) + NNAR(1,1) on residuals; 20 nets x 5 seeds",,0.154,,0.154,402,5
+India,24,ARFIMA-ANN,"ARFIMA(0,0.492,5) + NNAR(6,4) on residuals; 20 nets x 5 seeds",,0.521,,0.521,3306,5
+India,48,ARIMA-ANN,"ARIMA(0,1,1) + NNAR(1,1) on residuals; 20 nets x 5 seeds",,0.16,,0.16,402,5
+India,48,ARFIMA-ANN,"ARFIMA(0,0.491,5) + NNAR(6,4) on residuals; 20 nets x 5 seeds",,0.572,,0.572,3306,5
+China,1,ARIMA-ANN,"ARIMA(0,1,2) + NNAR(1,1) on residuals; 20 nets x 5 seeds",,0.093,,0.093,402,5
+China,1,ARFIMA-ANN,"ARFIMA(0,0.497,3) + NNAR(10,6) on residuals; 20 nets x 5 seeds",,0.902,,0.902,7304,5
+China,3,ARIMA-ANN,"ARIMA(0,1,2) + NNAR(1,1) on residuals; 20 nets x 5 seeds",,0.11,,0.11,402,5
+China,3,ARFIMA-ANN,"ARFIMA(0,0.497,3) + NNAR(10,6) on residuals; 20 nets x 5 seeds",,0.89,,0.89,7304,5
+China,6,ARIMA-ANN,"ARIMA(0,1,2) + NNAR(1,1) on residuals; 20 nets x 5 seeds",,0.111,,0.111,402,5
+China,6,ARFIMA-ANN,"ARFIMA(0,0.496,5) + NNAR(6,4) on residuals; 20 nets x 5 seeds",,0.54,,0.54,3306,5
+China,12,ARIMA-ANN,"ARIMA(1,1,0) + NNAR(1,1) on residuals; 20 nets x 5 seeds",,0.103,,0.103,401,5
+China,12,ARFIMA-ANN,"ARFIMA(0,0.499,1) + NNAR(4,2) on residuals; 20 nets x 5 seeds",,0.264,,0.264,1302,5
+China,24,ARIMA-ANN,"ARIMA(1,1,0) + NNAR(1,1) on residuals; 20 nets x 5 seeds",,0.092,,0.092,402,5
+China,24,ARFIMA-ANN,"ARFIMA(0,0.496,5) + NNAR(6,4) on residuals; 20 nets x 5 seeds",,0.533,,0.533,3306,5
+China,48,ARIMA-ANN,"ARIMA(1,1,0) + NNAR(1,1) on residuals; 20 nets x 5 seeds",,0.185,,0.185,401,5
+China,48,ARFIMA-ANN,"ARFIMA(0,0.496,4) + NNAR(5,3) on residuals; 20 nets x 5 seeds",,0.508,,0.508,2205,5

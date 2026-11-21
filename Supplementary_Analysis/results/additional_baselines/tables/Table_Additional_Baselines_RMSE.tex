@@ -1,0 +1,39 @@
+\begin{table}[!htbp]
+\caption{\rev{RMSE of the additional baselines and NARFIMA for all BRIC countries and forecast horizons (\textbf{\underline{best}} and \textbf{\textit{second-best}} among these 9 models are highlighted). The last column gives the rank of NARFIMA among all 25 models (16 original baselines, 8 additional baselines and NARFIMA).}}
+\centering
+\begin{adjustbox}{width=\textwidth}
+\begin{tabular}{llcccccccccc}
+\hline
+Country & $h$ & CatBoostx & LightGBMx & TiDEx & GRUx & LSTMx & ARIMA--ANN & ARFIMA--ANN & EWNet & NARFIMA & Rank of NARFIMA \\\hline
+\multirow{6}{*}{Brazil} & 1 & 0.083 & 0.106 & 0.216 & 0.144 & 0.237 & 0.104 & 0.155 & \textbf{\textit{0.067}} & \textbf{\underline{0.0021}} & 1 \\
+ & 3 & 0.194 & 0.290 & 0.170 & 0.292 & 0.187 & 0.171 & 0.284 & \textbf{\textit{0.102}} & \textbf{\underline{0.031}} & 1 \\
+ & 6 & \textbf{\textit{0.099}} & 0.109 & 0.245 & 0.547 & 0.336 & 0.117 & 0.281 & 0.240 & \textbf{\underline{0.082}} & 2 \\
+ & 12 & 0.325 & 0.608 & 0.318 & 0.449 & 0.297 & 0.335 & 0.303 & \textbf{\textit{0.140}} & \textbf{\underline{0.096}} & 1 \\
+ & 24 & 1.064 & 0.704 & 0.439 & 0.682 & 1.048 & 0.741 & 0.535 & \textbf{\textit{0.207}} & \textbf{\underline{0.204}} & 1 \\
+ & 48 & \textbf{\underline{0.708}} & 0.774 & 2.292 & 1.733 & 1.298 & 1.131 & 1.433 & 1.265 & \textbf{\textit{0.715}} & 2 \\
+\hline
+\multirow{6}{*}{Russia} & 1 & 3.986 & 5.213 & 4.124 & \textbf{\textit{0.407}} & 13.437 & 5.143 & 6.131 & 2.811 & \textbf{\underline{0.040}} & 1 \\
+ & 3 & 3.939 & \textbf{\underline{2.497}} & 18.093 & 18.209 & 22.518 & 3.918 & 5.189 & 7.118 & \textbf{\textit{3.762}} & 5 \\
+ & 6 & 14.817 & 16.888 & 25.965 & 27.501 & 28.706 & \textbf{\textit{12.821}} & 18.310 & 14.976 & \textbf{\underline{9.297}} & 3 \\
+ & 12 & 22.164 & 19.320 & 21.608 & \textbf{\textit{16.523}} & 17.106 & 22.867 & 22.085 & 40.052 & \textbf{\underline{7.613}} & 1 \\
+ & 24 & 12.176 & 12.430 & \textbf{\textit{11.778}} & 12.456 & 11.858 & 12.030 & 18.823 & 13.170 & \textbf{\underline{7.488}} & 1 \\
+ & 48 & 26.074 & 31.766 & 9.977 & 10.199 & 13.231 & \textbf{\textit{9.871}} & 21.671 & 12.151 & \textbf{\underline{9.709}} & 1 \\
+\hline
+\multirow{6}{*}{India} & 1 & 0.227 & 0.015 & 0.258 & 0.017 & 4.919 & \textbf{\textit{0.014}} & 0.363 & 0.069 & \textbf{\underline{0.0049}} & 1 \\
+ & 3 & 0.535 & 0.602 & \textbf{\underline{0.294}} & 1.956 & 3.677 & 0.633 & 2.388 & 1.030 & \textbf{\textit{0.477}} & 4 \\
+ & 6 & \textbf{\underline{0.200}} & 0.301 & 0.745 & 0.571 & 2.250 & 0.318 & 4.063 & 1.169 & \textbf{\textit{0.236}} & 2 \\
+ & 12 & \textbf{\underline{0.529}} & \textbf{\textit{0.770}} & 2.991 & 2.604 & 8.568 & 1.424 & 5.842 & 2.049 & 1.160 & 6 \\
+ & 24 & \textbf{\underline{1.451}} & \textbf{\textit{1.973}} & 2.655 & 3.831 & 4.800 & 3.666 & 11.243 & 6.894 & 3.801 & 6 \\
+ & 48 & \textbf{\textit{2.975}} & 4.706 & 3.617 & 9.650 & 11.991 & 3.643 & 14.625 & 7.407 & \textbf{\underline{2.616}} & 1 \\
+\hline
+\multirow{6}{*}{China} & 1 & 0.013 & \textbf{\underline{0.0002}} & 0.566 & 0.184 & 0.192 & 0.015 & 0.013 & 0.036 & \textbf{\textit{0.0004}} & 2 \\
+ & 3 & \textbf{\textit{0.055}} & 0.116 & 0.159 & 0.332 & 0.638 & 0.127 & 0.293 & 0.133 & \textbf{\underline{0.011}} & 1 \\
+ & 6 & \textbf{\textit{0.102}} & 0.377 & 0.274 & 0.354 & 0.512 & 0.354 & 0.425 & 0.227 & \textbf{\underline{0.039}} & 1 \\
+ & 12 & \textbf{\underline{0.188}} & 0.300 & 0.474 & 0.580 & \textbf{\textit{0.210}} & 0.348 & 0.218 & 0.252 & 0.212 & 5 \\
+ & 24 & 0.651 & 0.608 & 0.484 & 0.441 & 0.441 & 0.649 & \textbf{\textit{0.330}} & 0.568 & \textbf{\underline{0.150}} & 1 \\
+ & 48 & 0.664 & 1.007 & \textbf{\textit{0.325}} & 0.411 & 0.396 & 0.417 & 0.338 & 0.338 & \textbf{\underline{0.199}} & 1 \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\label{tab:additional_baselines_rmse}
+\end{table}

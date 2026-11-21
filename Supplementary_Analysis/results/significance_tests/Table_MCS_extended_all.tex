@@ -1,0 +1,15 @@
+\begin{table}[!htbp]
+\fontsize{7}{8}\selectfont
+\caption{\rev{Model confidence sets with the additional baselines (25 models: 16 original baselines, 8 additional baselines and NARFIMA). Models remaining in the superior set $\widehat{\mathcal{A}}^*_{1-\alpha}$ (squared loss, range statistic $T_R$, $B = 5000$ bootstrap replications), as in Table~\ref{tab:MCS_transposed_final}.}}
+\centering
+\begin{tabular}{@{}l>{\raggedright\arraybackslash}p{4.5cm}>{\raggedright\arraybackslash}p{4.5cm}>{\raggedright\arraybackslash}p{4.5cm}@{}}
+\hline
+Country & $\alpha = 0.05$ & $\alpha = 0.10$ & $\alpha = 0.15$ \\ \hline
+Brazil & CatBoostx, \textbf{NARFIMA} & \textbf{NARFIMA} & \textbf{NARFIMA} \\
+Russia & LSTMx, CatBoostx, LightGBMx, TiDEx, GRUx, ARIMAx, BSTSx, ARIMA--ANN, EWNet, \textbf{NARFIMA} & \textbf{NARFIMA} & \textbf{NARFIMA} \\
+India & DLinearx, NLinearx, \textbf{NARFIMA}, TiDEx, ARIMA--ANN, CatBoostx & DLinearx, NLinearx, \textbf{NARFIMA}, TiDEx, ARIMA--ANN, CatBoostx & DLinearx, NLinearx, \textbf{NARFIMA}, TiDEx, ARIMA--ANN, CatBoostx \\
+China & \textbf{NARFIMA} & \textbf{NARFIMA} & \textbf{NARFIMA} \\
+\hline
+\end{tabular}
+\label{tab:MCS_extended}
+\end{table}

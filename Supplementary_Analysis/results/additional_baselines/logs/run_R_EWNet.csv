@@ -1,0 +1,25 @@
+"Country","Horizon","Model","Config","Seconds_linear_stage","Seconds_ANN_stage","Seconds_total","N_params","Test_RMSE"
+"Brazil",1,"EWNet","EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=2) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)",NA,37.588,37.588,27000,0.0673828666550005
+"Brazil",3,"EWNet","EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=1) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)",NA,34.54,34.54,12000,0.102139016247582
+"Brazil",6,"EWNet","EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=1) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)",NA,34.185,34.185,12000,0.239728788404104
+"Brazil",12,"EWNet","EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=1) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)",NA,33.534,33.534,12000,0.14013488379841
+"Brazil",24,"EWNet","EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=1) x 500 repeats per component; p chosen from 1..5 by validation MASE (24 months)",NA,34.608,34.608,12000,0.207137274065198
+"Brazil",48,"EWNet","EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=1) x 500 repeats per component; p chosen from 1..5 by validation MASE (48 months)",NA,35.577,35.577,12000,1.26505524001052
+"Russia",1,"EWNet","EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=2) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)",NA,37.473,37.473,27000,2.81103309791369
+"Russia",3,"EWNet","EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=5) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)",NA,41.576,41.576,66000,7.11842828339886
+"Russia",6,"EWNet","EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=3) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)",NA,37.026,37.026,33000,14.9755502204806
+"Russia",12,"EWNet","EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=4) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)",NA,37.491,37.491,39000,40.0517847056151
+"Russia",24,"EWNet","EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=1) x 500 repeats per component; p chosen from 1..5 by validation MASE (24 months)",NA,34.646,34.646,12000,13.1704739881355
+"Russia",48,"EWNet","EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=1) x 500 repeats per component; p chosen from 1..5 by validation MASE (48 months)",NA,35.103,35.103,12000,12.151267987309
+"India",1,"EWNet","EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=5) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)",NA,40.552,40.552,66000,0.0692186595974391
+"India",3,"EWNet","EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=5) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)",NA,40.423,40.423,66000,1.03023540748148
+"India",6,"EWNet","EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=5) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)",NA,39.78,39.78,66000,1.16895178049627
+"India",12,"EWNet","EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=5) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)",NA,39.412,39.412,66000,2.04912055872863
+"India",24,"EWNet","EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=5) x 500 repeats per component; p chosen from 1..5 by validation MASE (24 months)",NA,40.807,40.807,66000,6.8939232955625
+"India",48,"EWNet","EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=5) x 500 repeats per component; p chosen from 1..5 by validation MASE (48 months)",NA,38.896,38.896,66000,7.40709482356581
+"China",1,"EWNet","EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=3) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)",NA,36.981,36.981,33000,0.0357544478745577
+"China",3,"EWNet","EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=2) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)",NA,35.996,35.996,27000,0.133113613998834
+"China",6,"EWNet","EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=5) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)",NA,40.188,40.188,66000,0.227112883121469
+"China",12,"EWNet","EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=1) x 500 repeats per component; p chosen from 1..5 by validation MASE (12 months)",NA,33.07,33.07,12000,0.251721763046981
+"China",24,"EWNet","EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=1) x 500 repeats per component; p chosen from 1..5 by validation MASE (24 months)",NA,33.576,33.576,12000,0.567759862641207
+"China",48,"EWNet","EWNet: Haar MODWT, 5 levels (+1 smooth), periodic; NNAR(p=1) x 500 repeats per component; p chosen from 1..5 by validation MASE (48 months)",NA,35.091,35.091,12000,0.338402115436398

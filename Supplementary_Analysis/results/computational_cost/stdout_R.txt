@@ -1,0 +1,30 @@
+Warning messages:
+1: package ‘tseries’ was built under R version 4.6.1 
+2: package ‘rugarch’ was built under R version 4.6.1 
+3: package ‘Boom’ was built under R version 4.6.1 
+4: package ‘readxl’ was built under R version 4.6.1 
+Brazil  h= 1 done (NARFIMA 0.5s, BSTSx 1.2s)
+Brazil  h= 3 done (NARFIMA 0.3s, BSTSx 1.2s)
+Brazil  h= 6 done (NARFIMA 0.6s, BSTSx 1.2s)
+Brazil  h=12 done (NARFIMA 1.1s, BSTSx 1.2s)
+Brazil  h=24 done (NARFIMA 0.6s, BSTSx 1.2s)
+Brazil  h=48 done (NARFIMA 1.8s, BSTSx 1.3s)
+Russia  h= 1 done (NARFIMA 0.9s, BSTSx 1.4s)
+Russia  h= 3 done (NARFIMA 1.0s, BSTSx 1.4s)
+Russia  h= 6 done (NARFIMA 0.9s, BSTSx 1.4s)
+Russia  h=12 done (NARFIMA 2.5s, BSTSx 1.5s)
+Russia  h=24 done (NARFIMA 3.1s, BSTSx 1.4s)
+Russia  h=48 done (NARFIMA 1.3s, BSTSx 1.3s)
+India   h= 1 done (NARFIMA 1.6s, BSTSx 1.5s)
+India   h= 3 done (NARFIMA 0.8s, BSTSx 1.5s)
+India   h= 6 done (NARFIMA 1.0s, BSTSx 1.5s)
+India   h=12 done (NARFIMA 0.8s, BSTSx 1.5s)
+India   h=24 done (NARFIMA 0.8s, BSTSx 1.4s)
+India   h=48 done (NARFIMA 1.1s, BSTSx 1.3s)
+China   h= 1 done (NARFIMA 1.5s, BSTSx 1.5s)
+China   h= 3 done (NARFIMA 1.2s, BSTSx 1.5s)
+China   h= 6 done (NARFIMA 1.9s, BSTSx 1.5s)
+China   h=12 done (NARFIMA 1.7s, BSTSx 1.5s)
+China   h=24 done (NARFIMA 2.3s, BSTSx 1.4s)
+China   h=48 done (NARFIMA 3.2s, BSTSx 1.3s)
+There were 50 or more warnings (use warnings() to see the first 50)

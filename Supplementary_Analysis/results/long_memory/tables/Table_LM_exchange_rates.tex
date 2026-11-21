@@ -1,0 +1,19 @@
+\begin{table*}[!htbp]
+\caption{\rev{Long-memory evidence for the BRIC exchange rates (training sample 1997-01 to 2019-10, $n = 274$). Semiparametric estimates of the memory parameter $d$ with bandwidth $m = \lfloor n^{0.6} \rfloor = 29$ (standard errors in parentheses): feasible exact local Whittle (FELW; Shimotsu, 2010), exact local Whittle (ELW; Shimotsu and Phillips, 2005), local Whittle (LW; Robinson, 1995a), GPH (Geweke and Porter-Hudak, 1983) and bias-reduced GPH (Andrews and Guggenberger, 2003). ML: exact maximum likelihood ARFIMA$(p,d,q)$ fitted to the first differences (BIC over $p,q \le 2$), reported as the implied order of the level, $1+\hat{d}$. Qu: test of \citet{qu2011test} of true against spurious long memory on the first differences (5\% critical value 1.155). BP: number of breaks in the mean of the first differences (Bai--Perron, BIC). $p$-values refer to FELW (levels).}}
+\centering
+\begin{adjustbox}{width=\textwidth}
+\begin{tabular}{lccccccccccc}
+\hline
+ & \multicolumn{5}{c}{Levels} & \multicolumn{2}{c}{First differences} & & \multicolumn{3}{c}{FELW $p$-value for $H_0$} \\
+Country & FELW & ELW & LW & GPH & BR-GPH & FELW & GPH & ML $1+\hat{d}$ & $d=0$ & $d=1/2$ & $d=1$ \\ \hline
+Brazil & 1.027 (0.093) & 1.027 (0.093) & 0.951 (0.093) & 0.874 (0.119) & 0.839 (0.179) & 0.005 (0.094) & 0.011 (0.121) & 1.000 (0.063) & 0.000 & 0.000 & 0.772 \\
+Russia & 0.911 (0.093) & 0.911 (0.093) & 0.993 (0.093) & 1.002 (0.119) & 1.003 (0.179) & -0.097 (0.094) & -0.079 (0.121) & 0.859 (0.112) & 0.000 & 0.000 & 0.339 \\
+India & 1.084 (0.093) & 1.084 (0.093) & 0.978 (0.093) & 0.984 (0.119) & 1.010 (0.179) & 0.058 (0.094) & 0.105 (0.121) & 0.971 (0.066) & 0.000 & 0.000 & 0.363 \\
+China & 1.154 (0.093) & 1.154 (0.093) & 1.212 (0.093) & 1.188 (0.119) & 0.987 (0.179) & 0.147 (0.094) & 0.103 (0.121) & 1.183 (0.064) & 0.000 & 0.000 & 0.098 \\
+\hline
+ & \multicolumn{11}{l}{Qu statistic (first differences): Brazil 0.951; Russia 0.834; India 0.590; China 0.575. BP breaks: Brazil 0; Russia 0; India 0; China 2 (2005-06, 2014-01).} \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\label{tab:long_memory_er}
+\end{table*}

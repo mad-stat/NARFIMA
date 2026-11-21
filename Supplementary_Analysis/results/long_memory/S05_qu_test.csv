@@ -1,0 +1,31 @@
+"Country","Series","Applied_to","m","d_LW","Qu_W","Crit_5pct","Reject_true_long_memory_5pct"
+"Brazil","Exchange Rate (first difference)","level",50,0.182165094949877,0.951101598268537,1.155,FALSE
+"Brazil","Short-term Interest Rate","first difference",50,-0.141679741274586,0.939752635365311,1.155,FALSE
+"Brazil","Short-term IRD","first difference",50,-0.103725195672569,1.0382510445807,1.155,FALSE
+"Brazil","CPI Inflation","first difference",50,0.479688485744497,1.39473160810966,1.155,TRUE
+"Brazil","CPI Inflation Differential","first difference",50,0.306445302551995,1.28045939494223,1.155,TRUE
+"Brazil","GPR","level",50,0.263895555443078,0.655246632015681,1.155,FALSE
+"Russia","Exchange Rate (first difference)","level",50,-0.0944707541864859,0.834320889687993,1.155,FALSE
+"Russia","Short-term Interest Rate","first difference",50,-0.349903635488644,0.397532451516812,1.155,FALSE
+"Russia","Short-term IRD","first difference",50,-0.351737505054005,0.389064186373007,1.155,FALSE
+"Russia","CPI Inflation","first difference",50,0.466593619075242,1.49510386401307,1.155,TRUE
+"Russia","CPI Inflation Differential","first difference",50,0.457706305043843,1.49026507789181,1.155,TRUE
+"Russia","GPR","level",50,0.410737608013261,0.743270321384004,1.155,FALSE
+"India","Exchange Rate (first difference)","level",50,0.0404651813161585,0.590084593445903,1.155,FALSE
+"India","Short-term Interest Rate","first difference",50,-0.0912358225130954,1.28447037557644,1.155,TRUE
+"India","Short-term IRD","first difference",50,0.0623744194649501,0.988485938085777,1.155,FALSE
+"India","CPI Inflation","first difference",50,-0.00342056698603406,1.22841707347479,1.155,TRUE
+"India","CPI Inflation Differential","first difference",50,0.00362165485543732,1.06583029939072,1.155,FALSE
+"India","GPR","level",50,0.315725213540417,0.287006430573524,1.155,FALSE
+"China","Exchange Rate (first difference)","level",50,0.237758894691788,0.575393339237115,1.155,FALSE
+"China","Short-term Interest Rate","first difference",26,0.293685979249728,0.254735377200276,1.155,FALSE
+"China","Short-term IRD","first difference",50,0.307477779045041,0.495426368990452,1.155,FALSE
+"China","CPI Inflation","first difference",50,0.220595405047074,1.33844481969847,1.155,TRUE
+"China","CPI Inflation Differential","first difference",50,-0.121986276895576,0.97948581388893,1.155,FALSE
+"China","GPR","first difference",50,-0.489999475283531,1.16102483515653,1.155,TRUE
+"Global","GEPU","first difference",50,-0.366306218565367,0.349796393908145,1.155,FALSE
+"Global","US EMV","level",50,0.372556503880087,0.403312463847816,1.155,FALSE
+"Global","US MPU","first difference",50,-0.441618071117179,1.2414438984648,1.155,TRUE
+"Global","Oil Price Growth Rate","first difference",50,0.103830940081449,1.31922995856257,1.155,TRUE
+"Global","US Short-term Interest Rate","first difference",50,0.466073906625534,0.57923186896293,1.155,FALSE
+"Global","US CPI Inflation","first difference",50,0.0035903014087587,1.37108093773557,1.155,TRUE

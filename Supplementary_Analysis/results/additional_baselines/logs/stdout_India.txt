@@ -1,0 +1,34 @@
+The StatsForecast module could not be imported. To enable support for the AutoARIMA, AutoETS and Croston models, please consider installing it.
+The `XGBoost` module could not be imported. To enable XGBoost support in Darts, follow the detailed instructions in the installation guide: https://github.com/unit8co/darts/blob/master/INSTALL.md
+The `XGBoost` module could not be imported. To enable XGBoost support in Darts, follow the detailed instructions in the installation guide: https://github.com/unit8co/darts/blob/master/INSTALL.md
+India   h= 1 CatBoost  test RMSE=0.2271 val RMSE=0.6050 cfg={"lags": 6, "lags_past_covariates": 6} total=0.7s
+India   h= 1 LightGBM  test RMSE=0.0151 val RMSE=0.7271 cfg={"lags": 12, "lags_past_covariates": 1} total=0.2s
+India   h= 1 TiDE      test RMSE=0.2581 val RMSE=0.5208 cfg={"input_chunk_length": 12, "hidden_size": 32, "epochs": 298} total=44.2s
+India   h= 1 GRU       test RMSE=0.0166 val RMSE=1.1144 cfg={"input_chunk_length": 12, "hidden_dim": 32, "epochs": 108} total=18.3s
+India   h= 1 LSTM      test RMSE=4.9192 val RMSE=1.8006 cfg={"input_chunk_length": 12, "hidden_dim": 32, "epochs": 17} total=5.0s
+India   h= 3 CatBoost  test RMSE=0.5346 val RMSE=0.7624 cfg={"lags": 12, "lags_past_covariates": 6} total=2.1s
+India   h= 3 LightGBM  test RMSE=0.6015 val RMSE=0.8773 cfg={"lags": 12, "lags_past_covariates": 6} total=0.8s
+India   h= 3 TiDE      test RMSE=0.2940 val RMSE=1.1588 cfg={"input_chunk_length": 24, "hidden_size": 32, "epochs": 283} total=41.5s
+India   h= 3 GRU       test RMSE=1.9559 val RMSE=2.6501 cfg={"input_chunk_length": 12, "hidden_dim": 32, "epochs": 54} total=10.0s
+India   h= 3 LSTM      test RMSE=3.6774 val RMSE=1.6426 cfg={"input_chunk_length": 12, "hidden_dim": 32, "epochs": 37} total=6.8s
+India   h= 6 CatBoost  test RMSE=0.2005 val RMSE=1.8664 cfg={"lags": 6, "lags_past_covariates": 1} total=3.2s
+India   h= 6 LightGBM  test RMSE=0.3006 val RMSE=1.7959 cfg={"lags": 6, "lags_past_covariates": 6} total=1.5s
+India   h= 6 TiDE      test RMSE=0.7449 val RMSE=3.2595 cfg={"input_chunk_length": 24, "hidden_size": 32, "epochs": 102} total=23.4s
+India   h= 6 GRU       test RMSE=0.5714 val RMSE=3.2251 cfg={"input_chunk_length": 12, "hidden_dim": 32, "epochs": 49} total=10.9s
+India   h= 6 LSTM      test RMSE=2.2501 val RMSE=3.9535 cfg={"input_chunk_length": 12, "hidden_dim": 32, "epochs": 21} total=5.3s
+India   h=12 CatBoost  test RMSE=0.5291 val RMSE=1.3995 cfg={"lags": 12, "lags_past_covariates": 1} total=6.5s
+India   h=12 LightGBM  test RMSE=0.7699 val RMSE=1.4149 cfg={"lags": 12, "lags_past_covariates": 6} total=2.9s
+India   h=12 TiDE      test RMSE=2.9914 val RMSE=1.9510 cfg={"input_chunk_length": 24, "hidden_size": 64, "epochs": 69} total=16.1s
+India   h=12 GRU       test RMSE=2.6043 val RMSE=1.5567 cfg={"input_chunk_length": 24, "hidden_dim": 32, "epochs": 65} total=13.8s
+India   h=12 LSTM      test RMSE=8.5675 val RMSE=3.1930 cfg={"input_chunk_length": 24, "hidden_dim": 32, "epochs": 9} total=6.4s
+India   h=24 CatBoost  test RMSE=1.4506 val RMSE=1.9690 cfg={"lags": 12, "lags_past_covariates": 1} total=12.1s
+India   h=24 LightGBM  test RMSE=1.9733 val RMSE=2.2369 cfg={"lags": 6, "lags_past_covariates": 1} total=4.4s
+India   h=24 TiDE      test RMSE=2.6555 val RMSE=2.0237 cfg={"input_chunk_length": 24, "hidden_size": 64, "epochs": 112} total=22.3s
+India   h=24 GRU       test RMSE=3.8313 val RMSE=4.5107 cfg={"input_chunk_length": 12, "hidden_dim": 32, "epochs": 45} total=12.9s
+India   h=24 LSTM      test RMSE=4.8004 val RMSE=4.0495 cfg={"input_chunk_length": 24, "hidden_dim": 16, "epochs": 297} total=36.0s
+India   h=48 CatBoost  test RMSE=2.9748 val RMSE=6.0761 cfg={"lags": 12, "lags_past_covariates": 1} total=14.6s
+India   h=48 LightGBM  test RMSE=4.7059 val RMSE=6.4876 cfg={"lags": 12, "lags_past_covariates": 1} total=5.8s
+India   h=48 TiDE      test RMSE=3.6166 val RMSE=7.4768 cfg={"input_chunk_length": 24, "hidden_size": 32, "epochs": 22} total=3.6s
+India   h=48 GRU       test RMSE=9.6499 val RMSE=18.0386 cfg={"input_chunk_length": 12, "hidden_dim": 16, "epochs": 48} total=4.4s
+India   h=48 LSTM      test RMSE=11.9912 val RMSE=16.2023 cfg={"input_chunk_length": 12, "hidden_dim": 32, "epochs": 23} total=4.0s
+exit=0

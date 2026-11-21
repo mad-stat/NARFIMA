@@ -1,0 +1,28 @@
+R version 4.6.0 (2026-04-24)
+Platform: aarch64-apple-darwin23
+Running under: macOS 27.2.1
+
+Matrix products: default
+BLAS:   /Library/Frameworks/R.framework/Versions/4.6/Resources/lib/libRblas.0.dylib 
+LAPACK: /Library/Frameworks/R.framework/Versions/4.6/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.1
+
+locale:
+[1] en_US/en_US/en_US/C/en_US/en_US
+
+time zone: America/New_York
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] strucchange_1.6-0 sandwich_3.1-1    zoo_1.8-15        tseries_0.10-62  
+[5] fracdiff_1.5-4    readxl_1.6.0     
+
+loaded via a namespace (and not attached):
+ [1] xts_0.14.2       quantmod_0.4.29  arfima_1.8-2     cellranger_1.1.0
+ [5] lattice_0.22-9   TTR_0.24.4       magrittr_2.0.5   glue_1.8.1      
+ [9] tibble_3.3.1     parallel_4.6.0   pkgconfig_2.0.3  longmemo_1.1-4  
+[13] stats4_4.6.0     lifecycle_1.0.5  cli_3.6.6        vctrs_0.7.3     
+[17] grid_4.6.0       compiler_4.6.0   tools_4.6.0      curl_7.1.0      
+[21] pillar_1.11.1    ltsa_1.4.6.1     quadprog_1.5-8   rlang_1.3.0     

@@ -1,0 +1,7 @@
+{
+  "python": "3.10.20",
+  "platform": "macOS-27.2.1-arm64-arm-64bit",
+  "torch": "2.14.1",
+  "darts": "0.41.0",
+  "threads": 4
+}

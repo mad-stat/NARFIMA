@@ -1,0 +1,26 @@
+Model,Family,Fit_forecast_median,Fit_forecast_max,Total_incl_tuning_median,Params_median,Cells
+Naïve,Statistical,0.001,0.002,,0.0,24
+AR,Statistical,0.0,0.002,,3.0,24
+ARIMAx,Statistical,0.038500000000000006,0.288,,6.5,24
+ARFIMAx,Statistical,0.131,0.253,,11.0,24
+ETS,Statistical,0.012,0.018,,5.0,24
+SETAR,Statistical,0.0235,0.178,,11.0,24
+TBATS,Statistical,0.2275,0.529,,,24
+GARCH,Statistical,0.0295,0.242,,4.0,24
+BSTSx,"Statistical (Bayesian, MCMC)",1.421,1.516,,,24
+ARNNx,Neural network (R),0.0935,0.444,,740.0,24
+DeepAR,Deep learning (Darts),1.237,1.429,,726.0,24
+NBEATSx,Deep learning (Darts),46.467,49.651,,7432535.0,24
+NHiTSx,Deep learning (Darts),6.0985,6.627,,1046778.0,24
+DLinearx,Deep learning (Darts),0.9155,1.135,,4706.0,24
+NLinearx,Deep learning (Darts),0.763,1.025,,2353.0,24
+TSMixerx,Deep learning (Darts),3.3899999999999997,6.498,,30848.0,24
+CatBoostx,Gradient boosting,0.6467499999999999,5.635599999999999,4.6365,2700.0,24
+LightGBMx,Gradient boosting,0.46604999999999996,1.3012,2.1665,2700.0,24
+TiDEx,Deep learning (Darts),8.56465,31.6946,15.5775,23518.0,24
+GRUx,Recurrent network (Darts),2.9505,19.9923,8.7415,3873.0,24
+LSTMx,Recurrent network (Darts),1.8888,23.2007,5.8665,5153.0,24
+ARIMA-ANN,Hybrid,0.1245,1.818,0.1245,402.0,24
+ARFIMA-ANN,Hybrid,0.548,2.958,0.548,3306.0,24
+EWNet,Hybrid (wavelet + ANN),37.0035,41.576,37.0035,27000.0,24
+NARFIMA,Proposed,1.0715,3.226,,29011.0,24

@@ -1,0 +1,37 @@
+\begin{table}[!htbp]
+\fontsize{7}{8}\selectfont
+\caption{\rev{Computational cost per country--horizon cell (24 cells): wall-clock seconds to fit the model and produce the forecast (median and maximum), median time including hyperparameter selection and five-seed averaging (additional baselines only), and median number of estimated parameters or trees. Published baselines and NARFIMA are timed with their published hyperparameters (NARFIMA: ARFIMAx stage plus an ensemble of 1000 networks). Hardware: Apple M5 Pro, 18 cores, 64 GB RAM, CPU only.}}
+\centering
+\begin{tabular}{llcccc}
+\hline
+ & & \multicolumn{2}{c}{Fit + forecast (s)} & Incl.\ tuning & Parameters \\
+Model & Family & median & max & (median, s) & (median) \\ \hline
+Naïve & Statistical & 0.00 & 0.00 & -- & 0 \\
+AR & Statistical & 0.00 & 0.00 & -- & 3 \\
+ARIMAx & Statistical & 0.04 & 0.29 & -- & 6 \\
+ARFIMAx & Statistical & 0.13 & 0.25 & -- & 11 \\
+ETS & Statistical & 0.01 & 0.02 & -- & 5 \\
+SETAR & Statistical & 0.02 & 0.18 & -- & 11 \\
+TBATS & Statistical & 0.23 & 0.53 & -- & -- \\
+GARCH & Statistical & 0.03 & 0.24 & -- & 4 \\
+BSTSx & Statistical (Bayesian, MCMC) & 1.42 & 1.52 & -- & -- \\
+ARNNx & Neural network (R) & 0.09 & 0.44 & -- & 740 \\
+DeepAR & Deep learning (Darts) & 1.24 & 1.43 & -- & 726 \\
+NBEATSx & Deep learning (Darts) & 46.47 & 49.65 & -- & 7,432,535 \\
+NHiTSx & Deep learning (Darts) & 6.10 & 6.63 & -- & 1,046,778 \\
+DLinearx & Deep learning (Darts) & 0.92 & 1.14 & -- & 4,706 \\
+NLinearx & Deep learning (Darts) & 0.76 & 1.02 & -- & 2,353 \\
+TSMixerx & Deep learning (Darts) & 3.39 & 6.50 & -- & 30,848 \\
+{\color{blue}CatBoostx} & Gradient boosting & 0.65 & 5.64 & 4.64 & 2,700 \\
+{\color{blue}LightGBMx} & Gradient boosting & 0.47 & 1.30 & 2.17 & 2,700 \\
+{\color{blue}TiDEx} & Deep learning (Darts) & 8.56 & 31.69 & 15.58 & 23,518 \\
+{\color{blue}GRUx} & Recurrent network (Darts) & 2.95 & 19.99 & 8.74 & 3,873 \\
+{\color{blue}LSTMx} & Recurrent network (Darts) & 1.89 & 23.20 & 5.87 & 5,153 \\
+{\color{blue}ARIMA--ANN} & Hybrid & 0.12 & 1.82 & 0.12 & 402 \\
+{\color{blue}ARFIMA--ANN} & Hybrid & 0.55 & 2.96 & 0.55 & 3,306 \\
+{\color{blue}EWNet} & Hybrid (wavelet + ANN) & 37.00 & 41.58 & 37.00 & 27,000 \\
+{\color{blue}NARFIMA} & Proposed & 1.07 & 3.23 & -- & 29,011 \\
+\hline
+\end{tabular}
+\label{tab:computational_cost}
+\end{table}

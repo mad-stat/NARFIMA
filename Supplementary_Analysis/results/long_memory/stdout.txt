@@ -1,0 +1,173 @@
+Warning messages:
+1: package ‘readxl’ was built under R version 4.6.1 
+2: package ‘tseries’ was built under R version 4.6.1 
+3: package ‘strucchange’ was built under R version 4.6.1 
+
+S02 (published Whittle table re-run): series at the H = 0.99 bound: 26 of 30 
+
+S03 exchange rates, m = n^0.6:
+ Country                           Series Estimator    d_hat     SE  p_H0_d0
+  Brazil                    Exchange Rate       GPH  0.87378 0.1191 2.17e-13
+  Brazil                    Exchange Rate    BR-GPH  0.83943 0.1786 2.61e-06
+  Brazil                    Exchange Rate        LW  0.95073 0.0928 1.32e-24
+  Brazil                    Exchange Rate       ELW  1.02690 0.0928 1.96e-28
+  Brazil                    Exchange Rate      FELW  1.02690 0.0928 1.96e-28
+  Brazil Exchange Rate (first difference)       GPH  0.01123 0.1212 9.26e-01
+  Brazil Exchange Rate (first difference)    BR-GPH -0.07542 0.1818 6.78e-01
+  Brazil Exchange Rate (first difference)        LW  0.00432 0.0945 9.64e-01
+  Brazil Exchange Rate (first difference)       ELW  0.00389 0.0945 9.67e-01
+  Brazil Exchange Rate (first difference)      FELW  0.00534 0.0945 9.55e-01
+  Russia                    Exchange Rate       GPH  1.00152 0.1191 4.09e-17
+  Russia                    Exchange Rate    BR-GPH  1.00316 0.1786 1.95e-08
+  Russia                    Exchange Rate        LW  0.99267 0.0928 1.12e-26
+  Russia                    Exchange Rate       ELW  0.91129 0.0928 9.71e-23
+  Russia                    Exchange Rate      FELW  0.91129 0.0928 9.71e-23
+  Russia Exchange Rate (first difference)       GPH -0.07880 0.1212 5.16e-01
+  Russia Exchange Rate (first difference)    BR-GPH  0.48036 0.1818 8.23e-03
+  Russia Exchange Rate (first difference)        LW -0.10045 0.0945 2.88e-01
+  Russia Exchange Rate (first difference)       ELW -0.10113 0.0945 2.84e-01
+  Russia Exchange Rate (first difference)      FELW -0.09676 0.0945 3.06e-01
+   India                    Exchange Rate       GPH  0.98369 0.1191 1.45e-16
+   India                    Exchange Rate    BR-GPH  1.00983 0.1786 1.57e-08
+   India                    Exchange Rate        LW  0.97826 0.0928 5.89e-26
+   India                    Exchange Rate       ELW  1.08439 0.0928 1.63e-31
+   India                    Exchange Rate      FELW  1.08439 0.0928 1.63e-31
+   India Exchange Rate (first difference)       GPH  0.10536 0.1212 3.85e-01
+   India Exchange Rate (first difference)    BR-GPH -0.07327 0.1818 6.87e-01
+   India Exchange Rate (first difference)        LW  0.05354 0.0945 5.71e-01
+   India Exchange Rate (first difference)       ELW  0.05741 0.0945 5.43e-01
+   India Exchange Rate (first difference)      FELW  0.05812 0.0945 5.38e-01
+   China                    Exchange Rate       GPH  1.18786 0.1191 1.96e-23
+   China                    Exchange Rate    BR-GPH  0.98667 0.1786 3.32e-08
+   China                    Exchange Rate        LW  1.21200 0.0928 6.06e-39
+   China                    Exchange Rate       ELW  1.15373 0.0928 1.89e-35
+   China                    Exchange Rate      FELW  1.15373 0.0928 1.89e-35
+   China Exchange Rate (first difference)       GPH  0.10287 0.1212 3.96e-01
+   China Exchange Rate (first difference)    BR-GPH  0.27990 0.1818 1.24e-01
+   China Exchange Rate (first difference)        LW  0.12331 0.0945 1.92e-01
+   China Exchange Rate (first difference)       ELW  0.14571 0.0945 1.23e-01
+   China Exchange Rate (first difference)      FELW  0.14652 0.0945 1.21e-01
+  p_H0_d1
+ 2.89e-01
+ 3.69e-01
+ 5.96e-01
+ 7.72e-01
+ 7.72e-01
+ 3.38e-16
+ 3.30e-09
+ 5.81e-26
+ 5.54e-26
+ 6.52e-26
+ 9.90e-01
+ 9.86e-01
+ 9.37e-01
+ 3.39e-01
+ 3.39e-01
+ 5.50e-19
+ 4.26e-03
+ 2.40e-31
+ 2.21e-31
+ 3.80e-31
+ 8.91e-01
+ 9.56e-01
+ 8.15e-01
+ 3.63e-01
+ 3.63e-01
+ 1.56e-13
+ 3.55e-09
+ 1.29e-23
+ 1.95e-23
+ 2.11e-23
+ 1.15e-01
+ 9.41e-01
+ 2.24e-02
+ 9.78e-02
+ 9.78e-02
+ 1.33e-13
+ 7.45e-05
+ 1.73e-20
+ 1.55e-19
+ 1.68e-19
+
+ARFIMA ML on first differences:
+ Country                              Model    d_diff     SE d_level
+  Brazil ARFIMA(0,d,1) on first differences -0.000204 0.0634   1.000
+  Russia ARFIMA(1,d,0) on first differences -0.141000 0.1122   0.859
+   India ARFIMA(0,d,1) on first differences -0.029122 0.0657   0.971
+   China ARFIMA(0,d,1) on first differences  0.182804 0.0636   1.183
+ CI95_level_low CI95_level_high p_H0_d_level_1   BIC
+          0.876            1.12        0.99744 -1243
+          0.639            1.08        0.20871   351
+          0.842            1.10        0.65745  -103
+          1.058            1.31        0.00404 -1796
+
+Qu test:
+ Country                           Series       Applied_to  m     d_LW  Qu_W
+  Brazil Exchange Rate (first difference)            level 50  0.18217 0.951
+  Brazil         Short-term Interest Rate first difference 50 -0.14168 0.940
+  Brazil                   Short-term IRD first difference 50 -0.10373 1.038
+  Brazil                    CPI Inflation first difference 50  0.47969 1.395
+  Brazil       CPI Inflation Differential first difference 50  0.30645 1.280
+  Brazil                              GPR            level 50  0.26390 0.655
+  Russia Exchange Rate (first difference)            level 50 -0.09447 0.834
+  Russia         Short-term Interest Rate first difference 50 -0.34990 0.398
+  Russia                   Short-term IRD first difference 50 -0.35174 0.389
+  Russia                    CPI Inflation first difference 50  0.46659 1.495
+  Russia       CPI Inflation Differential first difference 50  0.45771 1.490
+  Russia                              GPR            level 50  0.41074 0.743
+   India Exchange Rate (first difference)            level 50  0.04047 0.590
+   India         Short-term Interest Rate first difference 50 -0.09124 1.284
+   India                   Short-term IRD first difference 50  0.06237 0.988
+   India                    CPI Inflation first difference 50 -0.00342 1.228
+   India       CPI Inflation Differential first difference 50  0.00362 1.066
+   India                              GPR            level 50  0.31573 0.287
+   China Exchange Rate (first difference)            level 50  0.23776 0.575
+   China         Short-term Interest Rate first difference 26  0.29369 0.255
+   China                   Short-term IRD first difference 50  0.30748 0.495
+   China                    CPI Inflation first difference 50  0.22060 1.338
+   China       CPI Inflation Differential first difference 50 -0.12199 0.979
+   China                              GPR first difference 50 -0.49000 1.161
+  Global                             GEPU first difference 50 -0.36631 0.350
+  Global                           US EMV            level 50  0.37256 0.403
+  Global                           US MPU first difference 50 -0.44162 1.241
+  Global            Oil Price Growth Rate first difference 50  0.10383 1.319
+  Global      US Short-term Interest Rate first difference 50  0.46607 0.579
+  Global                 US CPI Inflation first difference 50  0.00359 1.371
+ Crit_5pct Reject_true_long_memory_5pct
+      1.16                        FALSE
+      1.16                        FALSE
+      1.16                        FALSE
+      1.16                         TRUE
+      1.16                         TRUE
+      1.16                        FALSE
+      1.16                        FALSE
+      1.16                        FALSE
+      1.16                        FALSE
+      1.16                         TRUE
+      1.16                         TRUE
+      1.16                        FALSE
+      1.16                        FALSE
+      1.16                         TRUE
+      1.16                        FALSE
+      1.16                         TRUE
+      1.16                        FALSE
+      1.16                        FALSE
+      1.16                        FALSE
+      1.16                        FALSE
+      1.16                        FALSE
+      1.16                         TRUE
+      1.16                        FALSE
+      1.16                         TRUE
+      1.16                        FALSE
+      1.16                        FALSE
+      1.16                         TRUE
+      1.16                         TRUE
+      1.16                        FALSE
+      1.16                         TRUE
+
+Bai-Perron:
+ Country Breaks_BIC      Break_dates
+  Brazil          0                 
+  Russia          0                 
+   India          0                 
+   China          2 2005-06, 2014-01
