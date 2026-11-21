@@ -52,7 +52,7 @@ All code and outputs added in the revision are in [`Supplementary_Analysis/`](Su
    * GRU and LSTM (recurrent networks);
    * ARIMA–ANN, ARFIMA–ANN and EWNet (hybrids).
 
-   They use the same splits, horizons and evaluation function as Tables 6–9. Comparison tables are built by `make_comparison_tables.py`.
+   They use the same splits, horizons and evaluation function as Tables 6–9 of the original submission (Tables 7–10 of the revised paper). Comparison tables are built by `make_comparison_tables.py`.
 2. **MCB and MCS with the additional baselines** (`significance_tests_extended.R`).
 3. **Long-memory analysis** (`long_memory_analysis.R`, `long_memory_montecarlo.R`, `R/long_memory_estimators.R`):
    * GPH, bias-reduced GPH, local Whittle, exact and feasible exact local Whittle estimates;
@@ -75,13 +75,15 @@ Spot exchange rates and macroeconomic indicators come from FRED (<https://fred.s
 
 # Reproducibility Checks: NARFIMA
 
+The table and figure numbers in this list are those of the original submission, which the script names also follow. For the numbering of the revised paper, see the map in [`Supplementary_Analysis/README.md`](Supplementary_Analysis/README.md).
+
 * To view the full list of packages (both R and Python) along with their respective versions, please refer to the following files [R_package_version.txt](https://github.com/mad-stat/NARFIMA/blob/main/R_package_version.txt) and [Python_Package_Version.txt](https://github.com/mad-stat/NARFIMA/blob/main/Python_Package_Version.txt).
 
 * To view "Table 1: Time plots of the training data for exchange rates of BRIC nations, alongside the ACF plots and OLS-based CUSUM test results.", please refer to [Table_01_TS_ACF_OLS_CUSUM_BRIC.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_01_TS_ACF_OLS_CUSUM_BRIC.R).
 
-* To view "Table 2: Nonlinear Granger causality test results assessing the influence of exogenous covariates on exchange rates in BRIC countries.", please refer to [Table_02_Causality Analysis_BRIC.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_02_Causality_Analysis_BRIC.R).
+* To view "Table 2: Nonlinear Granger causality test results assessing the influence of exogenous covariates on exchange rates in BRIC countries.", please refer to [Table_02_Causality_Analysis_BRIC.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_02_Causality_Analysis_BRIC.R).
 
-* To view "Table 5: Assumptions (3) and (5) for the NARFIMA model. Reported values are median weight estimates and the associated assumption conditions, obtained from $1000$ bootstrap iterations ($100$ internal ensemble fits per iteration). Long horizons with $skip = \text{FALSE}$ are omitted, as skip connections were removed.", please refer to [Table_05_Empirical Validation_BRIC.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_05_Empirical_Validation_BRIC.R).
+* To view "Table 5: Assumptions (3) and (5) for the NARFIMA model. Reported values are median weight estimates and the associated assumption conditions, obtained from $1000$ bootstrap iterations ($100$ internal ensemble fits per iteration). Long horizons with $skip = \text{FALSE}$ are omitted, as skip connections were removed.", please refer to [Table_05_Empirical_Validation_BRIC.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_05_Empirical_Validation_BRIC.R).
 
 * To generate "Table 6: Evaluation of the proposed NARFIMA model’s performance relative to baseline forecasters across all forecast horizons for Brazil (**`best`** and ***`second-best`*** results are highlighted).", please refer to [Table_06_Evaluation_Comparison_Brazil.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_06_Evaluation_Comparison_Brazil.R). To check the forecasts across various algorithms, please refer to the following folder [Brazil Forecasts](https://github.com/mad-stat/NARFIMA/tree/main/Dataset/Dataset_Model_Forecasts/Brazil). The performance evaluation summary can be found in [Brazil Evaluation](https://github.com/mad-stat/NARFIMA/blob/main/Dataset/Dataset_Model_Evaluation/Brazil%20Evaluation.xlsx).
 
@@ -89,7 +91,7 @@ Spot exchange rates and macroeconomic indicators come from FRED (<https://fred.s
 
 * To generate "Table 8: Evaluation of the proposed NARFIMA model’s performance relative to baseline forecasters across all forecast horizons for India (**`best`** and ***`second-best`*** results are highlighted).", please refer to [Table_08_Evaluation_Comparison_India.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_08_Evaluation_Comparison_India.R). To check the forecasts across various algorithms, please refer to the following folder [India Forecasts](https://github.com/mad-stat/NARFIMA/tree/main/Dataset/Dataset_Model_Forecasts/India). The performance evaluation summary can be found in [India Evaluation](https://github.com/mad-stat/NARFIMA/blob/main/Dataset/Dataset_Model_Evaluation/India%20Evaluation.xlsx).
 
-* To generate "Table 9: Evaluation of the proposed NARFIMA model’s performance relative to baseline forecasters across all forecast horizons for China (**`best`** and ***`second-best`*** results are highlighted).", please refer to [Table_09_Evaluation_Comparison_China.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_09_Evaluation_Comparison_China.R). To check the forecasts across various algorithms, please refer to the following folder [China Forecasts](https://github.com/mad-stat/NARFIMA/tree/main/Dataset/Dataset_Model_Forecasts/Russia). The performance evaluation summary can be found in [China Evaluation](https://github.com/mad-stat/NARFIMA/blob/main/Dataset/Dataset_Model_Evaluation/China%20Evaluation.xlsx).
+* To generate "Table 9: Evaluation of the proposed NARFIMA model’s performance relative to baseline forecasters across all forecast horizons for China (**`best`** and ***`second-best`*** results are highlighted).", please refer to [Table_09_Evaluation_Comparison_China.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_09_Evaluation_Comparison_China.R). To check the forecasts across various algorithms, please refer to the following folder [China Forecasts](https://github.com/mad-stat/NARFIMA/tree/main/Dataset/Dataset_Model_Forecasts/China). The performance evaluation summary can be found in [China Evaluation](https://github.com/mad-stat/NARFIMA/blob/main/Dataset/Dataset_Model_Evaluation/China%20Evaluation.xlsx).
 
 * To view "Figure 1: Multiple comparisons with the best (MCB) plot for BRIC nations based on (a) RMSE, (b) MAE, (c) SMAPE, and (d) MAPE metrics. In the plots, ‘NARFIMA-1.58’ indicates that the average rank of the NARFIMA model is 1.58, based on the RMSE metric. A similar interpretation holds across different models and metrics.", please refer to [Figure_01_MCB_BRIC.R](https://github.com/mad-stat/NARFIMA/blob/main/Figure_01_MCB_BRIC.R).
 
@@ -97,7 +99,7 @@ Spot exchange rates and macroeconomic indicators come from FRED (<https://fred.s
 
 * To view "Figure 3: Visualization of the actual exchange rate series (red dots) with point forecasts from NARFIMA (blue line), BSTSx (green line), and ARIMAx (violet line), along with the conformal prediction interval for NARFIMA (yellow shaded region). Forecasts are for a 48-month horizon for (a) Brazil, (b) Russia, (c) India, and (d) China.", please refer to [Figure_03_Conformal_Prediction_Interval_48.R](https://github.com/mad-stat/NARFIMA/blob/main/Figure_03_Conformal_Prediction_Interval_48.R).
 
-* To view "Figure 4: MCB plot comparing the performance of NARFIMA and its variants based on RMSE metrics. In the plot, `NARFIMA - 1.38' indicates that the average rank of NARFIMA is 1.38, similar for other models.", please refer to [Figure_04_MCB_Ablation_Study.R](https://github.com/mad-stat/NARFIMA/blob/main/Figure_04_MCB_Ablation_Study). The performance evaluation summary can be found in [BRIC NARFIMA Variants Evaluation](https://github.com/mad-stat/NARFIMA/blob/main/Dataset/Dataset_Model_Evaluation/BRIC%20NARFIMA%20Variants%20Evaluation.xlsx)]. To check the code, please refer to [Ablation_Study.R](https://github.com/mad-stat/NARFIMA/blob/main/Ablation_Study.R).
+* To view "Figure 4: MCB plot comparing the performance of NARFIMA and its variants based on RMSE metrics. In the plot, ‘NARFIMA - 1.38’ indicates that the average rank of NARFIMA is 1.38, similar for other models.", please refer to [Figure_04_MCB_Ablation_Study.R](https://github.com/mad-stat/NARFIMA/blob/main/Figure_04_MCB_Ablation_Study). The performance evaluation summary can be found in [BRIC NARFIMA Variants Evaluation](https://github.com/mad-stat/NARFIMA/blob/main/Dataset/Dataset_Model_Evaluation/BRIC%20NARFIMA%20Variants%20Evaluation.xlsx). To check the code, please refer to [Ablation_Study.R](https://github.com/mad-stat/NARFIMA/blob/main/Ablation_Study.R).
   
 * To view "Table 10: Summary statistics of the datasets utilized in this analysis.", please refer to [Table_10_Summary_Statistics_BRIC.R](https://github.com/mad-stat/NARFIMA/blob/main/Table_10_Summary_Statistics_BRIC.R)
 
